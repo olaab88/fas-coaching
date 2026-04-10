@@ -7,7 +7,6 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { href: "/", label: "Hjem" },
   { href: "/om", label: "Om meg" },
   { href: "/timeplan", label: "Timeplan" },
   { href: "/referanser", label: "Referanser" },
@@ -20,7 +19,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const fn = () => setScrolled(window.scrollY > 60);
+    const fn = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", fn, { passive: true });
     return () => window.removeEventListener("scroll", fn);
   }, []);
@@ -32,17 +31,18 @@ export default function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-[#0B3D4A]/98 backdrop-blur-md shadow-lg shadow-black/20"
-            : "bg-[#0B3D4A]"
+            ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-[#E2DDD7]"
+            : "bg-white border-b border-[#E2DDD7]"
         }`}
       >
         <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-8 h-8 rounded-lg overflow-hidden bg-[#1B6B7A] flex items-center justify-center shrink-0">
+          <Link href="/" className="flex items-center gap-2.5 group shrink-0">
+            <div className="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center bg-[#F8F7F4] border border-[#E2DDD7]">
               <Image src="/images/logo6.png" alt="FAS Coaching" width={32} height={32} className="object-contain scale-90" />
             </div>
-            <span className="font-[family-name:var(--font-outfit)] text-white font-semibold text-base tracking-tight group-hover:text-[#3AA0B2] transition-colors duration-200">
+            <span className="font-[family-name:var(--font-dm)] text-[#111110] font-semibold text-sm tracking-tight">
               FAS Coaching
             </span>
           </Link>
@@ -53,10 +53,10 @@ export default function Navbar() {
               <li key={l.href}>
                 <Link
                   href={l.href}
-                  className={`px-4 py-2 rounded-lg font-[family-name:var(--font-dm)] text-sm font-medium transition-all duration-200 ${
+                  className={`px-4 py-2 rounded-lg font-[family-name:var(--font-dm)] text-sm transition-colors duration-150 ${
                     pathname === l.href
-                      ? "bg-white/10 text-white"
-                      : "text-white/65 hover:text-white hover:bg-white/8"
+                      ? "text-[#111110] font-medium"
+                      : "text-[#6B6860] hover:text-[#111110]"
                   }`}
                 >
                   {l.label}
@@ -67,44 +67,46 @@ export default function Navbar() {
 
           {/* CTA */}
           <Link
-            href="/timeplan"
-            className="hidden md:inline-flex items-center gap-2 bg-[#C8963A] text-white font-[family-name:var(--font-dm)] font-semibold text-sm px-5 py-2 rounded-lg hover:bg-[#E8B96A] transition-colors duration-200 cursor-pointer"
+            href="/kontakt"
+            className="hidden md:inline-flex items-center gap-2 bg-[#111110] text-white font-[family-name:var(--font-dm)] font-medium text-sm px-5 py-2.5 rounded-full hover:bg-[#C8963A] transition-colors duration-200 cursor-pointer"
           >
-            Book time
+            Book gratis intro
           </Link>
 
           {/* Hamburger */}
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden p-2 rounded-lg text-white/80 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
+            className="md:hidden p-2 rounded-lg text-[#6B6860] hover:text-[#111110] hover:bg-[#EFECEA] transition-colors cursor-pointer"
             aria-label="Meny"
           >
-            {open ? <X size={20} /> : <Menu size={20} />}
+            {open ? <X size={18} /> : <Menu size={18} />}
           </button>
         </nav>
       </header>
 
       {/* Mobile drawer */}
-      <div className={`fixed inset-0 z-40 md:hidden transition-opacity duration-300 ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}>
-        <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setOpen(false)} />
-        <div className={`absolute top-16 left-0 right-0 bg-[#0B3D4A] border-t border-white/10 shadow-2xl transition-all duration-300 ${open ? "translate-y-0 opacity-100" : "-translate-y-2 opacity-0"}`}>
-          <div className="px-4 py-4 flex flex-col gap-1">
+      <div className={`fixed inset-0 z-40 md:hidden transition-opacity duration-200 ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}>
+        <div className="absolute inset-0 bg-black/20" onClick={() => setOpen(false)} />
+        <div className={`absolute top-16 left-0 right-0 bg-white border-b border-[#E2DDD7] shadow-lg transition-all duration-200 ${open ? "translate-y-0 opacity-100" : "-translate-y-2 opacity-0"}`}>
+          <div className="px-4 py-3 flex flex-col gap-1">
             {links.map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
-                className={`px-4 py-3 rounded-lg font-[family-name:var(--font-dm)] text-sm font-medium transition-colors ${
-                  pathname === l.href ? "bg-white/10 text-white" : "text-white/70 hover:bg-white/8 hover:text-white"
+                className={`px-4 py-3 rounded-lg font-[family-name:var(--font-dm)] text-sm transition-colors ${
+                  pathname === l.href
+                    ? "text-[#111110] font-medium bg-[#EFECEA]"
+                    : "text-[#6B6860] hover:text-[#111110] hover:bg-[#F8F7F4]"
                 }`}
               >
                 {l.label}
               </Link>
             ))}
             <Link
-              href="/timeplan"
-              className="mt-2 px-4 py-3 rounded-lg bg-[#C8963A] text-white font-[family-name:var(--font-dm)] font-semibold text-sm text-center hover:bg-[#E8B96A] transition-colors cursor-pointer"
+              href="/kontakt"
+              className="mt-2 px-4 py-3 rounded-full bg-[#111110] text-white font-[family-name:var(--font-dm)] font-medium text-sm text-center hover:bg-[#C8963A] transition-colors cursor-pointer"
             >
-              Book en time
+              Book gratis intro
             </Link>
           </div>
         </div>

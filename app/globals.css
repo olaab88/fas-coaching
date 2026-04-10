@@ -1,57 +1,36 @@
 @import "tailwindcss";
 
 @theme {
-  /* ── Brand palette — extracted from screenshot ── */
-  --color-teal-900:  #07303C;
-  --color-teal-800:  #0B3D4A;
-  --color-teal-700:  #0F4E5E;
-  --color-teal-600:  #1B6B7A;
-  --color-teal-500:  #258596;
-  --color-teal-400:  #3AA0B2;
-  --color-teal-100:  #D6EEF3;
-  --color-teal-50:   #EDF7FA;
-
+  --color-base:      #F8F7F4;
+  --color-surface:   #EFECEA;
+  --color-ink:       #111110;
+  --color-muted:     #6B6860;
   --color-gold:      #C8963A;
-  --color-gold-light:#E8B96A;
-
-  --color-ink:       #0A1F27;
-  --color-ink-mid:   #2C4A55;
-  --color-ink-muted: #5C7A84;
-  --color-mist:      #F4F9FA;
-  --color-white:     #FFFFFF;
-  --color-border:    #D0E5EA;
-
-  --font-display: var(--font-bebas), "Arial Black", sans-serif;
-  --font-heading: var(--font-outfit), "system-ui", sans-serif;
+  --color-gold-soft: #F5E4C3;
+  --color-border:    #E2DDD7;
+  --color-dark:      #141210;
+  --font-display: var(--font-playfair), Georgia, serif;
   --font-body:    var(--font-dm), "system-ui", sans-serif;
 }
-
-* { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
 
 body {
-  background: #F4F9FA;
-  color: #0A1F27;
+  background: #F8F7F4;
+  color: #111110;
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
-::selection { background: #1B6B7A; color: #fff; }
+::selection { background: #C8963A; color: #fff; }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: #EDF7FA; }
-::-webkit-scrollbar-thumb { background: #1B6B7A; border-radius: 2px; }
+::-webkit-scrollbar-track { background: #EFECEA; }
+::-webkit-scrollbar-thumb { background: #C8963A; border-radius: 2px; }
 
 @keyframes marquee {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(24px); }
-  to   { opacity: 1; transform: translateY(0); }
 }

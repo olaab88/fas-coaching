@@ -1,19 +1,14 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Outfit, DM_Sans } from "next/font/google";
+import { Playfair_Display, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const bebas = Bebas_Neue({
-  variable: "--font-bebas",
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
-  weight: "400",
-});
-
-const outfit = Outfit({
-  variable: "--font-outfit",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
+  style: ["normal", "italic"],
 });
 
 const dmSans = DM_Sans({
@@ -29,7 +24,7 @@ export const metadata: Metadata = {
   keywords: ["coaching", "livsstilscoaching", "karrierecoaching", "Lørenskog", "personlig utvikling"],
   openGraph: {
     title: "FAS Coaching",
-    description: "Jeg veileder deg til et nytt perspektiv på livet.",
+    description: "Coaching som gir deg retning.",
     url: "https://www.fas-coaching.no",
     siteName: "FAS Coaching",
     locale: "nb_NO",
@@ -39,8 +34,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="nb" className={`${bebas.variable} ${outfit.variable} ${dmSans.variable}`}>
-      <body className="min-h-screen flex flex-col bg-[#F4F9FA]">
+    <html lang="nb" className={`${playfair.variable} ${dmSans.variable}`}>
+      <body className="min-h-screen flex flex-col bg-[#F8F7F4]">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

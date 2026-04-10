@@ -12,17 +12,17 @@ const nav = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#07303C] text-white">
+    <footer className="bg-[#141210] text-white">
       <div className="max-w-7xl mx-auto px-6 pt-16 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/8">
 
           {/* Brand */}
           <div className="md:col-span-2 space-y-5">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-lg overflow-hidden bg-[#1B6B7A] flex items-center justify-center">
-                <Image src="/images/logo6.png" alt="FAS Coaching" width={36} height={36} className="object-contain scale-90" />
+              <div className="w-8 h-8 rounded-lg overflow-hidden bg-white/5 flex items-center justify-center border border-white/10">
+                <Image src="/images/logo6.png" alt="FAS Coaching" width={32} height={32} className="object-contain scale-90" />
               </div>
-              <span className="font-[family-name:var(--font-outfit)] text-white font-semibold text-lg">FAS Coaching</span>
+              <span className="font-[family-name:var(--font-dm)] text-white font-semibold text-sm">FAS Coaching</span>
             </div>
             <p className="font-[family-name:var(--font-dm)] text-white/40 text-sm leading-relaxed max-w-sm">
               Profesjonell coaching i livsstil, karriere, relasjoner, sorg, idrett og ledelse — for voksne og barn i Lørenskog og digitalt.
@@ -31,7 +31,7 @@ export default function Footer() {
               href="https://www.facebook.com/Fascoaching.no/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white/6 hover:bg-[#1B6B7A] text-white/60 hover:text-white font-[family-name:var(--font-dm)] text-xs font-semibold px-4 py-2 rounded-lg transition-all duration-200 cursor-pointer"
+              className="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 text-white/50 hover:text-white font-[family-name:var(--font-dm)] text-xs font-medium px-4 py-2 rounded-lg transition-all duration-200 cursor-pointer border border-white/8"
             >
               Facebook
             </a>
@@ -39,11 +39,11 @@ export default function Footer() {
 
           {/* Nav */}
           <div className="space-y-4">
-            <p className="font-[family-name:var(--font-dm)] text-white/30 text-xs font-semibold tracking-[0.15em] uppercase">Sider</p>
+            <p className="font-[family-name:var(--font-dm)] text-white/25 text-xs font-semibold tracking-[0.15em] uppercase">Sider</p>
             <ul className="space-y-2.5">
               {nav.map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="font-[family-name:var(--font-dm)] text-white/50 hover:text-white text-sm transition-colors duration-200">
+                  <Link href={l.href} className="font-[family-name:var(--font-dm)] text-white/45 hover:text-white text-sm transition-colors duration-150">
                     {l.label}
                   </Link>
                 </li>
@@ -53,7 +53,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="space-y-4">
-            <p className="font-[family-name:var(--font-dm)] text-white/30 text-xs font-semibold tracking-[0.15em] uppercase">Kontakt</p>
+            <p className="font-[family-name:var(--font-dm)] text-white/25 text-xs font-semibold tracking-[0.15em] uppercase">Kontakt</p>
             <ul className="space-y-3">
               {[
                 { icon: Phone, label: "+47 41 12 21 29", href: "tel:+4741122129" },
@@ -63,8 +63,8 @@ export default function Footer() {
               ].map(({ icon: Icon, label, href }) => (
                 <li key={label}>
                   <a href={href} className="flex items-center gap-2.5 group cursor-pointer">
-                    <Icon size={13} className="text-[#3AA0B2] shrink-0" />
-                    <span className="font-[family-name:var(--font-dm)] text-white/50 group-hover:text-white text-sm transition-colors duration-200">{label}</span>
+                    <Icon size={12} className="text-[#C8963A] shrink-0" />
+                    <span className="font-[family-name:var(--font-dm)] text-white/45 group-hover:text-white text-sm transition-colors duration-150">{label}</span>
                   </a>
                 </li>
               ))}
@@ -77,8 +77,8 @@ export default function Footer() {
             © {new Date().getFullYear()} FAS Coaching · Skårerveien 12, Lørenskog
           </p>
           <Link
-            href="/timeplan"
-            className="font-[family-name:var(--font-dm)] text-xs bg-[#C8963A] text-white px-4 py-2 rounded-lg hover:bg-[#E8B96A] transition-colors cursor-pointer font-semibold"
+            href="/kontakt"
+            className="font-[family-name:var(--font-dm)] text-xs bg-[#C8963A] text-white px-5 py-2 rounded-full hover:bg-[#E8B96A] transition-colors cursor-pointer font-medium"
           >
             Book gratis intro →
           </Link>
