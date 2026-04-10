@@ -136,7 +136,7 @@ export default function OmPage() {
             </p>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-white leading-tight">
               Sertifiseringer<br />
-              <span className="text-[#64C8C8]">& utdanning</span>
+              <span className="text-[#64C8C8]">og utdanning</span>
             </h2>
             <p className="font-[family-name:var(--font-dm)] text-white/85 text-sm leading-relaxed mt-4 max-w-xs">
               Solid faglig fundament kombinert med mange år i praksis.

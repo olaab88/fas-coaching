@@ -79,7 +79,7 @@ export default function HomePage() {
           <div className="flex flex-col justify-center py-20 lg:py-24 lg:w-[52%] lg:pr-16 space-y-8 z-10">
             <div className="inline-flex items-center gap-2 bg-[#E8F7F7] text-[#00617A] rounded-full px-4 py-1.5 text-xs font-[family-name:var(--font-dm)] font-semibold tracking-wide w-fit">
               <span className="w-1.5 h-1.5 rounded-full bg-[#64C8C8]" />
-              Coaching · Lørenskog &amp; digitalt
+              Coaching · Lørenskog og digitalt
             </div>
 
             <div>

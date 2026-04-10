@@ -18,7 +18,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "FAS Coaching — Livsstil, Karriere & Personlig Utvikling",
+  title: "FAS Coaching — Livsstil, Karriere og Personlig Utvikling",
   description:
     "Profesjonell coaching i livsstil, karriere, relasjoner, sorg, idrett og ledelse. For voksne og barn i Lørenskog og digitalt.",
   keywords: ["coaching", "livsstilscoaching", "karrierecoaching", "Lørenskog", "personlig utvikling"],
