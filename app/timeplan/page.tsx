@@ -28,18 +28,31 @@ export default function TimeplanPage() {
     <div className="bg-[#F8F7F4] pt-16">
 
       {/* HERO */}
-      <section className="py-24 px-6 border-b border-[#E2DDD7]">
-        <div className="max-w-7xl mx-auto">
-          <p className="font-[family-name:var(--font-dm)] text-[#64C8C8] text-xs font-semibold tracking-[0.2em] uppercase mb-6">
-            Timeplan
-          </p>
-          <h1 className="font-[family-name:var(--font-playfair)] text-[clamp(3rem,8vw,7rem)] text-[#111110] font-bold leading-[1.0]">
-            Start din<br />
-            <span className="text-[#002850]">reise</span>
-          </h1>
-          <p className="font-[family-name:var(--font-dm)] text-[#111110] text-[1rem] mt-6 max-w-lg leading-relaxed">
-            Velg det coachingområdet som passer deg — og start gjerne med en gratis intro-samtale.
-          </p>
+      <section className="border-b border-[#E2DDD7] overflow-hidden">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2">
+          <div className="py-24 px-6 lg:pr-12 flex flex-col justify-center">
+            <p className="font-[family-name:var(--font-dm)] text-[#64C8C8] text-xs font-semibold tracking-[0.2em] uppercase mb-6">
+              Timeplan
+            </p>
+            <h1 className="font-[family-name:var(--font-playfair)] text-[clamp(3rem,6vw,6rem)] text-[#111110] font-bold leading-[1.0]">
+              Start din<br />
+              <span className="text-[#002850]">reise</span>
+            </h1>
+            <p className="font-[family-name:var(--font-dm)] text-[#111110] text-[1rem] mt-6 max-w-sm leading-relaxed">
+              Velg det coachingområdet som passer deg — og start gjerne med en gratis intro-samtale.
+            </p>
+          </div>
+          <div className="relative h-72 lg:h-auto min-h-[360px]">
+            <Image
+              src="/images/site_img_h.jpg"
+              alt="Coaching session"
+              fill
+              sizes="(max-width:1024px)100vw,50vw"
+              className="object-cover"
+              quality={85}
+            />
+            <div className="absolute inset-0 bg-[#111110]/15" />
+          </div>
         </div>
       </section>
 
