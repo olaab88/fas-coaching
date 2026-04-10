@@ -14,7 +14,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#141210] text-white">
       <div className="max-w-7xl mx-auto px-6 pt-16 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/30">
 
           {/* Brand */}
           <div className="md:col-span-2 space-y-5">
@@ -24,14 +24,14 @@ export default function Footer() {
               </div>
               <span className="font-[family-name:var(--font-dm)] text-white font-semibold text-sm">FAS Coaching</span>
             </div>
-            <p className="font-[family-name:var(--font-dm)] text-white/40 text-sm leading-relaxed max-w-sm">
+            <p className="font-[family-name:var(--font-dm)] text-white/85 text-sm leading-relaxed max-w-sm">
               Profesjonell coaching i livsstil, karriere, relasjoner, sorg, idrett og ledelse — for voksne og barn i Lørenskog og digitalt.
             </p>
             <a
               href="https://www.facebook.com/Fascoaching.no/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 text-white/50 hover:text-white font-[family-name:var(--font-dm)] text-xs font-medium px-4 py-2 rounded-lg transition-all duration-200 cursor-pointer border border-white/8"
+              className="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 text-white/85 hover:text-white font-[family-name:var(--font-dm)] text-xs font-medium px-4 py-2 rounded-lg transition-all duration-200 cursor-pointer border border-white/30"
             >
               Facebook
             </a>
@@ -39,11 +39,11 @@ export default function Footer() {
 
           {/* Nav */}
           <div className="space-y-4">
-            <p className="font-[family-name:var(--font-dm)] text-white/25 text-xs font-semibold tracking-[0.15em] uppercase">Sider</p>
+            <p className="font-[family-name:var(--font-dm)] text-white/80 text-xs font-semibold tracking-[0.15em] uppercase">Sider</p>
             <ul className="space-y-2.5">
               {nav.map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="font-[family-name:var(--font-dm)] text-white/45 hover:text-white text-sm transition-colors duration-150">
+                  <Link href={l.href} className="font-[family-name:var(--font-dm)] text-white/85 hover:text-white text-sm transition-colors duration-150">
                     {l.label}
                   </Link>
                 </li>
@@ -53,7 +53,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="space-y-4">
-            <p className="font-[family-name:var(--font-dm)] text-white/25 text-xs font-semibold tracking-[0.15em] uppercase">Kontakt</p>
+            <p className="font-[family-name:var(--font-dm)] text-white/80 text-xs font-semibold tracking-[0.15em] uppercase">Kontakt</p>
             <ul className="space-y-3">
               {[
                 { icon: Phone, label: "+47 906 90 635", href: "tel:+4790690635" },
@@ -64,7 +64,7 @@ export default function Footer() {
                 <li key={label}>
                   <a href={href} className="flex items-center gap-2.5 group cursor-pointer">
                     <Icon size={12} className="text-[#64C8C8] shrink-0" />
-                    <span className="font-[family-name:var(--font-dm)] text-white/45 group-hover:text-white text-sm transition-colors duration-150">{label}</span>
+                    <span className="font-[family-name:var(--font-dm)] text-white/85 group-hover:text-white text-sm transition-colors duration-150">{label}</span>
                   </a>
                 </li>
               ))}
@@ -73,7 +73,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
-          <p className="font-[family-name:var(--font-dm)] text-white/20 text-xs">
+          <p className="font-[family-name:var(--font-dm)] text-white/80 text-xs">
             © {new Date().getFullYear()} FAS Coaching · Finn Arne Sivertsen · Orgnr. 812977652
           </p>
           <Link

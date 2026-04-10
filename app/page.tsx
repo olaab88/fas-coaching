@@ -239,7 +239,7 @@ export default function HomePage() {
             </div>
             <div className="absolute -bottom-5 -right-4 bg-[#141210] text-white rounded-2xl px-6 py-5 shadow-xl">
               <p className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-[#64C8C8]">5+</p>
-              <p className="font-[family-name:var(--font-dm)] text-white/60 text-xs mt-0.5">år som coach</p>
+              <p className="font-[family-name:var(--font-dm)] text-white text-xs mt-0.5">år som coach</p>
             </div>
           </div>
 
@@ -291,7 +291,7 @@ export default function HomePage() {
             </div>
             <Link
               href="/referanser"
-              className="font-[family-name:var(--font-dm)] text-sm text-white/50 hover:text-white transition-colors cursor-pointer self-start"
+              className="font-[family-name:var(--font-dm)] text-sm text-white/85 hover:text-white transition-colors cursor-pointer self-start"
             >
               Se alle referanser →
             </Link>
@@ -299,18 +299,18 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {testimonials.map((t, i) => (
-              <div key={i} className="bg-white/5 border border-white/8 rounded-2xl p-7 flex flex-col gap-5">
+              <div key={i} className="bg-white/5 border border-white/30 rounded-2xl p-7 flex flex-col gap-5">
                 <div className="flex gap-1">
                   {[...Array(5)].map((_, j) => (
                     <Star key={j} size={12} className="fill-[#64C8C8] text-[#64C8C8]" />
                   ))}
                 </div>
-                <p className="font-[family-name:var(--font-dm)] text-sm text-white/90 leading-relaxed flex-1">
+                <p className="font-[family-name:var(--font-dm)] text-sm text-white leading-relaxed flex-1">
                   &ldquo;{t.quote}&rdquo;
                 </p>
-                <div className="pt-4 border-t border-white/10">
+                <div className="pt-4 border-t border-white/30">
                   <p className="font-[family-name:var(--font-dm)] font-semibold text-white text-sm">{t.name}</p>
-                  <p className="font-[family-name:var(--font-dm)] text-white/40 text-xs mt-0.5">{t.role}</p>
+                  <p className="font-[family-name:var(--font-dm)] text-white/85 text-xs mt-0.5">{t.role}</p>
                 </div>
               </div>
             ))}

@@ -59,7 +59,7 @@ export default function OmPage() {
               </div>
               <div className="absolute -bottom-5 -right-4 bg-[#141210] rounded-2xl px-6 py-5 shadow-xl">
                 <p className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-[#64C8C8]">5+</p>
-                <p className="font-[family-name:var(--font-dm)] text-white/60 text-xs mt-0.5">år som coach</p>
+                <p className="font-[family-name:var(--font-dm)] text-white text-xs mt-0.5">år som coach</p>
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-video relative mt-8">
@@ -138,15 +138,15 @@ export default function OmPage() {
               Sertifiseringer<br />
               <span className="text-[#64C8C8]">& utdanning</span>
             </h2>
-            <p className="font-[family-name:var(--font-dm)] text-white/40 text-sm leading-relaxed mt-4 max-w-xs">
+            <p className="font-[family-name:var(--font-dm)] text-white/85 text-sm leading-relaxed mt-4 max-w-xs">
               Solid faglig fundament kombinert med mange år i praksis.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-3">
             {certs.map((c) => (
-              <div key={c.num} className="bg-white/5 rounded-xl p-5 border border-white/8">
+              <div key={c.num} className="bg-white/5 rounded-xl p-5 border border-white/30">
                 <span className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-[#64C8C8]">{c.num}</span>
-                <p className="font-[family-name:var(--font-dm)] text-white/60 text-sm mt-2 leading-snug">{c.title}</p>
+                <p className="font-[family-name:var(--font-dm)] text-white text-sm mt-2 leading-snug">{c.title}</p>
               </div>
             ))}
           </div>
