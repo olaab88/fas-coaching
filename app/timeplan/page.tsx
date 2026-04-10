@@ -30,12 +30,12 @@ export default function TimeplanPage() {
       {/* HERO */}
       <section className="py-24 px-6 border-b border-[#E2DDD7]">
         <div className="max-w-7xl mx-auto">
-          <p className="font-[family-name:var(--font-dm)] text-[#C8963A] text-xs font-semibold tracking-[0.2em] uppercase mb-6">
+          <p className="font-[family-name:var(--font-dm)] text-[#64C8C8] text-xs font-semibold tracking-[0.2em] uppercase mb-6">
             Timeplan
           </p>
           <h1 className="font-[family-name:var(--font-playfair)] text-[clamp(3rem,8vw,7rem)] text-[#111110] font-bold leading-[1.0]">
             Start din<br />
-            <em>reise</em>
+            <em className="text-[#002850]">reise</em>
           </h1>
           <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-base mt-6 max-w-lg leading-relaxed">
             Velg det coachingområdet som passer deg — og start gjerne med en gratis intro-samtale.
@@ -63,7 +63,7 @@ export default function TimeplanPage() {
       {/* SESSION TYPES */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          <p className="font-[family-name:var(--font-dm)] text-[#C8963A] text-xs font-semibold tracking-[0.2em] uppercase mb-3">
+          <p className="font-[family-name:var(--font-dm)] text-[#64C8C8] text-xs font-semibold tracking-[0.2em] uppercase mb-3">
             Hva jeg tilbyr
           </p>
           <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-[#111110] mb-10">
@@ -84,7 +84,7 @@ export default function TimeplanPage() {
                   />
                 </div>
                 <div className="p-5">
-                  <span className="font-[family-name:var(--font-dm)] text-[10px] font-bold tracking-widest uppercase text-[#C8963A]">
+                  <span className="font-[family-name:var(--font-dm)] text-[10px] font-bold tracking-widest uppercase text-[#64C8C8]">
                     {s.tag}
                   </span>
                   <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-[#111110] mt-1 mb-2">{s.title}</h3>
@@ -114,7 +114,7 @@ export default function TimeplanPage() {
           <div className="space-y-5">
             <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-[#111110]">
               Usikker på om coaching er{" "}
-              <em className="text-[#C8963A]">noe for deg?</em>
+              <em className="text-[#002850]">noe for deg?</em>
             </h2>
             <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-sm leading-[1.8]">
               Start med en gratis 20-minutters intro-samtale. Ingen forpliktelser — bare en åpen prat om hva du ønsker å jobbe med. Etter samtalen avgjør du selv om du ønsker å gå videre.

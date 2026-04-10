@@ -49,12 +49,12 @@ export default function ReferanserPage() {
       {/* HERO */}
       <section className="py-24 px-6 border-b border-[#E2DDD7]">
         <div className="max-w-7xl mx-auto">
-          <p className="font-[family-name:var(--font-dm)] text-[#C8963A] text-xs font-semibold tracking-[0.2em] uppercase mb-6">
+          <p className="font-[family-name:var(--font-dm)] text-[#64C8C8] text-xs font-semibold tracking-[0.2em] uppercase mb-6">
             Referanser
           </p>
           <h1 className="font-[family-name:var(--font-playfair)] text-[clamp(3rem,8vw,7rem)] text-[#111110] font-bold leading-[1.0]">
             Ekte<br />
-            <em>endring</em>
+            <em className="text-[#002850]">endring</em>
           </h1>
         </div>
       </section>
@@ -103,7 +103,7 @@ export default function ReferanserPage() {
         <div className="absolute inset-0 flex items-center justify-center px-6">
           <p className="font-[family-name:var(--font-playfair)] text-[clamp(1.8rem,4vw,3.5rem)] font-bold italic text-white text-center max-w-3xl leading-tight">
             Den beste investeringen du kan gjøre,{" "}
-            <em className="text-[#C8963A] not-italic font-bold">er i deg selv.</em>
+            <em className="text-[#64C8C8] not-italic font-bold">er i deg selv.</em>
           </p>
         </div>
       </section>

@@ -21,7 +21,7 @@ export default function RotatingWord() {
 
   return (
     <em
-      className="text-[#C8963A] inline-block transition-all duration-300"
+      className="text-[#002850] inline-block transition-all duration-300"
       style={{
         opacity: visible ? 1 : 0,
         transform: visible ? "translateY(0)" : "translateY(8px)",

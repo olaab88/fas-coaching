@@ -14,12 +14,12 @@ export default function KontaktPage() {
       {/* HERO */}
       <section className="py-24 px-6 border-b border-[#E2DDD7]">
         <div className="max-w-7xl mx-auto">
-          <p className="font-[family-name:var(--font-dm)] text-[#C8963A] text-xs font-semibold tracking-[0.2em] uppercase mb-6">
+          <p className="font-[family-name:var(--font-dm)] text-[#64C8C8] text-xs font-semibold tracking-[0.2em] uppercase mb-6">
             Kontakt
           </p>
           <h1 className="font-[family-name:var(--font-playfair)] text-[clamp(3rem,8vw,7rem)] text-[#111110] font-bold leading-[1.0]">
             La oss ta en<br />
-            <em>prat</em>
+            <em className="text-[#002850]">prat</em>
           </h1>
           <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-base mt-6 max-w-lg leading-relaxed">
             Send en melding og jeg svarer innen én arbeidsdag. Eller ring direkte.
@@ -142,7 +142,7 @@ export default function KontaktPage() {
       {/* MAP */}
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
-          <p className="font-[family-name:var(--font-dm)] text-[#C8963A] text-xs font-semibold tracking-[0.2em] uppercase mb-5">
+          <p className="font-[family-name:var(--font-dm)] text-[#64C8C8] text-xs font-semibold tracking-[0.2em] uppercase mb-5">
             Finn oss
           </p>
           <div className="rounded-2xl overflow-hidden border border-[#E2DDD7]" style={{ height: "420px" }}>

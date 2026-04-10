@@ -30,12 +30,12 @@ export default function OmPage() {
       {/* HERO */}
       <section className="py-24 px-6 border-b border-[#E2DDD7]">
         <div className="max-w-7xl mx-auto">
-          <p className="font-[family-name:var(--font-dm)] text-[#C8963A] text-xs font-semibold tracking-[0.2em] uppercase mb-6">
+          <p className="font-[family-name:var(--font-dm)] text-[#64C8C8] text-xs font-semibold tracking-[0.2em] uppercase mb-6">
             Om meg
           </p>
           <h1 className="font-[family-name:var(--font-playfair)] text-[clamp(3rem,8vw,7rem)] text-[#111110] font-bold leading-[1.0]">
             Finn Arne<br />
-            <em>Sivertsen</em>
+            <em className="text-[#002850]">Sivertsen</em>
           </h1>
         </div>
       </section>
@@ -58,7 +58,7 @@ export default function OmPage() {
                 />
               </div>
               <div className="absolute -bottom-5 -right-4 bg-[#141210] rounded-2xl px-6 py-5 shadow-xl">
-                <p className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-[#C8963A]">5+</p>
+                <p className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-[#64C8C8]">5+</p>
                 <p className="font-[family-name:var(--font-dm)] text-white/60 text-xs mt-0.5">år som coach</p>
               </div>
             </div>
@@ -116,12 +116,12 @@ export default function OmPage() {
       <section className="py-20 px-6 bg-[#141210]">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="font-[family-name:var(--font-dm)] text-[#C8963A] text-xs font-semibold tracking-[0.2em] uppercase mb-4">
+            <p className="font-[family-name:var(--font-dm)] text-[#64C8C8] text-xs font-semibold tracking-[0.2em] uppercase mb-4">
               Kompetanse
             </p>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-white leading-tight">
               Sertifiseringer<br />
-              <em>& utdanning</em>
+              <em className="text-[#64C8C8]">& utdanning</em>
             </h2>
             <p className="font-[family-name:var(--font-dm)] text-white/40 text-sm leading-relaxed mt-4 max-w-xs">
               Solid faglig fundament kombinert med mange år i praksis.
@@ -130,7 +130,7 @@ export default function OmPage() {
           <div className="grid grid-cols-2 gap-3">
             {certs.map((c) => (
               <div key={c.num} className="bg-white/5 rounded-xl p-5 border border-white/8">
-                <span className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-[#C8963A]">{c.num}</span>
+                <span className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-[#64C8C8]">{c.num}</span>
                 <p className="font-[family-name:var(--font-dm)] text-white/60 text-sm mt-2 leading-snug">{c.title}</p>
               </div>
             ))}
@@ -149,7 +149,7 @@ export default function OmPage() {
             <blockquote>
               <p className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-[#111110] leading-snug italic">
                 &ldquo;Coaching handler ikke om å gi svar — det handler om å hjelpe deg{" "}
-                <span className="text-[#C8963A] not-italic font-semibold">finne dine egne.&rdquo;</span>
+                <span className="text-[#002850] not-italic font-semibold">finne dine egne.&rdquo;</span>
               </p>
             </blockquote>
             <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-sm leading-relaxed">

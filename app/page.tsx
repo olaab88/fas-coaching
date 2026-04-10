@@ -77,8 +77,8 @@ export default function HomePage() {
 
           {/* Left: Text */}
           <div className="space-y-8">
-            <div className="inline-flex items-center gap-2 bg-[#F5E4C3] text-[#8B5E1A] rounded-full px-4 py-1.5 text-xs font-[family-name:var(--font-dm)] font-semibold tracking-wide">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#C8963A]" />
+            <div className="inline-flex items-center gap-2 bg-[#E8F7F7] text-[#00617A] rounded-full px-4 py-1.5 text-xs font-[family-name:var(--font-dm)] font-semibold tracking-wide">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#64C8C8]" />
               Coaching · Lørenskog & digitalt
             </div>
 
@@ -159,12 +159,12 @@ export default function HomePage() {
 
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
             <div>
-              <p className="font-[family-name:var(--font-dm)] text-[#C8963A] text-xs font-semibold tracking-[0.2em] uppercase mb-3">
+              <p className="font-[family-name:var(--font-dm)] text-[#64C8C8] text-xs font-semibold tracking-[0.2em] uppercase mb-3">
                 Hva jeg tilbyr
               </p>
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl font-bold text-[#111110] leading-tight">
                 Seks veier til<br />
-                <em>bedre livskvalitet</em>
+                <em className="text-[#002850]">bedre livskvalitet</em>
               </h2>
             </div>
             <Link
@@ -189,7 +189,7 @@ export default function HomePage() {
                   />
                 </div>
                 <div className="p-5">
-                  <span className="font-[family-name:var(--font-dm)] text-[10px] font-bold tracking-widest uppercase text-[#C8963A]">
+                  <span className="font-[family-name:var(--font-dm)] text-[10px] font-bold tracking-widest uppercase text-[#64C8C8]">
                     {area.tag}
                   </span>
                   <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-[#111110] mt-1 mb-2">
@@ -238,12 +238,12 @@ export default function HomePage() {
 
           {/* Text */}
           <div className="space-y-6">
-            <p className="font-[family-name:var(--font-dm)] text-[#C8963A] text-xs font-semibold tracking-[0.2em] uppercase">
+            <p className="font-[family-name:var(--font-dm)] text-[#64C8C8] text-xs font-semibold tracking-[0.2em] uppercase">
               Om Finn Arne
             </p>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl font-bold text-[#111110] leading-tight">
               Profesjonell coach<br />
-              <em>for hele livet</em>
+              <em className="text-[#002850]">for hele livet</em>
             </h2>
             <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-base leading-[1.8]">
               Jeg er en profesjonell business- og livsstilscoach som hjelper både voksne og barn til å forme et eget perspektiv på livet. Ditt liv kan bli mye bedre med positiv tenking, livsglede, bedre helse og en mer effektiv og morsommere hverdag.
@@ -252,7 +252,7 @@ export default function HomePage() {
               Jeg kan hjelpe deg med verktøy og teknikker, og utvikle vaner og ferdigheter som gjør at du effektivt, og med et helt nytt perspektiv, kan håndtere de utfordringene du møter i livet. Samtaler kan gjøres via telefon, video eller personlig møte.
             </p>
 
-            <blockquote className="border-l-2 border-[#C8963A] pl-5 py-1">
+            <blockquote className="border-l-2 border-[#002850] pl-5 py-1">
               <p className="font-[family-name:var(--font-playfair)] text-xl italic text-[#111110] leading-snug">
                 &ldquo;Hvis du gjør det du alltid har gjort, får du det du alltid har fått.&rdquo;
               </p>
@@ -274,12 +274,12 @@ export default function HomePage() {
 
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-14">
             <div>
-              <p className="font-[family-name:var(--font-dm)] text-[#C8963A] text-xs font-semibold tracking-[0.2em] uppercase mb-3">
+              <p className="font-[family-name:var(--font-dm)] text-[#64C8C8] text-xs font-semibold tracking-[0.2em] uppercase mb-3">
                 Referanser
               </p>
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl font-bold text-white leading-tight">
                 Hva sier<br />
-                <em className="text-[#C8963A]">klientene?</em>
+                <em className="text-[#64C8C8]">klientene?</em>
               </h2>
             </div>
             <Link
@@ -316,12 +316,12 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
           <div className="space-y-7">
-            <p className="font-[family-name:var(--font-dm)] text-[#C8963A] text-xs font-semibold tracking-[0.2em] uppercase">
+            <p className="font-[family-name:var(--font-dm)] text-[#64C8C8] text-xs font-semibold tracking-[0.2em] uppercase">
               Kom i gang
             </p>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl font-bold text-[#111110] leading-tight">
               Klar for å starte<br />
-              <em>din reise?</em>
+              <em className="text-[#002850]">din reise?</em>
             </h2>
             <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-base leading-[1.8]">
               Start med en gratis 20-minutters intro-samtale. Ingen forpliktelser — bare en åpen prat om hva du ønsker å jobbe med.

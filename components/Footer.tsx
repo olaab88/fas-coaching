@@ -63,7 +63,7 @@ export default function Footer() {
               ].map(({ icon: Icon, label, href }) => (
                 <li key={label}>
                   <a href={href} className="flex items-center gap-2.5 group cursor-pointer">
-                    <Icon size={12} className="text-[#C8963A] shrink-0" />
+                    <Icon size={12} className="text-[#64C8C8] shrink-0" />
                     <span className="font-[family-name:var(--font-dm)] text-white/45 group-hover:text-white text-sm transition-colors duration-150">{label}</span>
                   </a>
                 </li>
