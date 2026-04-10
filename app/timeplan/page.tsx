@@ -44,8 +44,8 @@ export default function TimeplanPage() {
           </div>
           <div className="relative h-80 lg:h-[520px]">
             <Image
-              src="/images/site_img_h.jpg"
-              alt="Coaching session"
+              src="/images/hero_timeplan.jpg"
+              alt="Profesjonell coaching"
               fill
               sizes="(max-width:1024px)100vw,50vw"
               className="object-cover"

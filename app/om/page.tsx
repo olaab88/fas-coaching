@@ -42,15 +42,16 @@ export default function OmPage() {
               Sertifisert coach med over 5 år erfaring. Hjelper deg å finne din vei.
             </p>
           </div>
-          <div className="relative h-80 lg:h-[520px] bg-[#F0EEEB]">
+          <div className="relative h-80 lg:h-[520px]">
             <Image
-              src="/images/finn_arne_outdoor.png"
-              alt="Finn Arne Sivertsen"
+              src="/images/hero_om.jpg"
+              alt="Norsk natur"
               fill
               sizes="(max-width:1024px)100vw,50vw"
-              className="object-contain object-top"
+              className="object-cover object-center"
               priority
             />
+            <div className="absolute inset-0 bg-[#111110]/10" />
           </div>
         </div>
       </section>
@@ -62,13 +63,13 @@ export default function OmPage() {
           {/* Photos */}
           <div className="lg:col-span-5 space-y-4">
             <div className="relative">
-              <div className="rounded-3xl overflow-hidden aspect-[4/5] relative bg-[#F0EEEB]">
+              <div className="rounded-3xl overflow-hidden aspect-square relative">
                 <Image
                   src="/images/finn_arne.png"
                   alt="Finn Arne Sivertsen — FAS Coaching"
                   fill
                   sizes="(max-width:1024px)100vw,42vw"
-                  className="object-contain object-top"
+                  className="object-cover object-top"
                   priority
                 />
               </div>
@@ -77,13 +78,13 @@ export default function OmPage() {
                 <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-xs mt-1.5">år som coach</p>
               </div>
             </div>
-            <div className="rounded-2xl overflow-hidden aspect-[2/3] relative mt-8 bg-[#F0EEEB]">
+            <div className="rounded-2xl overflow-hidden aspect-[4/3] relative mt-8">
               <Image
                 src="/images/site_img_d.jpg"
-                alt="Finn Arne Sivertsen — aktivitet"
+                alt="Finn Arne Sivertsen — aktivitet utendørs"
                 fill
                 sizes="(max-width:1024px)100vw,42vw"
-                className="object-contain object-center"
+                className="object-cover object-top"
                 quality={85}
               />
             </div>

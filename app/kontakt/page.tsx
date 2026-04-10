@@ -28,8 +28,8 @@ export default function KontaktPage() {
           </div>
           <div className="relative h-80 lg:h-[520px]">
             <Image
-              src="/images/site_img_b.jpg"
-              alt="Ta kontakt"
+              src="/images/hero_kontakt.jpg"
+              alt="Ta kontakt med FAS Coaching"
               fill
               sizes="(max-width:1024px)100vw,50vw"
               className="object-cover"

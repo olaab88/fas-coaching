@@ -61,10 +61,10 @@ export default function ReferanserPage() {
               Les hva klienter sier om sitt møte med coaching — i egne ord.
             </p>
           </div>
-          <div className="relative h-80 lg:h-[520px]">
+          <div className="relative h-80 lg:h-[520px] rounded-none">
             <Image
-              src="/images/site_img_f.png"
-              alt="Coaching"
+              src="/images/hero_referanser.jpg"
+              alt="Coaching samtale"
               fill
               sizes="(max-width:1024px)100vw,50vw"
               className="object-cover"
