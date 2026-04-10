@@ -298,7 +298,7 @@ export default function HomePage() {
                     <Star key={j} size={12} className="fill-[#C8963A] text-[#C8963A]" />
                   ))}
                 </div>
-                <p className="font-[family-name:var(--font-playfair)] text-base italic font-light text-white/80 leading-relaxed flex-1">
+                <p className="font-[family-name:var(--font-dm)] text-sm text-white/90 leading-relaxed flex-1">
                   &ldquo;{t.quote}&rdquo;
                 </p>
                 <div className="pt-4 border-t border-white/10">

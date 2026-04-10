@@ -79,7 +79,7 @@ export default function ReferanserPage() {
               <div className="flex gap-1">
                 {[...Array(5)].map((_, j) => <Star key={j} size={12} className="fill-[#C8963A] text-[#C8963A]" />)}
               </div>
-              <p className="font-[family-name:var(--font-playfair)] text-base italic font-light text-[#111110] leading-relaxed flex-1">
+              <p className="font-[family-name:var(--font-dm)] text-sm text-[#2C2C2C] leading-relaxed flex-1">
                 &ldquo;{t.quote}&rdquo;
               </p>
               <div className="flex items-center justify-between pt-4 border-t border-[#F8F7F4]">
