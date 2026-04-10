@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { MapPin, Mail, Clock, Phone, ArrowRight } from "lucide-react";
+import { MapPin, Mail, Clock, Phone } from "lucide-react";
 import type { Metadata } from "next";
+import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
   title: "Kontakt FAS Coaching — Coach i Lørenskog | Book gratis intro",
@@ -50,65 +51,7 @@ export default function KontaktPage() {
             <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-[#111110] mb-8">
               Send en melding
             </h2>
-            <form className="space-y-5" action="#" method="POST">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div>
-                  <label htmlFor="navn" className="block font-[family-name:var(--font-dm)] text-xs font-semibold text-[#111110] tracking-[0.1em] uppercase mb-2">
-                    Navn
-                  </label>
-                  <input
-                    type="text" id="navn" name="navn" required
-                    placeholder="Ditt fulle navn"
-                    className="w-full px-4 py-3 rounded-xl border border-[#E2DDD7] bg-white font-[family-name:var(--font-dm)] text-sm text-[#111110] placeholder:text-[#B8B4AE] focus:outline-none focus:border-[#111110] focus:ring-2 focus:ring-[#111110]/8 transition-all"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="epost" className="block font-[family-name:var(--font-dm)] text-xs font-semibold text-[#111110] tracking-[0.1em] uppercase mb-2">
-                    E-post
-                  </label>
-                  <input
-                    type="email" id="epost" name="epost" required
-                    placeholder="din@epost.no"
-                    className="w-full px-4 py-3 rounded-xl border border-[#E2DDD7] bg-white font-[family-name:var(--font-dm)] text-sm text-[#111110] placeholder:text-[#B8B4AE] focus:outline-none focus:border-[#111110] focus:ring-2 focus:ring-[#111110]/8 transition-all"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="emne" className="block font-[family-name:var(--font-dm)] text-xs font-semibold text-[#111110] tracking-[0.1em] uppercase mb-2">
-                  Hva gjelder det?
-                </label>
-                <select
-                  id="emne" name="emne"
-                  className="w-full px-4 py-3 rounded-xl border border-[#E2DDD7] bg-white font-[family-name:var(--font-dm)] text-sm text-[#111110] focus:outline-none focus:border-[#111110] focus:ring-2 focus:ring-[#111110]/8 transition-all cursor-pointer"
-                >
-                  <option value="">Velg kategori...</option>
-                  <option value="intro">Gratis intro-samtale</option>
-                  <option value="individuell">Individuell coaching — voksen</option>
-                  <option value="barn">Coaching for barn/unge</option>
-                  <option value="gruppe">Gruppecoaching</option>
-                  <option value="annet">Annet spørsmål</option>
-                </select>
-              </div>
-
-              <div>
-                <label htmlFor="melding" className="block font-[family-name:var(--font-dm)] text-xs font-semibold text-[#111110] tracking-[0.1em] uppercase mb-2">
-                  Melding
-                </label>
-                <textarea
-                  id="melding" name="melding" rows={6} required
-                  placeholder="Fortell litt om deg selv og hva du ønsker å jobbe med..."
-                  className="w-full px-4 py-3 rounded-xl border border-[#E2DDD7] bg-white font-[family-name:var(--font-dm)] text-sm text-[#111110] placeholder:text-[#B8B4AE] focus:outline-none focus:border-[#111110] focus:ring-2 focus:ring-[#111110]/8 transition-all resize-none"
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="inline-flex items-center gap-2 bg-[#111110] text-white font-[family-name:var(--font-dm)] font-medium px-8 py-4 rounded-full hover:bg-[#002850] transition-colors duration-200 cursor-pointer text-sm"
-              >
-                Send melding <ArrowRight size={14} />
-              </button>
-            </form>
+            <ContactForm />
           </div>
 
           {/* Sidebar */}
@@ -130,7 +73,7 @@ export default function KontaktPage() {
                     </div>
                     <div>
                       <p className="font-[family-name:var(--font-dm)] font-semibold text-[#111110] text-xs tracking-wide uppercase">{label}</p>
-                      <a href={href} className="font-[family-name:var(--font-dm)] text-[#111110] hover:text-[#111110] text-sm mt-0.5 transition-colors leading-relaxed">
+                      <a href={href} className="font-[family-name:var(--font-dm)] text-[#111110] text-sm mt-0.5 transition-colors leading-relaxed">
                         {value}
                       </a>
                     </div>
