@@ -126,14 +126,14 @@ export default function HomePage() {
           {/* Right: Full-height photo */}
           <div className="relative lg:w-[48%] h-72 lg:h-auto">
             {/* On mobile: normal flow with aspect ratio; on lg: absolute fill right side */}
-            <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:left-0 rounded-3xl lg:rounded-none lg:rounded-l-3xl overflow-hidden h-full min-h-72 bg-[#F0EEEB]">
+            <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:left-0 rounded-3xl lg:rounded-none lg:rounded-l-3xl overflow-hidden h-full min-h-72">
               <Image
                 src="/images/finn_arne_outdoor.png"
                 alt="Finn Arne Sivertsen — FAS Coaching"
                 fill
                 priority
                 sizes="(max-width:1024px)100vw,48vw"
-                className="object-contain object-top"
+                className="object-cover object-top"
                 quality={90}
               />
               <div className="absolute inset-0 bg-gradient-to-r from-[#F8F7F4]/20 to-transparent lg:block hidden" />
@@ -170,8 +170,8 @@ export default function HomePage() {
                 Hva jeg tilbyr
               </p>
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl font-bold text-[#111110] leading-tight">
-                Seks veier til<br />
-                <span className="text-[#002850]">bedre livskvalitet</span>
+                Coaching i Lørenskog<br />
+                <span className="text-[#002850]">og digitalt</span>
               </h2>
             </div>
             <Link
@@ -231,13 +231,13 @@ export default function HomePage() {
 
           {/* Photo */}
           <div className="relative">
-            <div className="rounded-3xl overflow-hidden aspect-[4/5] relative bg-[#F0EEEB]">
+            <div className="rounded-3xl overflow-hidden aspect-[4/5] relative">
               <Image
-                src="/images/finn_arne.png"
+                src="/images/site_img_b.jpg"
                 alt="Finn Arne Sivertsen — FAS Coaching"
                 fill
                 sizes="(max-width:1024px)100vw,50vw"
-                className="object-contain object-top"
+                className="object-cover object-top"
                 quality={90}
               />
             </div>
@@ -316,6 +316,49 @@ export default function HomePage() {
                   <p className="font-[family-name:var(--font-dm)] font-semibold text-white text-sm">{t.name}</p>
                   <p className="font-[family-name:var(--font-dm)] text-white/85 text-xs mt-0.5">{t.role}</p>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ ──────────────────────────────────────── */}
+      <section className="py-24 px-6 bg-[#F8F7F4]">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-14">
+            <p className="font-[family-name:var(--font-dm)] text-[#64C8C8] text-xs font-semibold tracking-[0.2em] uppercase mb-3">
+              Ofte stilte spørsmål
+            </p>
+            <h2 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl font-bold text-[#111110] leading-tight">
+              Vanlige <span className="text-[#002850]">spørsmål</span>
+            </h2>
+          </div>
+          <div className="space-y-4">
+            {[
+              {
+                q: "Hva er coaching — og hva er forskjellen på coach og terapeut?",
+                a: "En coach hjelper deg fremover mot mål og ønsket fremtid, med fokus på ressurser og løsninger. En terapeut arbeider primært med fortiden og behandling av psykiske lidelser. Coaching er ikke terapi, men et strukturert samarbeid om vekst og endring."
+              },
+              {
+                q: "Hva koster en coachingtime?",
+                a: "Ta kontakt for pris — jeg tilpasser tilbud etter behov og forløpets lengde. Jeg tilbyr alltid en gratis 20-minutters intro-samtale slik at du kan kjenne om dette er riktig for deg, uten noen forpliktelse."
+              },
+              {
+                q: "Kan jeg ta samtaler digitalt eller per telefon?",
+                a: "Ja. Coaching tilbys fysisk på Skårerveien 12 i Lørenskog, men like gjerne via Teams, Zoom eller telefon. Mange klienter foretrekker digitale samtaler og opplever dem like effektive."
+              },
+              {
+                q: "Hvor mange timer trenger jeg?",
+                a: "Det varierer fra person til person og avhenger av hva du ønsker å jobbe med. Noen opplever stor endring etter 2–3 samtaler. Andre jobber over flere måneder. Vi finner rytmen som passer deg."
+              },
+              {
+                q: "Tilbyr du coaching for barn og unge?",
+                a: "Ja. Finn Arne har spesialisering innen coaching for barn og unge, og har god erfaring med å jobbe med ungdom i ulike livssituasjoner — fra skole og prestasjonspress til sorg og relasjoner."
+              },
+            ].map(({ q, a }, i) => (
+              <div key={i} className="bg-white rounded-2xl border border-[#E2DDD7] p-6 space-y-2">
+                <h3 className="font-[family-name:var(--font-dm)] font-semibold text-[#111110] text-[1rem]">{q}</h3>
+                <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-sm leading-relaxed">{a}</p>
               </div>
             ))}
           </div>

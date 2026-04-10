@@ -4,8 +4,9 @@ import { ArrowRight, Check } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Om meg — FAS Coaching",
-  description: "Lær mer om Finn Arne Sivertsen og FAS Coaching. Profesjonell coaching i livsstil, karriere, relasjoner, sorg, idrett og ledelse — i Lørenskog.",
+  title: "Finn Arne Sivertsen — Sertifisert Coach i Lørenskog | FAS Coaching",
+  description: "Lær mer om Finn Arne Sivertsen, sertifisert livsstils- og businesscoach med over 5 års erfaring. Coaching i Lørenskog og digitalt for voksne og barn.",
+  alternates: { canonical: "https://www.fas-coaching.no/om" },
 };
 
 const values = [
@@ -172,8 +173,8 @@ export default function OmPage() {
       {/* QUOTE / CTA */}
       <section className="py-24 px-6 bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="h-72 lg:h-[400px] rounded-3xl overflow-hidden relative">
-            <Image src="/images/site_img_f.png" alt="" fill className="object-cover" quality={80} />
+          <div className="aspect-[4/3] rounded-3xl overflow-hidden relative">
+            <Image src="/images/cliff_new3.jpg" alt="" fill className="object-cover object-center" quality={80} />
             <div className="absolute inset-0 bg-[#141210]/40" />
           </div>
           <div className="space-y-6">
