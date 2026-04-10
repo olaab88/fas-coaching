@@ -1,62 +1,52 @@
 @import "tailwindcss";
 
 @theme {
-  --color-warm-black: #1C1917;
-  --color-warm-charcoal: #292524;
-  --color-warm-stone: #44403C;
-  --color-warm-white: #FAFAF9;
-  --color-warm-cream: #F5F0EB;
-  --color-warm-sand: #E8DDD0;
-  --color-gold: #CA8A04;
-  --color-gold-light: #D97706;
-  --color-gold-muted: #92400E;
+  /* ── Logo-extracted palette ── */
+  --color-brand-olive:   #7A8E3E;   /* olive green from logo (darkened for contrast) */
+  --color-brand-olive-light: #9EAB5C; /* original logo olive */
+  --color-brand-gold:    #C8963A;   /* warm gold from logo (deepened) */
+  --color-brand-gold-light: #E8B96A; /* lighter gold */
+  --color-brand-sand:    #F3CB91;   /* sandy warmth from logo */
 
-  --font-heading: var(--font-cormorant), "Georgia", serif;
-  --font-body: var(--font-quicksand), "system-ui", sans-serif;
+  /* ── Neutrals ── */
+  --color-cream:         #FAF8F2;   /* warm off-white background */
+  --color-cream-dark:    #F0EBE0;   /* slightly darker cream for sections */
+  --color-warm-dark:     #1A1A12;   /* very warm near-black */
+  --color-warm-mid:      #2D2C1F;   /* warm dark brown for text */
+  --color-warm-muted:    #6B6852;   /* warm muted for captions */
+  --color-warm-border:   #DDD5C0;   /* warm beige border */
 
-  --ease-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
+  --font-heading: var(--font-caveat), "Georgia", cursive;
+  --font-body:    var(--font-quicksand), "system-ui", sans-serif;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
-  background-color: #FAFAF9;
-  color: #1C1917;
+  background-color: #FAF8F2;
+  color: #2D2C1F;
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5 {
   font-family: var(--font-heading);
-  letter-spacing: -0.01em;
 }
 
 ::selection {
-  background-color: #CA8A04;
-  color: #FAFAF9;
+  background-color: #9EAB5C;
+  color: #FAF8F2;
 }
 
-/* Scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: #F5F0EB;
-}
-::-webkit-scrollbar-thumb {
-  background: #44403C;
-  border-radius: 3px;
-}
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #F0EBE0; }
+::-webkit-scrollbar-thumb { background: #7A8E3E; border-radius: 3px; }
 
-/* Smooth image rendering */
-img {
-  image-rendering: auto;
+img { image-rendering: auto; }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-33.333%); }
 }

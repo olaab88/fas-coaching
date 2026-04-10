@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Quicksand } from "next/font/google";
+import { Caveat, Quicksand } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const caveat = Caveat({
+  variable: "--font-caveat",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  style: ["normal", "italic"],
+  weight: ["400", "500", "600", "700"],
 });
 
 const quicksand = Quicksand({
@@ -21,14 +20,7 @@ export const metadata: Metadata = {
   title: "FAS Coaching — Livsstil & Personlig Utvikling",
   description:
     "Profesjonell livsstilscoaching for voksne og barn. Hjelper deg til å forme et eget perspektiv på livet. Basert i Lørenskog.",
-  keywords: [
-    "livsstilscoaching",
-    "coaching",
-    "personlig utvikling",
-    "Lørenskog",
-    "Oslo",
-    "FAS Coaching",
-  ],
+  keywords: ["livsstilscoaching", "coaching", "personlig utvikling", "Lørenskog", "Oslo"],
   openGraph: {
     title: "FAS Coaching",
     description: "Profesjonell livsstilscoaching for voksne og barn.",
@@ -41,15 +33,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="nb"
-      className={`${cormorant.variable} ${quicksand.variable}`}
-    >
-      <body className="min-h-screen flex flex-col antialiased">
+    <html lang="nb" className={`${caveat.variable} ${quicksand.variable}`}>
+      <body className="min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
