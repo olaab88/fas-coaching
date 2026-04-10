@@ -96,7 +96,7 @@ export default function OmPage() {
               <p className="font-[family-name:var(--font-dm)] text-[#64C8C8] text-sm font-semibold tracking-wide">FAS Coaching</p>
             </div>
 
-            <blockquote className="border-l-2 border-[#C8963A] pl-5 py-1">
+            <blockquote className="border-l-2 border-[#002850] pl-5 py-1">
               <p className="font-[family-name:var(--font-playfair)] text-xl italic text-[#111110] leading-snug">
                 &ldquo;Hvis du gjør det du alltid har gjort, får du det du alltid har fått.&rdquo;
               </p>
