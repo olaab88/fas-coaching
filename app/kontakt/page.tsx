@@ -105,9 +105,9 @@ export default function KontaktPage() {
               </h3>
               <div className="space-y-4">
                 {[
-                  { icon: Phone, label: "Telefon", value: "+47 41 12 21 29", href: "tel:+4741122129" },
-                  { icon: Mail, label: "E-post", value: "post@fas-coaching.no", href: "mailto:post@fas-coaching.no" },
-                  { icon: MapPin, label: "Adresse", value: "Skårerveien 12, Lørenskog", href: "#" },
+                  { icon: Phone, label: "Telefon", value: "+47 906 90 635", href: "tel:+4790690635" },
+                  { icon: Mail, label: "E-post", value: "finnarnes@yahoo.no", href: "mailto:finnarnes@yahoo.no" },
+                  { icon: MapPin, label: "Adresse", value: "Skårerveien 12, 1470 Lørenskog", href: "#" },
                   { icon: Clock, label: "Åpningstider", value: "Man–fre 09:00–17:00", href: "#" },
                 ].map(({ icon: Icon, label, value, href }) => (
                   <div key={label} className="flex items-start gap-4">

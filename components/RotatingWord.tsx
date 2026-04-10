@@ -1,0 +1,33 @@
+"use client";
+
+import { useState, useEffect } from "react";
+
+const words = ["retning", "klarhet", "balanse", "fremgang", "mot", "mening"];
+
+export default function RotatingWord() {
+  const [index, setIndex] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setVisible(false);
+      setTimeout(() => {
+        setIndex((i) => (i + 1) % words.length);
+        setVisible(true);
+      }, 400);
+    }, 2800);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <em
+      className="text-[#C8963A] inline-block transition-all duration-300"
+      style={{
+        opacity: visible ? 1 : 0,
+        transform: visible ? "translateY(0)" : "translateY(8px)",
+      }}
+    >
+      {words[index]}
+    </em>
+  );
+}

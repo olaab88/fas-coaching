@@ -1,20 +1,63 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Star, Phone, Mail, MapPin } from "lucide-react";
+import RotatingWord from "@/components/RotatingWord";
 
 const areas = [
-  { label: "Livsstilscoaching",   tag: "Livsstil",  img: "/images/img1.jpg", desc: "Finn balansen mellom hvem du er og hvordan du lever hverdagen." },
-  { label: "Karrierecoaching",    tag: "Karriere",  img: "/images/img2.jpg", desc: "Retning, mål og mot til å ta det neste steget i karrieren." },
-  { label: "Relasjonsveiledning", tag: "Relasjoner",img: "/images/img3.jpg", desc: "Bedre kommunikasjon og dypere, mer ærlige forbindelser." },
-  { label: "Sorgveiledning",      tag: "Sorg",      img: "/images/img4.jpg", desc: "Et trygt rom for å bearbeide tap og vanskelige tider." },
-  { label: "Idrettscoaching",     tag: "Idrett",    img: "/images/img5.jpg", desc: "Mental styrke og fokus for å prestere på ditt beste." },
-  { label: "Ledelsescoaching",    tag: "Ledelse",   img: "/images/img6.jpg", desc: "Bli lederen som inspirerer, engasjerer og leverer resultater." },
+  {
+    label: "Livsstilscoaching",
+    tag: "Livsstil",
+    img: "/images/site_img_n.jpg",
+    desc: "Få mest mulig ut av livet! Det er viktig å ta de riktige og gode valgene for å kunne ha en langsiktig og god fremtid. Vi hjelper deg ut av sirkelen.",
+  },
+  {
+    label: "Prestasjonscoaching",
+    tag: "Prestasjon",
+    img: "/images/site_img_m.jpg",
+    desc: "For å prestere sitt ytterste i sport eller innenfor bil- og MC-kjøring er det viktig med fokus. Jeg har utviklet verktøy for å prestere under høyt press.",
+  },
+  {
+    label: "Relasjonscoaching",
+    tag: "Relasjoner",
+    img: "/images/site_img_j.jpg",
+    desc: "Vi har ikke kontroll over hva andre gjør, men vi kan ta kontroll over vår egen respons. Lær å håndtere mellommenneskelige forhold bedre.",
+  },
+  {
+    label: "Sorgbearbeiding",
+    tag: "Sorg",
+    img: "/images/site_img_i.png",
+    desc: "Det å miste noen er vondt. Jeg jobber både med barn og voksne, og har god erfaring med sorgbearbeiding etter tap, skilsmisse og livskriser.",
+  },
+  {
+    label: "Karrierecoaching",
+    tag: "Karriere",
+    img: "/images/site_img_g.jpg",
+    desc: "Sitter du fast i tankerekker på jobb? Ta kontakt så kan vi se potensialet i å oppnå flere av dine personlige og profesjonelle mål.",
+  },
+  {
+    label: "Ledelsescoaching",
+    tag: "Ledelse",
+    img: "/images/site_img_h.jpg",
+    desc: "Ønsker du som leder å få til et bedre samarbeid med ansatte? Jeg har mange verktøy og teknikker som kan hjelpe deg med å lede mer effektivt.",
+  },
 ];
 
 const testimonials = [
-  { quote: "FAS Coaching forandret måten jeg ser på meg selv. Etter noen samtaler hadde jeg verktøy jeg ikke visste jeg trengte.", name: "Maria H.", role: "Pedagog, Oslo" },
-  { quote: "Ingen press, ingen fasitsvar — bare ekte lytting og de rette spørsmålene. Utrolig varmt og profesjonelt.", name: "Thomas A.", role: "Bedriftsleder, Lørenskog" },
-  { quote: "Datteren min blomstret etter coaching her. Anbefales på det varmeste.", name: "Kari M.", role: "Mor til 14-åring" },
+  {
+    quote: "Finn Arne er en mann som virkelig får deg til å finne ut av hvem som er viktigst i livet og hva som er viktigst ved å lytte hjerte og følelser. Jeg hadde ikke kommet dit jeg er i dag på 4 mnd uten hans hjelp.",
+    name: "Jon Henning",
+    role: "42 år",
+  },
+  {
+    quote: "Når jeg kom til deg hadde jeg få eller ingen positive tanker. Du fikk meg til å gå i meg selv og vi fant raskt noen av årsakene til mine problemer. Nå smiler livet igjen.",
+    name: "Tore",
+    role: "38 år",
+  },
+  {
+    quote: "Han er ikke belærende, ikke instruerende, men er meget god til å stille spørsmål. Gjennom gode samtaler leder han meg gjennom nye måter å se ting på.",
+    name: "Per",
+    role: "40 år",
+  },
 ];
 
 const stats = [
@@ -39,14 +82,14 @@ export default function HomePage() {
               Coaching · Lørenskog & digitalt
             </div>
 
-            <h1 className="font-[family-name:var(--font-playfair)] text-[clamp(3rem,6vw,5.5rem)] text-[#111110] leading-[1.05] font-bold">
+            <h1 className="font-[family-name:var(--font-playfair)] text-[clamp(2.8rem,5.5vw,5rem)] text-[#111110] leading-[1.05] font-bold">
               Coaching som<br />
               gir deg<br />
-              <em className="not-italic text-[#C8963A]">retning.</em>
+              <RotatingWord />
             </h1>
 
             <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-lg leading-relaxed max-w-md">
-              Profesjonell coaching for deg som ønsker å vokse i liv, karriere og relasjoner — i trygge, konfidensielle omgivelser.
+              Jeg er Finn Arne Sivertsen — profesjonell business- og livsstilscoach som hjelper både voksne og barn til å forme et eget perspektiv på livet.
             </p>
 
             <div className="flex flex-wrap gap-3">
@@ -60,7 +103,7 @@ export default function HomePage() {
                 href="/om"
                 className="inline-flex items-center gap-2 text-[#111110] border border-[#E2DDD7] font-[family-name:var(--font-dm)] font-medium px-6 py-3.5 rounded-full hover:border-[#111110] transition-colors duration-200 cursor-pointer text-sm"
               >
-                Les mer
+                Les mer om meg
               </Link>
             </div>
 
@@ -75,30 +118,30 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right: Image */}
+          {/* Right: Finn Arne photo */}
           <div className="relative order-first lg:order-last">
             <div className="relative rounded-3xl overflow-hidden aspect-[4/5] lg:aspect-[3/4]">
               <Image
-                src="/images/hero_hires.jpg"
-                alt="FAS Coaching"
+                src="/images/site_img_d.jpg"
+                alt="Finn Arne Sivertsen — FAS Coaching"
                 fill
                 priority
                 sizes="(max-width:1024px)100vw,50vw"
                 className="object-cover object-center"
-                quality={85}
+                quality={90}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#111110]/30 to-transparent" />
             </div>
 
-            {/* Floating card */}
+            {/* Floating rating card */}
             <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl px-6 py-4 shadow-xl border border-[#E2DDD7]">
               <div className="flex gap-1 mb-1.5">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} size={11} className="fill-[#C8963A] text-[#C8963A]" />
                 ))}
               </div>
-              <p className="font-[family-name:var(--font-dm)] font-semibold text-[#111110] text-sm">98% anbefaler</p>
-              <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-xs mt-0.5">100+ klienter</p>
+              <p className="font-[family-name:var(--font-dm)] font-semibold text-[#111110] text-sm">Finn Arne Sivertsen</p>
+              <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-xs mt-0.5">FAS Coaching · Lørenskog</p>
             </div>
 
             {/* Top badge */}
@@ -134,7 +177,7 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {areas.map((area, i) => (
-              <div key={i} className="group bg-[#F8F7F4] rounded-2xl overflow-hidden border border-[#E2DDD7] hover:border-[#C8963A] hover:shadow-lg transition-all duration-300 cursor-default">
+              <div key={i} className="group bg-[#F8F7F4] rounded-2xl overflow-hidden border border-[#E2DDD7] hover:border-[#C8963A] hover:shadow-lg transition-all duration-300">
                 <div className="relative h-52 overflow-hidden">
                   <Image
                     src={area.img}
@@ -142,7 +185,7 @@ export default function HomePage() {
                     fill
                     sizes="(max-width:640px)100vw,(max-width:1024px)50vw,33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    quality={70}
+                    quality={75}
                   />
                 </div>
                 <div className="p-5">
@@ -162,7 +205,7 @@ export default function HomePage() {
 
           <div className="mt-10 text-center">
             <Link
-              href="/timeplan"
+              href="/kontakt"
               className="inline-flex items-center gap-2 bg-[#111110] text-white font-[family-name:var(--font-dm)] font-medium px-8 py-3.5 rounded-full hover:bg-[#C8963A] transition-colors duration-200 cursor-pointer text-sm"
             >
               Book en samtale <ArrowRight size={14} />
@@ -179,12 +222,12 @@ export default function HomePage() {
           <div className="relative">
             <div className="rounded-3xl overflow-hidden aspect-[3/4] relative">
               <Image
-                src="/images/img2.jpg"
-                alt="FAS Coaching"
+                src="/images/site_img_b.jpg"
+                alt="Finn Arne Sivertsen — FAS Coaching"
                 fill
                 sizes="(max-width:1024px)100vw,50vw"
                 className="object-cover object-top"
-                quality={85}
+                quality={90}
               />
             </div>
             <div className="absolute -bottom-5 -right-4 bg-[#141210] text-white rounded-2xl px-6 py-5 shadow-xl">
@@ -196,22 +239,22 @@ export default function HomePage() {
           {/* Text */}
           <div className="space-y-6">
             <p className="font-[family-name:var(--font-dm)] text-[#C8963A] text-xs font-semibold tracking-[0.2em] uppercase">
-              Om meg
+              Om Finn Arne
             </p>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl font-bold text-[#111110] leading-tight">
-              Et møte som<br />
-              <em>forandrer noe</em>
+              Profesjonell coach<br />
+              <em>for hele livet</em>
             </h2>
             <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-base leading-[1.8]">
-              FAS Coaching jobber innen mange områder. Jeg veileder unge og voksne i å få et nytt perspektiv på livsstil, karriere, relasjoner, sorg, idrett og ledelse.
+              Jeg er en profesjonell business- og livsstilscoach som hjelper både voksne og barn til å forme et eget perspektiv på livet. Ditt liv kan bli mye bedre med positiv tenking, livsglede, bedre helse og en mer effektiv og morsommere hverdag.
             </p>
             <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-base leading-[1.8]">
-              Jeg er basert i Lørenskog og tilbyr samtaler både fysisk og digitalt — og vi starter alltid med en gratis intro-samtale.
+              Jeg kan hjelpe deg med verktøy og teknikker, og utvikle vaner og ferdigheter som gjør at du effektivt, og med et helt nytt perspektiv, kan håndtere de utfordringene du møter i livet. Samtaler kan gjøres via telefon, video eller personlig møte.
             </p>
 
             <blockquote className="border-l-2 border-[#C8963A] pl-5 py-1">
               <p className="font-[family-name:var(--font-playfair)] text-xl italic text-[#111110] leading-snug">
-                &ldquo;Coaching handler ikke om å gi svar — det handler om å hjelpe deg finne dine egne.&rdquo;
+                &ldquo;Hvis du gjør det du alltid har gjort, får du det du alltid har fått.&rdquo;
               </p>
             </blockquote>
 
@@ -286,9 +329,9 @@ export default function HomePage() {
 
             <div className="space-y-3">
               {[
-                { icon: Phone, label: "+47 41 12 21 29", href: "tel:+4741122129" },
-                { icon: Mail, label: "post@fas-coaching.no", href: "mailto:post@fas-coaching.no" },
-                { icon: MapPin, label: "Skårerveien 12, Lørenskog", href: "#" },
+                { icon: Phone, label: "+47 906 90 635", href: "tel:+4790690635" },
+                { icon: Mail, label: "finnarnes@yahoo.no", href: "mailto:finnarnes@yahoo.no" },
+                { icon: MapPin, label: "Skårerveien 12, 1470 Lørenskog", href: "#" },
               ].map(({ icon: Icon, label, href }) => (
                 <a key={label} href={href} className="flex items-center gap-3 group cursor-pointer">
                   <div className="w-9 h-9 rounded-xl bg-[#F8F7F4] border border-[#E2DDD7] flex items-center justify-center shrink-0 group-hover:bg-[#111110] group-hover:border-[#111110] transition-all duration-200">
@@ -317,14 +360,14 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Image with overlay card */}
+          {/* Image */}
           <div className="relative h-[460px] rounded-3xl overflow-hidden">
-            <Image src="/images/img5.jpg" alt="Kontakt FAS Coaching" fill className="object-cover" quality={85} />
+            <Image src="/images/site_img_l.jpg" alt="Kontakt FAS Coaching" fill className="object-cover" quality={85} />
             <div className="absolute inset-0 bg-gradient-to-t from-[#141210]/70 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6">
               <div className="bg-white/95 rounded-xl px-5 py-4 shadow-xl">
                 <p className="font-[family-name:var(--font-playfair)] font-bold text-[#111110] text-base">Gratis intro-samtale</p>
-                <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-xs mt-0.5">20 minutter · Ingen forpliktelse</p>
+                <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-xs mt-0.5">20 minutter · Ingen forpliktelse · Ring +47 906 90 635</p>
               </div>
             </div>
           </div>

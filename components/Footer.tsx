@@ -56,8 +56,8 @@ export default function Footer() {
             <p className="font-[family-name:var(--font-dm)] text-white/25 text-xs font-semibold tracking-[0.15em] uppercase">Kontakt</p>
             <ul className="space-y-3">
               {[
-                { icon: Phone, label: "+47 41 12 21 29", href: "tel:+4741122129" },
-                { icon: Mail, label: "post@fas-coaching.no", href: "mailto:post@fas-coaching.no" },
+                { icon: Phone, label: "+47 906 90 635", href: "tel:+4790690635" },
+                { icon: Mail, label: "finnarnes@yahoo.no", href: "mailto:finnarnes@yahoo.no" },
                 { icon: MapPin, label: "Skårerveien 12, Lørenskog", href: "#" },
                 { icon: Clock, label: "Man–fre 09–17", href: "#" },
               ].map(({ icon: Icon, label, href }) => (
@@ -74,7 +74,7 @@ export default function Footer() {
 
         <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="font-[family-name:var(--font-dm)] text-white/20 text-xs">
-            © {new Date().getFullYear()} FAS Coaching · Skårerveien 12, Lørenskog
+            © {new Date().getFullYear()} FAS Coaching · Finn Arne Sivertsen · Orgnr. 812977652
           </p>
           <Link
             href="/kontakt"
