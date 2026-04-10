@@ -57,9 +57,9 @@ export default function OmPage() {
                   priority
                 />
               </div>
-              <div className="absolute -bottom-5 -right-4 bg-[#141210] rounded-2xl px-6 py-5 shadow-xl">
-                <p className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-[#64C8C8]">5+</p>
-                <p className="font-[family-name:var(--font-dm)] text-white text-xs mt-0.5">år som coach</p>
+              <div className="absolute -bottom-4 -right-4 bg-white border border-[#E2DDD7] rounded-xl px-5 py-4 shadow-sm">
+                <p className="font-[family-name:var(--font-playfair)] font-bold text-3xl text-[#111110] leading-none">5+</p>
+                <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-xs mt-1.5">år som coach</p>
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[4/3] relative mt-8 bg-[#F0EEEB]">

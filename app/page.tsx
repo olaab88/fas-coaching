@@ -140,21 +140,21 @@ export default function HomePage() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#111110]/20 to-transparent" />
             </div>
 
-            {/* Floating rating card */}
-            <div className="absolute bottom-6 left-4 lg:-left-6 bg-white rounded-2xl px-5 py-4 shadow-xl border border-[#E2DDD7] z-10">
-              <div className="flex gap-1 mb-1.5">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={11} className="fill-[#64C8C8] text-[#64C8C8]" />
-                ))}
+            {/* Floating review chip */}
+            <div className="absolute bottom-6 left-4 lg:-left-6 bg-white rounded-xl px-4 py-3 shadow-sm border border-[#E2DDD7] z-10 flex items-center gap-3">
+              <div className="w-8 h-8 rounded-full bg-[#E8F7F7] flex items-center justify-center shrink-0">
+                <Star size={13} className="fill-[#64C8C8] text-[#64C8C8]" />
               </div>
-              <p className="font-[family-name:var(--font-dm)] font-semibold text-[#111110] text-sm">Finn Arne Sivertsen</p>
-              <p className="font-[family-name:var(--font-dm)] text-[#111110] text-xs mt-0.5">FAS Coaching · Lørenskog</p>
+              <div>
+                <p className="font-[family-name:var(--font-dm)] font-semibold text-[#111110] text-xs leading-none">5.0 · 98% anbefaler</p>
+                <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-[10px] mt-0.5">FAS Coaching · Lørenskog</p>
+              </div>
             </div>
 
-            {/* Top badge */}
-            <div className="absolute top-6 right-4 lg:-right-3 bg-[#002850] text-white rounded-2xl px-4 py-3 shadow-lg z-10">
-              <p className="font-[family-name:var(--font-playfair)] font-bold text-2xl leading-none">5+</p>
-              <p className="font-[family-name:var(--font-dm)] text-white/80 text-[10px] mt-0.5">år erfaring</p>
+            {/* Experience chip */}
+            <div className="absolute top-6 right-4 lg:-right-3 bg-white border border-[#E2DDD7] rounded-xl px-4 py-3 shadow-sm z-10">
+              <p className="font-[family-name:var(--font-playfair)] font-bold text-2xl text-[#111110] leading-none">5+</p>
+              <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-[10px] mt-1 leading-none">år erfaring</p>
             </div>
           </div>
         </div>
@@ -182,27 +182,31 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {areas.map((area, i) => (
-              <div key={i} className="group bg-[#F8F7F4] rounded-2xl overflow-hidden border border-[#E2DDD7] hover:border-[#64C8C8] hover:shadow-lg transition-all duration-300">
-                <div className="relative h-52 overflow-hidden">
+              <div key={i} className="group bg-white rounded-2xl overflow-hidden border border-[#E2DDD7] hover:border-[#002850] hover:shadow-md transition-all duration-200 cursor-pointer">
+                <div className="relative h-48 overflow-hidden">
                   <Image
                     src={area.img}
                     alt={area.label}
                     fill
                     sizes="(max-width:640px)100vw,(max-width:1024px)50vw,33vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover group-hover:scale-103 transition-transform duration-500"
                     quality={75}
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                 </div>
-                <div className="p-5">
-                  <span className="font-[family-name:var(--font-dm)] text-[10px] font-bold tracking-widest uppercase text-[#64C8C8]">
-                    {area.tag}
-                  </span>
-                  <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-[#111110] mt-1 mb-2">
+                <div className="p-5 border-t border-[#E2DDD7]">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="font-[family-name:var(--font-dm)] text-[10px] font-semibold tracking-[0.15em] uppercase text-[#64C8C8]">
+                      {area.tag}
+                    </span>
+                    <ArrowUpRight size={14} className="text-[#E2DDD7] group-hover:text-[#002850] transition-colors duration-200" />
+                  </div>
+                  <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-[#111110] mb-1.5">
                     {area.label}
                   </h3>
-                  <p className="font-[family-name:var(--font-dm)] text-[#111110] text-sm leading-relaxed">
+                  <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-sm leading-relaxed">
                     {area.desc}
                   </p>
                 </div>
@@ -237,9 +241,9 @@ export default function HomePage() {
                 quality={90}
               />
             </div>
-            <div className="absolute -bottom-5 -right-4 bg-[#141210] text-white rounded-2xl px-6 py-5 shadow-xl">
-              <p className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-[#64C8C8]">5+</p>
-              <p className="font-[family-name:var(--font-dm)] text-white text-xs mt-0.5">år som coach</p>
+            <div className="absolute -bottom-4 -right-4 bg-white border border-[#E2DDD7] rounded-xl px-5 py-4 shadow-sm">
+              <p className="font-[family-name:var(--font-playfair)] font-bold text-3xl text-[#111110] leading-none">5+</p>
+              <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-xs mt-1.5">år som coach</p>
             </div>
           </div>
 

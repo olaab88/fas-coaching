@@ -70,25 +70,29 @@ export default function TimeplanPage() {
             Velg ditt coachingområde
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {sessions.map((s, i) => (
-              <div key={i} className="group bg-[#F8F7F4] rounded-2xl overflow-hidden border border-[#E2DDD7] hover:border-[#64C8C8] hover:shadow-lg transition-all duration-300">
-                <div className="relative h-52 overflow-hidden">
+              <div key={i} className="group bg-white rounded-2xl overflow-hidden border border-[#E2DDD7] hover:border-[#002850] hover:shadow-md transition-all duration-200 cursor-pointer">
+                <div className="relative h-48 overflow-hidden">
                   <Image
                     src={s.img}
                     alt={s.title}
                     fill
                     sizes="(max-width:640px)100vw,(max-width:1024px)50vw,33vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover group-hover:scale-103 transition-transform duration-500"
                     quality={70}
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                 </div>
-                <div className="p-5">
-                  <span className="font-[family-name:var(--font-dm)] text-[10px] font-bold tracking-widest uppercase text-[#64C8C8]">
-                    {s.tag}
-                  </span>
-                  <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-[#111110] mt-1 mb-2">{s.title}</h3>
-                  <p className="font-[family-name:var(--font-dm)] text-[#111110] text-sm leading-relaxed">{s.desc}</p>
+                <div className="p-5 border-t border-[#E2DDD7]">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="font-[family-name:var(--font-dm)] text-[10px] font-semibold tracking-[0.15em] uppercase text-[#64C8C8]">
+                      {s.tag}
+                    </span>
+                    <ArrowRight size={13} className="text-[#E2DDD7] group-hover:text-[#002850] transition-colors duration-200" />
+                  </div>
+                  <h3 className="font-[family-name:var(--font-playfair)] text-lg font-bold text-[#111110] mb-1.5">{s.title}</h3>
+                  <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-sm leading-relaxed">{s.desc}</p>
                 </div>
               </div>
             ))}
