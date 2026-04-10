@@ -61,7 +61,7 @@ export default function ReferanserPage() {
               Les hva klienter sier om sitt møte med coaching — i egne ord.
             </p>
           </div>
-          <div className="relative h-72 lg:h-auto min-h-[360px]">
+          <div className="relative h-80 lg:h-[520px]">
             <Image
               src="/images/site_img_f.png"
               alt="Coaching"

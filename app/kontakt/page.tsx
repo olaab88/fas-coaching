@@ -26,7 +26,7 @@ export default function KontaktPage() {
               Send en melding og jeg svarer innen én arbeidsdag. Eller ring direkte.
             </p>
           </div>
-          <div className="relative h-72 lg:h-auto min-h-[360px]">
+          <div className="relative h-80 lg:h-[520px]">
             <Image
               src="/images/site_img_b.jpg"
               alt="Ta kontakt"

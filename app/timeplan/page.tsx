@@ -42,7 +42,7 @@ export default function TimeplanPage() {
               Velg det coachingområdet som passer deg — og start gjerne med en gratis intro-samtale.
             </p>
           </div>
-          <div className="relative h-72 lg:h-auto min-h-[360px]">
+          <div className="relative h-80 lg:h-[520px]">
             <Image
               src="/images/site_img_h.jpg"
               alt="Coaching session"

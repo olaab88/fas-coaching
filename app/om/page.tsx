@@ -42,7 +42,7 @@ export default function OmPage() {
               Sertifisert coach med over 5 år erfaring. Hjelper deg å finne din vei.
             </p>
           </div>
-          <div className="relative h-72 lg:h-auto min-h-[360px] bg-[#F0EEEB]">
+          <div className="relative h-80 lg:h-[520px] bg-[#F0EEEB]">
             <Image
               src="/images/finn_arne_outdoor.png"
               alt="Finn Arne Sivertsen"
