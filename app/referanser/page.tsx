@@ -75,9 +75,9 @@ export default function ReferanserPage() {
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
           {testimonials.map((t, i) => (
-            <div key={i} className="bg-white rounded-2xl p-8 border border-[#E2DDD7] hover:border-[#C8963A] hover:shadow-md transition-all duration-200 flex flex-col gap-5">
+            <div key={i} className="bg-white rounded-2xl p-8 border border-[#E2DDD7] hover:border-[#64C8C8] hover:shadow-md transition-all duration-200 flex flex-col gap-5">
               <div className="flex gap-1">
-                {[...Array(5)].map((_, j) => <Star key={j} size={12} className="fill-[#C8963A] text-[#C8963A]" />)}
+                {[...Array(5)].map((_, j) => <Star key={j} size={12} className="fill-[#64C8C8] text-[#64C8C8]" />)}
               </div>
               <p className="font-[family-name:var(--font-dm)] text-sm text-[#2C2C2C] leading-relaxed flex-1">
                 &ldquo;{t.quote}&rdquo;
@@ -119,7 +119,7 @@ export default function ReferanserPage() {
           </p>
           <Link
             href="/kontakt"
-            className="inline-flex items-center gap-2 bg-[#111110] text-white font-[family-name:var(--font-dm)] font-medium px-8 py-4 rounded-full hover:bg-[#C8963A] transition-colors duration-200 cursor-pointer text-sm"
+            className="inline-flex items-center gap-2 bg-[#111110] text-white font-[family-name:var(--font-dm)] font-medium px-8 py-4 rounded-full hover:bg-[#002850] transition-colors duration-200 cursor-pointer text-sm"
           >
             Book gratis intro <ArrowRight size={14} />
           </Link>

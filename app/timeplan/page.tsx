@@ -72,7 +72,7 @@ export default function TimeplanPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {sessions.map((s, i) => (
-              <div key={i} className="group bg-[#F8F7F4] rounded-2xl overflow-hidden border border-[#E2DDD7] hover:border-[#C8963A] hover:shadow-lg transition-all duration-300">
+              <div key={i} className="group bg-[#F8F7F4] rounded-2xl overflow-hidden border border-[#E2DDD7] hover:border-[#64C8C8] hover:shadow-lg transition-all duration-300">
                 <div className="relative h-52 overflow-hidden">
                   <Image
                     src={s.img}
@@ -97,7 +97,7 @@ export default function TimeplanPage() {
           <div className="mt-10 text-center">
             <Link
               href="/kontakt"
-              className="inline-flex items-center gap-2 bg-[#111110] text-white font-[family-name:var(--font-dm)] font-medium px-8 py-4 rounded-full hover:bg-[#C8963A] transition-colors duration-200 cursor-pointer text-sm"
+              className="inline-flex items-center gap-2 bg-[#111110] text-white font-[family-name:var(--font-dm)] font-medium px-8 py-4 rounded-full hover:bg-[#002850] transition-colors duration-200 cursor-pointer text-sm"
             >
               Ta kontakt for å booke <ArrowRight size={14} />
             </Link>
@@ -121,7 +121,7 @@ export default function TimeplanPage() {
             </p>
             <Link
               href="/kontakt"
-              className="inline-flex items-center gap-2 bg-[#C8963A] text-white font-[family-name:var(--font-dm)] font-medium px-7 py-3.5 rounded-full hover:bg-[#E8B96A] transition-colors duration-200 cursor-pointer text-sm"
+              className="inline-flex items-center gap-2 bg-[#002850] text-white font-[family-name:var(--font-dm)] font-medium px-7 py-3.5 rounded-full hover:bg-[#143C64] transition-colors duration-200 cursor-pointer text-sm"
             >
               Ta kontakt <ArrowRight size={14} />
             </Link>

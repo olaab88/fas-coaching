@@ -95,7 +95,7 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/kontakt"
-                className="inline-flex items-center gap-2 bg-[#111110] text-white font-[family-name:var(--font-dm)] font-medium px-7 py-3.5 rounded-full hover:bg-[#C8963A] transition-colors duration-200 cursor-pointer text-sm"
+                className="inline-flex items-center gap-2 bg-[#111110] text-white font-[family-name:var(--font-dm)] font-medium px-7 py-3.5 rounded-full hover:bg-[#002850] transition-colors duration-200 cursor-pointer text-sm"
               >
                 Book gratis intro <ArrowRight size={14} />
               </Link>
@@ -137,7 +137,7 @@ export default function HomePage() {
             <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl px-6 py-4 shadow-xl border border-[#E2DDD7]">
               <div className="flex gap-1 mb-1.5">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={11} className="fill-[#C8963A] text-[#C8963A]" />
+                  <Star key={i} size={11} className="fill-[#64C8C8] text-[#64C8C8]" />
                 ))}
               </div>
               <p className="font-[family-name:var(--font-dm)] font-semibold text-[#111110] text-sm">Finn Arne Sivertsen</p>
@@ -145,7 +145,7 @@ export default function HomePage() {
             </div>
 
             {/* Top badge */}
-            <div className="absolute -top-3 -right-3 bg-[#C8963A] text-white rounded-2xl px-4 py-3 shadow-lg">
+            <div className="absolute -top-3 -right-3 bg-[#002850] text-white rounded-2xl px-4 py-3 shadow-lg">
               <p className="font-[family-name:var(--font-playfair)] font-bold text-2xl leading-none">5+</p>
               <p className="font-[family-name:var(--font-dm)] text-white/80 text-[10px] mt-0.5">år erfaring</p>
             </div>
@@ -177,7 +177,7 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {areas.map((area, i) => (
-              <div key={i} className="group bg-[#F8F7F4] rounded-2xl overflow-hidden border border-[#E2DDD7] hover:border-[#C8963A] hover:shadow-lg transition-all duration-300">
+              <div key={i} className="group bg-[#F8F7F4] rounded-2xl overflow-hidden border border-[#E2DDD7] hover:border-[#64C8C8] hover:shadow-lg transition-all duration-300">
                 <div className="relative h-52 overflow-hidden">
                   <Image
                     src={area.img}
@@ -206,7 +206,7 @@ export default function HomePage() {
           <div className="mt-10 text-center">
             <Link
               href="/kontakt"
-              className="inline-flex items-center gap-2 bg-[#111110] text-white font-[family-name:var(--font-dm)] font-medium px-8 py-3.5 rounded-full hover:bg-[#C8963A] transition-colors duration-200 cursor-pointer text-sm"
+              className="inline-flex items-center gap-2 bg-[#111110] text-white font-[family-name:var(--font-dm)] font-medium px-8 py-3.5 rounded-full hover:bg-[#002850] transition-colors duration-200 cursor-pointer text-sm"
             >
               Book en samtale <ArrowRight size={14} />
             </Link>
@@ -260,7 +260,7 @@ export default function HomePage() {
 
             <Link
               href="/om"
-              className="inline-flex items-center gap-2 font-[family-name:var(--font-dm)] text-sm font-medium text-[#111110] hover:text-[#C8963A] transition-colors cursor-pointer group"
+              className="inline-flex items-center gap-2 font-[family-name:var(--font-dm)] text-sm font-medium text-[#111110] hover:text-[#002850] transition-colors cursor-pointer group"
             >
               Les mer om meg <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform duration-200" />
             </Link>
@@ -295,7 +295,7 @@ export default function HomePage() {
               <div key={i} className="bg-white/5 border border-white/8 rounded-2xl p-7 flex flex-col gap-5">
                 <div className="flex gap-1">
                   {[...Array(5)].map((_, j) => (
-                    <Star key={j} size={12} className="fill-[#C8963A] text-[#C8963A]" />
+                    <Star key={j} size={12} className="fill-[#64C8C8] text-[#64C8C8]" />
                   ))}
                 </div>
                 <p className="font-[family-name:var(--font-dm)] text-sm text-white/90 leading-relaxed flex-1">
@@ -347,7 +347,7 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-3 pt-2">
               <Link
                 href="/kontakt"
-                className="inline-flex items-center gap-2 bg-[#111110] text-white font-[family-name:var(--font-dm)] font-medium px-7 py-3.5 rounded-full hover:bg-[#C8963A] transition-colors duration-200 cursor-pointer text-sm"
+                className="inline-flex items-center gap-2 bg-[#111110] text-white font-[family-name:var(--font-dm)] font-medium px-7 py-3.5 rounded-full hover:bg-[#002850] transition-colors duration-200 cursor-pointer text-sm"
               >
                 Book gratis intro <ArrowRight size={14} />
               </Link>

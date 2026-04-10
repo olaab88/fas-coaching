@@ -78,7 +78,7 @@ export default function Footer() {
           </p>
           <Link
             href="/kontakt"
-            className="font-[family-name:var(--font-dm)] text-xs bg-[#C8963A] text-white px-5 py-2 rounded-full hover:bg-[#E8B96A] transition-colors cursor-pointer font-medium"
+            className="font-[family-name:var(--font-dm)] text-xs bg-[#002850] text-white px-5 py-2 rounded-full hover:bg-[#143C64] transition-colors cursor-pointer font-medium"
           >
             Book gratis intro →
           </Link>

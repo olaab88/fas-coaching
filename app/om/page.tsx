@@ -165,7 +165,7 @@ export default function OmPage() {
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/kontakt"
-                className="inline-flex items-center gap-2 bg-[#111110] text-white font-[family-name:var(--font-dm)] font-medium px-7 py-3.5 rounded-full hover:bg-[#C8963A] transition-colors duration-200 cursor-pointer text-sm"
+                className="inline-flex items-center gap-2 bg-[#111110] text-white font-[family-name:var(--font-dm)] font-medium px-7 py-3.5 rounded-full hover:bg-[#002850] transition-colors duration-200 cursor-pointer text-sm"
               >
                 Book en samtale <ArrowRight size={14} />
               </Link>

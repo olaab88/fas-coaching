@@ -90,7 +90,7 @@ export default function KontaktPage() {
 
               <button
                 type="submit"
-                className="inline-flex items-center gap-2 bg-[#111110] text-white font-[family-name:var(--font-dm)] font-medium px-8 py-4 rounded-full hover:bg-[#C8963A] transition-colors duration-200 cursor-pointer text-sm"
+                className="inline-flex items-center gap-2 bg-[#111110] text-white font-[family-name:var(--font-dm)] font-medium px-8 py-4 rounded-full hover:bg-[#002850] transition-colors duration-200 cursor-pointer text-sm"
               >
                 Send melding <ArrowRight size={14} />
               </button>
@@ -130,8 +130,8 @@ export default function KontaktPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#141210]/50 to-transparent" />
             </div>
 
-            <div className="bg-[#F5E4C3] border border-[#E8C87A] rounded-xl p-5">
-              <p className="font-[family-name:var(--font-dm)] text-[#8B5E1A] text-sm leading-relaxed">
+            <div className="bg-[#E8F7F7] border border-[#A8E0E0] rounded-xl p-5">
+              <p className="font-[family-name:var(--font-dm)] text-[#00617A] text-sm leading-relaxed">
                 <span className="font-semibold">Svartid:</span> Jeg svarer på alle henvendelser innen én arbeidsdag.
               </p>
             </div>

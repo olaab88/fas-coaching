@@ -68,7 +68,7 @@ export default function Navbar() {
           {/* CTA */}
           <Link
             href="/kontakt"
-            className="hidden md:inline-flex items-center gap-2 bg-[#111110] text-white font-[family-name:var(--font-dm)] font-medium text-sm px-5 py-2.5 rounded-full hover:bg-[#C8963A] transition-colors duration-200 cursor-pointer"
+            className="hidden md:inline-flex items-center gap-2 bg-[#111110] text-white font-[family-name:var(--font-dm)] font-medium text-sm px-5 py-2.5 rounded-full hover:bg-[#002850] transition-colors duration-200 cursor-pointer"
           >
             Book gratis intro
           </Link>
@@ -104,7 +104,7 @@ export default function Navbar() {
             ))}
             <Link
               href="/kontakt"
-              className="mt-2 px-4 py-3 rounded-full bg-[#111110] text-white font-[family-name:var(--font-dm)] font-medium text-sm text-center hover:bg-[#C8963A] transition-colors cursor-pointer"
+              className="mt-2 px-4 py-3 rounded-full bg-[#111110] text-white font-[family-name:var(--font-dm)] font-medium text-sm text-center hover:bg-[#002850] transition-colors cursor-pointer"
             >
               Book gratis intro
             </Link>
