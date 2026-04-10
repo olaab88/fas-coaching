@@ -80,7 +80,7 @@ export default function OmPage() {
               Min reise inn i coaching
             </h2>
             <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-base leading-[1.8]">
-              Jeg er en profesjonell business- og livsstilscoach som hjelper både voksne og barn til å forme et eget perspektiv på livet.
+              Jeg er en en profesjonell business-og livsstilscoach som hjelper både voksne og barn til å forme et eget perspektiv på livet.
             </p>
             <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-base leading-[1.8]">
               Ditt liv kan bli mye bedre med positiv tenking, livsglede, bedre helse og en mer effektiv og morsommere hverdag, enten det gjelder din karrière, dine relasjoner eller andre ting som er viktige for deg.
@@ -91,9 +91,17 @@ export default function OmPage() {
             <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-base leading-[1.8]">
               Samtaler kan gjøres via telefon, video eller personlig møte.
             </p>
-            <div className="pt-2">
-              <p className="font-[family-name:var(--font-playfair)] font-bold text-[#111110] text-base">Finn Arne Sivertsen</p>
-              <p className="font-[family-name:var(--font-dm)] text-[#64C8C8] text-sm font-semibold tracking-wide">FAS Coaching</p>
+            <div className="pt-2 flex flex-wrap items-end justify-between gap-4">
+              <div>
+                <p className="font-[family-name:var(--font-playfair)] font-bold text-[#111110] text-base">Finn Arne Sivertsen</p>
+                <p className="font-[family-name:var(--font-dm)] text-[#64C8C8] text-sm font-semibold tracking-wide">FAS Coaching</p>
+              </div>
+              <Link
+                href="/kontakt"
+                className="inline-flex items-center gap-2 bg-[#111110] text-white font-[family-name:var(--font-dm)] font-medium px-6 py-3 rounded-full hover:bg-[#002850] transition-colors duration-200 cursor-pointer text-sm"
+              >
+                Ta kontakt <ArrowRight size={14} />
+              </Link>
             </div>
 
             <blockquote className="border-l-2 border-[#002850] pl-5 py-1">
