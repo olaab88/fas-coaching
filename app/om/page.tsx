@@ -128,25 +128,25 @@ export default function OmPage() {
       </section>
 
       {/* CERTS */}
-      <section className="py-20 px-6 bg-[#141210]">
+      <section className="py-20 px-6 bg-white border-t border-b border-[#E2DDD7]">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="font-[family-name:var(--font-dm)] text-[#64C8C8] text-xs font-semibold tracking-[0.2em] uppercase mb-4">
               Kompetanse
             </p>
-            <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-white leading-tight">
+            <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-[#111110] leading-tight">
               Sertifiseringer<br />
-              <span className="text-[#64C8C8]">og utdanning</span>
+              <span className="text-[#002850]">og utdanning</span>
             </h2>
-            <p className="font-[family-name:var(--font-dm)] text-white/85 text-sm leading-relaxed mt-4 max-w-xs">
+            <p className="font-[family-name:var(--font-dm)] text-[#1A1A1A] text-sm leading-relaxed mt-4 max-w-xs">
               Solid faglig fundament kombinert med mange år i praksis.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-3">
             {certs.map((c) => (
-              <div key={c.num} className="bg-white/5 rounded-xl p-5 border border-white/30">
+              <div key={c.num} className="bg-[#F8F7F4] rounded-xl p-5 border border-[#E2DDD7]">
                 <span className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-[#64C8C8]">{c.num}</span>
-                <p className="font-[family-name:var(--font-dm)] text-white text-sm mt-2 leading-snug">{c.title}</p>
+                <p className="font-[family-name:var(--font-dm)] text-[#111110] text-sm mt-2 leading-snug font-medium">{c.title}</p>
               </div>
             ))}
           </div>
