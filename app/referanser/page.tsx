@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Star } from "lucide-react";
 import type { Metadata } from "next";
@@ -100,12 +99,13 @@ export default function ReferanserPage() {
         </div>
       </section>
 
-      {/* IMAGE BREAK */}
-      <section className="relative h-64 overflow-hidden">
-        <Image src="/images/site_img_a.jpg" alt="" fill className="object-cover" quality={75} />
-        <div className="absolute inset-0 bg-[#141210]/60" />
-        <div className="absolute inset-0 flex items-center justify-center px-6">
-          <p className="font-[family-name:var(--font-playfair)] text-[clamp(1.8rem,4vw,3.5rem)] font-bold text-white text-center max-w-3xl leading-tight">
+      {/* QUOTE BREAK */}
+      <section className="py-20 px-6 bg-[#002850]">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="font-[family-name:var(--font-dm)] text-[#64C8C8] text-xs font-semibold tracking-[0.2em] uppercase mb-6">
+            Finn Arne Sivertsen
+          </p>
+          <p className="font-[family-name:var(--font-playfair)] text-[clamp(2rem,4.5vw,3.5rem)] font-bold text-white leading-tight">
             Den beste investeringen du kan gjøre,{" "}
             <span className="text-[#64C8C8]">er i deg selv.</span>
           </p>
