@@ -65,7 +65,7 @@ export default function ReferanserPage() {
           {stats.map(({ value, label }) => (
             <div key={label}>
               <p className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-[#111110]">{value}</p>
-              <p className="font-[family-name:var(--font-dm)] text-[#1A1A1A] text-sm mt-1">{label}</p>
+              <p className="font-[family-name:var(--font-dm)] text-[#111110] text-sm mt-1">{label}</p>
             </div>
           ))}
         </div>
@@ -85,9 +85,9 @@ export default function ReferanserPage() {
               <div className="flex items-center justify-between pt-4 border-t border-[#F8F7F4]">
                 <div>
                   <p className="font-[family-name:var(--font-dm)] font-semibold text-[#111110] text-sm">{t.name}</p>
-                  <p className="font-[family-name:var(--font-dm)] text-[#1A1A1A] text-xs mt-0.5">{t.role}</p>
+                  <p className="font-[family-name:var(--font-dm)] text-[#111110] text-xs mt-0.5">{t.role}</p>
                 </div>
-                <span className="font-[family-name:var(--font-dm)] text-xs text-[#1A1A1A] bg-[#F8F7F4] border border-[#E2DDD7] px-3 py-1 rounded-full">
+                <span className="font-[family-name:var(--font-dm)] text-xs text-[#111110] bg-[#F8F7F4] border border-[#E2DDD7] px-3 py-1 rounded-full">
                   {t.sessions}
                 </span>
               </div>
@@ -114,7 +114,7 @@ export default function ReferanserPage() {
           <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-[#111110]">
             Skriv din egen <span className="text-[#002850]">historie</span>
           </h2>
-          <p className="font-[family-name:var(--font-dm)] text-[#1A1A1A] text-base leading-relaxed">
+          <p className="font-[family-name:var(--font-dm)] text-[#111110] text-base leading-relaxed">
             Start med en gratis intro-samtale og se hva coaching kan gjøre for deg.
           </p>
           <Link

@@ -21,7 +21,7 @@ export default function KontaktPage() {
             La oss ta en<br />
             <span className="text-[#002850]">prat</span>
           </h1>
-          <p className="font-[family-name:var(--font-dm)] text-[#1A1A1A] text-base mt-6 max-w-lg leading-relaxed">
+          <p className="font-[family-name:var(--font-dm)] text-[#111110] text-base mt-6 max-w-lg leading-relaxed">
             Send en melding og jeg svarer innen én arbeidsdag. Eller ring direkte.
           </p>
         </div>
@@ -112,11 +112,11 @@ export default function KontaktPage() {
                 ].map(({ icon: Icon, label, value, href }) => (
                   <div key={label} className="flex items-start gap-4">
                     <div className="w-9 h-9 rounded-xl bg-[#F8F7F4] border border-[#E2DDD7] flex items-center justify-center shrink-0 mt-0.5">
-                      <Icon size={14} className="text-[#1A1A1A]" />
+                      <Icon size={14} className="text-[#111110]" />
                     </div>
                     <div>
                       <p className="font-[family-name:var(--font-dm)] font-semibold text-[#111110] text-xs tracking-wide uppercase">{label}</p>
-                      <a href={href} className="font-[family-name:var(--font-dm)] text-[#1A1A1A] hover:text-[#111110] text-sm mt-0.5 transition-colors leading-relaxed">
+                      <a href={href} className="font-[family-name:var(--font-dm)] text-[#111110] hover:text-[#111110] text-sm mt-0.5 transition-colors leading-relaxed">
                         {value}
                       </a>
                     </div>

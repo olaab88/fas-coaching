@@ -79,16 +79,16 @@ export default function OmPage() {
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-[#111110] leading-tight">
               Min reise inn i coaching
             </h2>
-            <p className="font-[family-name:var(--font-dm)] text-[#1A1A1A] text-base leading-[1.8]">
+            <p className="font-[family-name:var(--font-dm)] text-[#111110] text-base leading-[1.8]">
               Jeg er en en profesjonell business-og livsstilscoach som hjelper både voksne og barn til å forme et eget perspektiv på livet.
             </p>
-            <p className="font-[family-name:var(--font-dm)] text-[#1A1A1A] text-base leading-[1.8]">
+            <p className="font-[family-name:var(--font-dm)] text-[#111110] text-base leading-[1.8]">
               Ditt liv kan bli mye bedre med positiv tenking, livsglede, bedre helse og en mer effektiv og morsommere hverdag, enten det gjelder din karrière, dine relasjoner eller andre ting som er viktige for deg.
             </p>
-            <p className="font-[family-name:var(--font-dm)] text-[#1A1A1A] text-base leading-[1.8]">
+            <p className="font-[family-name:var(--font-dm)] text-[#111110] text-base leading-[1.8]">
               Jeg kan hjelpe deg med verktøy og teknikker, og utvikle vaner og ferdigheter som gjør at du effektivt, og med et helt nytt perspektiv, kan håndtere de utfordringene du møter i livet.
             </p>
-            <p className="font-[family-name:var(--font-dm)] text-[#1A1A1A] text-base leading-[1.8]">
+            <p className="font-[family-name:var(--font-dm)] text-[#111110] text-base leading-[1.8]">
               Samtaler kan gjøres via telefon, video eller personlig møte.
             </p>
             <div className="pt-2 flex flex-wrap items-end justify-between gap-4">
@@ -119,7 +119,7 @@ export default function OmPage() {
                   <div className="w-5 h-5 rounded-full bg-[#141210] flex items-center justify-center shrink-0">
                     <Check size={10} className="text-white" strokeWidth={2.5} />
                   </div>
-                  <span className="font-[family-name:var(--font-dm)] text-[#1A1A1A] text-sm">{v}</span>
+                  <span className="font-[family-name:var(--font-dm)] text-[#111110] text-sm">{v}</span>
                 </div>
               ))}
             </div>
@@ -138,7 +138,7 @@ export default function OmPage() {
               Sertifiseringer<br />
               <span className="text-[#002850]">og utdanning</span>
             </h2>
-            <p className="font-[family-name:var(--font-dm)] text-[#1A1A1A] text-sm leading-relaxed mt-4 max-w-xs">
+            <p className="font-[family-name:var(--font-dm)] text-[#111110] text-sm leading-relaxed mt-4 max-w-xs">
               Solid faglig fundament kombinert med mange år i praksis.
             </p>
           </div>
@@ -167,7 +167,7 @@ export default function OmPage() {
                 <span className="text-[#002850]">finne dine egne.&rdquo;</span>
               </p>
             </blockquote>
-            <p className="font-[family-name:var(--font-dm)] text-[#1A1A1A] text-sm leading-relaxed">
+            <p className="font-[family-name:var(--font-dm)] text-[#111110] text-sm leading-relaxed">
               Hvert menneske er unikt. Det finnes ingen universaloppskrift — men det finnes alltid et veikart, og vi finner det sammen.
             </p>
             <div className="flex flex-wrap gap-3">

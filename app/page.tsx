@@ -83,7 +83,7 @@ export default function HomePage() {
             </div>
 
             <div>
-              <p className="font-[family-name:var(--font-dm)] text-[#1A1A1A] text-sm font-semibold tracking-[0.2em] uppercase mb-3">
+              <p className="font-[family-name:var(--font-dm)] text-[#111110] text-sm font-semibold tracking-[0.2em] uppercase mb-3">
                 FAS Coaching
               </p>
               <h1 className="font-[family-name:var(--font-playfair)] text-[clamp(3rem,6vw,5.5rem)] text-[#111110] leading-[1.0] font-bold">
@@ -93,7 +93,7 @@ export default function HomePage() {
               </h1>
             </div>
 
-            <p className="font-[family-name:var(--font-dm)] text-[#1A1A1A] text-lg leading-relaxed max-w-md">
+            <p className="font-[family-name:var(--font-dm)] text-[#111110] text-lg leading-relaxed max-w-md">
               Jeg er Finn Arne Sivertsen — profesjonell business- og livsstilscoach som hjelper både voksne og barn til å forme et eget perspektiv på livet.
             </p>
 
@@ -117,7 +117,7 @@ export default function HomePage() {
               {stats.map(({ value, label }) => (
                 <div key={label}>
                   <p className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-[#111110]">{value}</p>
-                  <p className="font-[family-name:var(--font-dm)] text-[#1A1A1A] text-xs mt-0.5">{label}</p>
+                  <p className="font-[family-name:var(--font-dm)] text-[#111110] text-xs mt-0.5">{label}</p>
                 </div>
               ))}
             </div>
@@ -148,7 +148,7 @@ export default function HomePage() {
                 ))}
               </div>
               <p className="font-[family-name:var(--font-dm)] font-semibold text-[#111110] text-sm">Finn Arne Sivertsen</p>
-              <p className="font-[family-name:var(--font-dm)] text-[#1A1A1A] text-xs mt-0.5">FAS Coaching · Lørenskog</p>
+              <p className="font-[family-name:var(--font-dm)] text-[#111110] text-xs mt-0.5">FAS Coaching · Lørenskog</p>
             </div>
 
             {/* Top badge */}
@@ -202,7 +202,7 @@ export default function HomePage() {
                   <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-[#111110] mt-1 mb-2">
                     {area.label}
                   </h3>
-                  <p className="font-[family-name:var(--font-dm)] text-[#1A1A1A] text-sm leading-relaxed">
+                  <p className="font-[family-name:var(--font-dm)] text-[#111110] text-sm leading-relaxed">
                     {area.desc}
                   </p>
                 </div>
@@ -252,10 +252,10 @@ export default function HomePage() {
               Profesjonell coach<br />
               <span className="text-[#002850]">for hele livet</span>
             </h2>
-            <p className="font-[family-name:var(--font-dm)] text-[#1A1A1A] text-base leading-[1.8]">
+            <p className="font-[family-name:var(--font-dm)] text-[#111110] text-base leading-[1.8]">
               Jeg er en profesjonell business- og livsstilscoach som hjelper både voksne og barn til å forme et eget perspektiv på livet. Ditt liv kan bli mye bedre med positiv tenking, livsglede, bedre helse og en mer effektiv og morsommere hverdag.
             </p>
-            <p className="font-[family-name:var(--font-dm)] text-[#1A1A1A] text-base leading-[1.8]">
+            <p className="font-[family-name:var(--font-dm)] text-[#111110] text-base leading-[1.8]">
               Jeg kan hjelpe deg med verktøy og teknikker, og utvikle vaner og ferdigheter som gjør at du effektivt, og med et helt nytt perspektiv, kan håndtere de utfordringene du møter i livet. Samtaler kan gjøres via telefon, video eller personlig møte.
             </p>
 
@@ -330,7 +330,7 @@ export default function HomePage() {
               Klar for å starte<br />
               <span className="text-[#002850]">din reise?</span>
             </h2>
-            <p className="font-[family-name:var(--font-dm)] text-[#1A1A1A] text-base leading-[1.8]">
+            <p className="font-[family-name:var(--font-dm)] text-[#111110] text-base leading-[1.8]">
               Start med en gratis 20-minutters intro-samtale. Ingen forpliktelser — bare en åpen prat om hva du ønsker å jobbe med.
             </p>
 
@@ -342,9 +342,9 @@ export default function HomePage() {
               ].map(({ icon: Icon, label, href }) => (
                 <a key={label} href={href} className="flex items-center gap-3 group cursor-pointer">
                   <div className="w-9 h-9 rounded-xl bg-[#F8F7F4] border border-[#E2DDD7] flex items-center justify-center shrink-0 group-hover:bg-[#111110] group-hover:border-[#111110] transition-all duration-200">
-                    <Icon size={14} className="text-[#1A1A1A] group-hover:text-white transition-colors duration-200" />
+                    <Icon size={14} className="text-[#111110] group-hover:text-white transition-colors duration-200" />
                   </div>
-                  <span className="font-[family-name:var(--font-dm)] text-[#1A1A1A] text-sm group-hover:text-[#111110] transition-colors duration-200">
+                  <span className="font-[family-name:var(--font-dm)] text-[#111110] text-sm group-hover:text-[#111110] transition-colors duration-200">
                     {label}
                   </span>
                 </a>
@@ -374,7 +374,7 @@ export default function HomePage() {
             <div className="absolute bottom-6 left-6 right-6">
               <div className="bg-white/95 rounded-xl px-5 py-4 shadow-xl">
                 <p className="font-[family-name:var(--font-playfair)] font-bold text-[#111110] text-base">Gratis intro-samtale</p>
-                <p className="font-[family-name:var(--font-dm)] text-[#1A1A1A] text-xs mt-0.5">20 minutter · Ingen forpliktelse · Ring +47 906 90 635</p>
+                <p className="font-[family-name:var(--font-dm)] text-[#111110] text-xs mt-0.5">20 minutter · Ingen forpliktelse · Ring +47 906 90 635</p>
               </div>
             </div>
           </div>
