@@ -1,412 +1,371 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Star, Check } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Star, Quote, Phone, Mail, MapPin } from "lucide-react";
 
-const services = [
-  {
-    title: "Livsstil & karriere",
-    desc: "Veiledning for deg som vil finne balansen mellom hvem du er og hva du gjør — i jobb, hverdag og fremtid.",
-    tag: "Livsstil",
-    color: "bg-[#7A8E3E]",
-    textColor: "text-[#FAF8F2]",
-  },
-  {
-    title: "Relasjoner & sorg",
-    desc: "Et trygt rom for å bearbeide vanskelige følelser, tap og relasjonelle utfordringer — i ditt eget tempo.",
-    tag: "Støtte",
-    color: "bg-[#F0EBE0]",
-    textColor: "text-[#1A1A12]",
-  },
-  {
-    title: "Idrett & ledelse",
-    desc: "Mentalt påfyll for utøvere og ledere som vil prestere bedre — med ro, fokus og indre styrke.",
-    tag: "Prestasjon",
-    color: "bg-[#C8963A]",
-    textColor: "text-[#FAF8F2]",
-  },
-  {
-    title: "Unge & barn",
-    desc: "Trygge og lekne samtaler for barn og tenåringer som trenger et eget rom å vokse i.",
-    tag: "6–18 år",
-    color: "bg-[#1A1A12]",
-    textColor: "text-[#FAF8F2]",
-  },
+/* ── Data ────────────────────────────────────────── */
+
+const areas = [
+  { slug: "livsstil",  label: "Livsstils-\ncoaching",  img: "/images/img1.jpg",  desc: "Finn balansen mellom hvem du er og hvordan du lever." },
+  { slug: "karriere",  label: "Karriere-\ncoaching",   img: "/images/img2.jpg",  desc: "Retning, mål og mot til å ta det neste steget." },
+  { slug: "relasjoner",label: "Relasjons-\ncoaching",  img: "/images/img3.jpg",  desc: "Bedre kommunikasjon og dypere forbindelser." },
+  { slug: "sorg",      label: "Sorg-\nveiledning",     img: "/images/img4.jpg",  desc: "Et trygt rom for å bearbeide tap og tunge tider." },
+  { slug: "idrett",    label: "Idrettslig\ncoaching",  img: "/images/img5.jpg",  desc: "Mental styrke og fokus for å prestere på topp." },
+  { slug: "ledelse",   label: "Ledelses-\ncoaching",   img: "/images/img6.jpg",  desc: "Bli en leder som inspirerer og skaper resultater." },
 ];
 
 const testimonials = [
-  {
-    quote: "FAS Coaching forandret måten jeg ser på meg selv og livet mitt. Etter noen samtaler hadde jeg verktøy jeg ikke visste jeg trengte.",
-    name: "Maria H.",
-    role: "Pedagog, Oslo",
-  },
-  {
-    quote: "Utrolig varmt og profesjonelt. Coachen møtte meg akkurat der jeg var — ingen press, ingen fasitsvar.",
-    name: "Thomas A.",
-    role: "Bedriftsleder, Lørenskog",
-  },
-  {
-    quote: "Datteren min blomstret opp etter coaching her. Anbefales til alle foreldre som vil hjelpe barnet sitt.",
-    name: "Kari M.",
-    role: "Mor til 14-åring",
-  },
+  { quote: "FAS Coaching ga meg verktøy jeg ikke visste jeg trengte. Etter noen samtaler så jeg livet på en helt ny måte.", name: "Maria H.", role: "Pedagog, Oslo" },
+  { quote: "Utrolig varmt og profesjonelt. Ingen press, ingen fasitsvar — bare ekte lytting og de rette spørsmålene.", name: "Thomas A.", role: "Bedriftsleder, Lørenskog" },
+  { quote: "Datteren min blomstret etter coaching her. Anbefales på det varmeste til alle foreldre.", name: "Kari M.", role: "Mor til 14-åring" },
+  { quote: "Etter å ha stått fast i karrieren i årevis, hjalp FAS Coaching meg å se mulighetene som alltid hadde vært der.", name: "Jonas B.", role: "IT-konsulent" },
 ];
+
+/* ── Page ───────────────────────────────────────── */
 
 export default function HomePage() {
   return (
-    <div className="bg-[#FAF8F2]">
+    <div className="bg-[#F4F9FA]">
 
-      {/* ─────────────────────────────────────────────
-          HERO  — full screen, high-res image, organic
-      ───────────────────────────────────────────── */}
-      <section className="relative min-h-screen flex flex-col justify-end overflow-hidden">
+      {/* ════════════════════════════════════════════
+          1. HERO — dark teal, massive PERSPEKTIV
+      ════════════════════════════════════════════ */}
+      <section className="relative min-h-screen bg-[#0B3D4A] flex flex-col justify-center overflow-hidden pt-16">
 
-        {/* Background image */}
-        <div className="absolute inset-0">
-          <Image
-            src="/images/hero_hires.jpg"
-            alt="FAS Coaching"
-            fill
-            priority
-            sizes="100vw"
-            quality={90}
-            className="object-cover object-center"
-          />
-          {/* Gradient: transparent top → dark bottom */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A12]/90 via-[#1A1A12]/30 to-transparent" />
+        {/* Subtle grid texture */}
+        <div className="absolute inset-0 opacity-[0.03]"
+          style={{ backgroundImage: "linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px)", backgroundSize: "60px 60px" }}
+        />
+
+        {/* Background image — right side, faded */}
+        <div className="absolute right-0 top-0 bottom-0 w-1/2 opacity-20">
+          <Image src="/images/hero_hires.jpg" alt="" fill className="object-cover object-left" priority quality={80} />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0B3D4A] via-[#0B3D4A]/60 to-transparent" />
         </div>
 
-        {/* Floating badge — top right */}
-        <div className="absolute top-28 right-6 md:right-12 z-10 bg-[#9EAB5C]/90 backdrop-blur-sm rounded-2xl px-5 py-4 border border-[#9EAB5C]">
-          <p className="font-[family-name:var(--font-caveat)] text-[#FAF8F2] text-lg font-semibold leading-tight">
-            5+ år<br />med coaching
-          </p>
-        </div>
-
-        {/* Hero text */}
-        <div className="relative z-10 max-w-6xl mx-auto px-6 w-full pb-20">
-          <p className="font-[family-name:var(--font-quicksand)] text-[#9EAB5C] text-sm font-semibold tracking-widest uppercase mb-5">
-            Livsstilscoaching — Lørenskog
-          </p>
-          <h1 className="font-[family-name:var(--font-caveat)] text-[clamp(3.5rem,9vw,8rem)] font-bold text-[#FAF8F2] leading-[0.9] mb-7 max-w-4xl">
-            Form ditt eget<br />
-            <span className="text-[#E8B96A]">perspektiv</span><br />
-            på livet
-          </h1>
-          <p className="font-[family-name:var(--font-quicksand)] text-[#D6D3C8] text-lg leading-relaxed max-w-lg mb-10">
-            Jeg veileder unge og voksne innen livsstil, karriere, relasjoner, sorg, idrett og ledelse — for en bedre livskvalitet.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <Link
-              href="/timeplan"
-              className="inline-flex items-center gap-2 bg-[#9EAB5C] text-[#FAF8F2] font-[family-name:var(--font-quicksand)] font-bold px-8 py-4 rounded-2xl hover:bg-[#7A8E3E] transition-colors duration-300 cursor-pointer text-base"
-            >
-              Book en samtale
-              <ArrowRight size={17} />
-            </Link>
-            <Link
-              href="/om"
-              className="inline-flex items-center gap-2 text-[#FAF8F2] font-[family-name:var(--font-quicksand)] font-medium px-6 py-4 rounded-2xl border border-[#FAF8F2]/25 hover:border-[#FAF8F2]/50 hover:bg-white/5 transition-all duration-300 cursor-pointer text-base"
-            >
-              Les om meg
-            </Link>
-          </div>
-        </div>
-
-        {/* Scroll hint */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
-          <div className="w-px h-10 bg-[#FAF8F2]/30 animate-[pulse_2s_ease-in-out_infinite]" />
-        </div>
-      </section>
-
-      {/* ─────────────────────────────────────────────
-          MARQUEE STRIP
-      ───────────────────────────────────────────── */}
-      <section className="bg-[#7A8E3E] py-4 overflow-hidden">
-        <div className="flex gap-12 animate-[marquee_20s_linear_infinite] whitespace-nowrap">
-          {[...Array(3)].map((_, i) =>
-            ["Livsstilscoaching", "Coaching for barn", "Gruppecoaching", "Lørenskog", "Digitalt tilgjengelig", "Individuell tilpasning"].map((item) => (
-              <span key={`${i}-${item}`} className="font-[family-name:var(--font-quicksand)] text-[#FAF8F2]/80 text-sm font-medium tracking-widest uppercase">
-                {item} <span className="text-[#E8B96A] mx-2">✦</span>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 w-full">
+          <div className="max-w-4xl">
+            {/* Eyebrow */}
+            <div className="flex items-center gap-3 mb-8">
+              <div className="h-px w-10 bg-[#C8963A]" />
+              <span className="font-[family-name:var(--font-dm)] text-[#3AA0B2] text-xs font-semibold tracking-[0.2em] uppercase">
+                Livsstilscoaching · Lørenskog
               </span>
-            ))
-          )}
-        </div>
-      </section>
-
-      {/* ─────────────────────────────────────────────
-          ABOUT — asymmetric split, organic feel
-      ───────────────────────────────────────────── */}
-      <section className="py-24 px-6">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-
-          {/* LEFT — stacked images */}
-          <div className="lg:col-span-5 relative">
-            {/* Main image */}
-            <div className="rounded-[2rem] overflow-hidden aspect-[4/5] relative">
-              <Image src="/images/img2.jpg" alt="Coaching session" fill sizes="(max-width:768px)100vw,42vw" className="object-cover object-top" />
             </div>
-            {/* Floating second image */}
-            <div className="absolute -bottom-8 -right-4 w-[55%] rounded-[1.5rem] overflow-hidden aspect-square border-4 border-[#FAF8F2] shadow-xl">
-              <Image src="/images/img1.jpg" alt="FAS Coaching" fill sizes="25vw" className="object-cover" />
-            </div>
-            {/* Logo badge */}
-            <div className="absolute top-6 -left-4 bg-[#FAF8F2] rounded-2xl p-3 shadow-lg border border-[#DDD5C0]">
-              <Image src="/images/logo6.png" alt="FAS Coaching" width={56} height={56} className="object-contain" />
-            </div>
-          </div>
 
-          {/* RIGHT — text */}
-          <div className="lg:col-span-7 lg:pt-16 space-y-6">
-            <p className="font-[family-name:var(--font-quicksand)] text-[#7A8E3E] text-sm font-bold tracking-widest uppercase">
-              Hvem er jeg
-            </p>
-            <h2 className="font-[family-name:var(--font-caveat)] text-[clamp(2.5rem,5vw,4.5rem)] font-bold text-[#1A1A12] leading-tight">
-              Et møte som{" "}
-              <span className="text-[#C8963A]">forandrer</span>{" "}
-              noe
-            </h2>
-            <p className="font-[family-name:var(--font-quicksand)] text-[#4A4837] text-base leading-[1.75]">
-              FAS Coaching jobber innen mange områder. Jeg veileder unge og voksne i å få et nytt perspektiv på livsstil, karriere, relasjoner, sorg, idrett og ledelse — der man støter på problemer. Hensikten er å oppnå en bedre livskvalitet.
-            </p>
-            <p className="font-[family-name:var(--font-quicksand)] text-[#4A4837] text-base leading-[1.75]">
-              Coachingen er alltid tilpasset deg og din situasjon. Ingen fasitsvar — bare de riktige verktøyene i ditt tempo.
+            {/* PERSPEKTIV — the money shot */}
+            <h1 className="font-[family-name:var(--font-bebas)] text-[clamp(5rem,18vw,16rem)] leading-[0.85] text-white tracking-wide mb-8">
+              PER
+              <span className="text-[#C8963A]">SPEK</span>
+              TIV
+            </h1>
+
+            {/* Tagline */}
+            <p className="font-[family-name:var(--font-dm)] text-white/60 text-lg leading-relaxed max-w-lg mb-10">
+              Jeg veileder unge og voksne i å få et nytt perspektiv på livsstil, karriere, relasjoner, sorg, idrett og ledelse — for en bedre livskvalitet.
             </p>
 
-            {/* Mini stat row */}
-            <div className="grid grid-cols-3 gap-4 pt-3">
-              {[["100+", "Klienter"], ["5+", "År erfaring"], ["98%", "Anbefaler"]].map(([val, lbl]) => (
-                <div key={lbl} className="bg-[#F0EBE0] rounded-2xl px-4 py-4 text-center">
-                  <p className="font-[family-name:var(--font-caveat)] text-3xl font-bold text-[#7A8E3E]">{val}</p>
-                  <p className="font-[family-name:var(--font-quicksand)] text-[#6B6852] text-xs mt-0.5">{lbl}</p>
+            {/* CTAs */}
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/timeplan"
+                className="inline-flex items-center gap-2 bg-[#C8963A] text-white font-[family-name:var(--font-dm)] font-semibold px-7 py-3.5 rounded-xl hover:bg-[#E8B96A] transition-colors duration-200 cursor-pointer text-sm"
+              >
+                Book en samtale
+                <ArrowRight size={15} />
+              </Link>
+              <Link
+                href="/om"
+                className="inline-flex items-center gap-2 text-white/70 border border-white/20 font-[family-name:var(--font-dm)] font-medium px-6 py-3.5 rounded-xl hover:text-white hover:border-white/40 transition-all duration-200 cursor-pointer text-sm"
+              >
+                Les om meg
+              </Link>
+            </div>
+
+            {/* Stats row */}
+            <div className="flex flex-wrap gap-8 mt-16 pt-8 border-t border-white/10">
+              {[["100+", "Klienter"], ["5+", "År erfaring"], ["6", "Coachingområder"], ["98%", "Anbefaler"]].map(([v, l]) => (
+                <div key={l}>
+                  <p className="font-[family-name:var(--font-bebas)] text-3xl text-[#C8963A] tracking-wide">{v}</p>
+                  <p className="font-[family-name:var(--font-dm)] text-white/40 text-xs mt-0.5">{l}</p>
                 </div>
               ))}
             </div>
-
-            <Link
-              href="/om"
-              className="inline-flex items-center gap-1.5 text-[#1A1A12] font-[family-name:var(--font-quicksand)] font-semibold text-sm hover:text-[#7A8E3E] transition-colors duration-200 cursor-pointer group mt-2"
-            >
-              Les mer om meg
-              <ArrowUpRight size={15} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
-            </Link>
           </div>
         </div>
+
+        {/* Bottom fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[#F4F9FA] to-transparent" />
       </section>
 
-      {/* ─────────────────────────────────────────────
-          PULL QUOTE — full width
-      ───────────────────────────────────────────── */}
-      <section className="relative overflow-hidden py-0">
-        <div className="relative h-[380px]">
-          <Image src="/images/img3.jpg" alt="Natur" fill className="object-cover object-center" quality={85} />
-          <div className="absolute inset-0 bg-[#1A1A12]/65" />
-          <div className="absolute inset-0 flex items-center justify-center px-6">
-            <blockquote className="text-center max-w-2xl">
-              <p className="font-[family-name:var(--font-caveat)] text-[clamp(1.8rem,4vw,3.5rem)] font-bold text-[#FAF8F2] leading-tight">
-                &ldquo;Du har allerede det du trenger —<br />
-                <span className="text-[#E8B96A]">la oss finne det sammen.</span>&rdquo;
-              </p>
-            </blockquote>
-          </div>
-        </div>
-      </section>
-
-      {/* ─────────────────────────────────────────────
-          SERVICES — bento-style, alternating colors
-      ───────────────────────────────────────────── */}
+      {/* ════════════════════════════════════════════
+          2. COACHING AREAS — image cards grid
+      ════════════════════════════════════════════ */}
       <section className="py-24 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="mb-12 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+        <div className="max-w-7xl mx-auto">
+
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
             <div>
-              <p className="font-[family-name:var(--font-quicksand)] text-[#7A8E3E] text-sm font-bold tracking-widest uppercase mb-2">
-                Tjenester
-              </p>
-              <h2 className="font-[family-name:var(--font-caveat)] text-[clamp(2.5rem,5vw,4rem)] font-bold text-[#1A1A12]">
-                Hva jeg kan hjelpe med
+              <div className="flex items-center gap-3 mb-3">
+                <div className="h-px w-8 bg-[#C8963A]" />
+                <span className="font-[family-name:var(--font-dm)] text-[#1B6B7A] text-xs font-semibold tracking-[0.15em] uppercase">Hva jeg jobber med</span>
+              </div>
+              <h2 className="font-[family-name:var(--font-outfit)] text-4xl md:text-5xl font-bold text-[#0A1F27] leading-tight">
+                Seks områder.<br />
+                <span className="text-[#1B6B7A]">Én tilnærming.</span>
               </h2>
             </div>
             <Link
               href="/timeplan"
-              className="inline-flex items-center gap-2 border-2 border-[#1A1A12] text-[#1A1A12] font-[family-name:var(--font-quicksand)] font-bold text-sm px-6 py-3 rounded-2xl hover:bg-[#1A1A12] hover:text-[#FAF8F2] transition-all duration-300 cursor-pointer self-start"
+              className="inline-flex items-center gap-2 text-[#1B6B7A] border border-[#1B6B7A] font-[family-name:var(--font-dm)] font-semibold text-sm px-5 py-2.5 rounded-xl hover:bg-[#1B6B7A] hover:text-white transition-all duration-200 cursor-pointer self-start"
             >
-              Se priser & tider
-              <ArrowRight size={14} />
+              Se timeplan <ArrowUpRight size={14} />
             </Link>
           </div>
 
-          {/* Bento grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {services.map((s, i) => (
+          {/* 6-card grid — 3 cols desktop, 2 tablet, 1 mobile */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {areas.map((area) => (
               <div
-                key={i}
-                className={`${s.color} rounded-[1.75rem] p-8 flex flex-col gap-4 group hover:scale-[1.01] transition-transform duration-300 cursor-default`}
+                key={area.slug}
+                className="group relative h-72 rounded-2xl overflow-hidden cursor-default"
               >
-                <div className="flex items-center justify-between">
-                  <span className={`font-[family-name:var(--font-quicksand)] text-xs font-bold tracking-widest uppercase px-3 py-1.5 rounded-full ${
-                    s.color === "bg-[#F0EBE0]"
-                      ? "bg-[#DDD5C0] text-[#1A1A12]"
-                      : "bg-black/15 text-white"
-                  }`}>
-                    {s.tag}
-                  </span>
-                  <span className={`font-[family-name:var(--font-caveat)] text-5xl font-bold opacity-20 ${s.textColor}`}>
-                    0{i + 1}
-                  </span>
+                {/* Background image */}
+                <Image
+                  src={area.img}
+                  alt={area.label.replace("\n", " ")}
+                  fill
+                  sizes="(max-width:640px)100vw,(max-width:1024px)50vw,33vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  quality={75}
+                />
+
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#07303C]/90 via-[#07303C]/40 to-transparent" />
+                <div className="absolute inset-0 bg-[#1B6B7A]/0 group-hover:bg-[#1B6B7A]/20 transition-colors duration-300" />
+
+                {/* Content */}
+                <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                  <h3 className="font-[family-name:var(--font-bebas)] text-3xl text-white leading-tight tracking-wide mb-2">
+                    {area.label.split("\n").map((line, i) => (
+                      <span key={i}>{line}{i === 0 && <br />}</span>
+                    ))}
+                  </h3>
+                  <p className="font-[family-name:var(--font-dm)] text-white/70 text-sm leading-relaxed translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                    {area.desc}
+                  </p>
                 </div>
-                <h3 className={`font-[family-name:var(--font-caveat)] text-2xl font-bold ${s.textColor}`}>
-                  {s.title}
-                </h3>
-                <p className={`font-[family-name:var(--font-quicksand)] text-sm leading-relaxed ${
-                  s.textColor === "text-[#FAF8F2]" ? "text-white/75" : "text-[#4A4837]"
-                }`}>
-                  {s.desc}
-                </p>
+
+                {/* Top badge */}
+                <div className="absolute top-4 right-4 w-2 h-2 rounded-full bg-[#C8963A]" />
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ─────────────────────────────────────────────
-          IMAGE TRIO — organic grid
-      ───────────────────────────────────────────── */}
-      <section className="px-6 pb-6">
-        <div className="max-w-6xl mx-auto grid grid-cols-12 grid-rows-2 gap-4 h-[380px]">
-          <div className="col-span-7 row-span-2 rounded-[1.75rem] overflow-hidden relative">
-            <Image src="/images/img4.jpg" alt="" fill className="object-cover" quality={80} />
+      {/* ════════════════════════════════════════════
+          3. ABOUT — OM MEG
+      ════════════════════════════════════════════ */}
+      <section className="py-24 px-6 bg-white">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+          {/* Photo side */}
+          <div className="relative order-2 lg:order-1">
+            <div className="aspect-[4/5] rounded-2xl overflow-hidden relative">
+              <Image
+                src="/images/img2.jpg"
+                alt="FAS Coaching — om meg"
+                fill
+                sizes="(max-width:1024px)100vw,50vw"
+                className="object-cover object-top"
+                quality={85}
+              />
+            </div>
+            {/* Floating teal accent card */}
+            <div className="absolute -bottom-6 -right-4 bg-[#0B3D4A] text-white rounded-2xl px-6 py-5 shadow-xl">
+              <p className="font-[family-name:var(--font-bebas)] text-4xl text-[#C8963A] tracking-wide">5+</p>
+              <p className="font-[family-name:var(--font-dm)] text-white/60 text-xs mt-0.5">år som coach</p>
+            </div>
+            {/* Logo bubble */}
+            <div className="absolute -top-4 -left-4 bg-white rounded-2xl p-3 shadow-lg border border-[#D0E5EA]">
+              <Image src="/images/logo6.png" alt="FAS Coaching" width={52} height={52} className="object-contain" />
+            </div>
           </div>
-          <div className="col-span-5 row-span-1 rounded-[1.75rem] overflow-hidden relative">
-            <Image src="/images/img5.jpg" alt="" fill className="object-cover object-center" quality={80} />
-          </div>
-          <div className="col-span-5 row-span-1 rounded-[1.75rem] overflow-hidden relative">
-            <Image src="/images/img6.jpg" alt="" fill className="object-cover" quality={80} />
+
+          {/* Text side */}
+          <div className="order-1 lg:order-2 space-y-6">
+            <div className="flex items-center gap-3">
+              <div className="h-px w-8 bg-[#C8963A]" />
+              <span className="font-[family-name:var(--font-dm)] text-[#1B6B7A] text-xs font-semibold tracking-[0.15em] uppercase">Om meg</span>
+            </div>
+            <h2 className="font-[family-name:var(--font-outfit)] text-4xl md:text-5xl font-bold text-[#0A1F27] leading-tight">
+              Et møte som<br />
+              <span className="text-[#1B6B7A]">forandrer noe</span>
+            </h2>
+            <p className="font-[family-name:var(--font-dm)] text-[#2C4A55] text-base leading-[1.8]">
+              FAS Coaching jobber innen mange områder. Jeg veileder unge og voksne i å få et nytt perspektiv på livsstil, karriere, relasjoner, sorg, idrett og ledelse — der man støter på problemer. Hensikten er å oppnå en bedre livskvalitet.
+            </p>
+            <p className="font-[family-name:var(--font-dm)] text-[#2C4A55] text-base leading-[1.8]">
+              Jeg er basert i Lørenskog og tilbyr samtaler både fysisk og digitalt. Alle samtaler holdes i konfidensielle omgivelser med full respekt for din prosess.
+            </p>
+
+            {/* 3-stat row */}
+            <div className="grid grid-cols-3 gap-4 py-2">
+              {[["Livsstil","Karriere","Relasjoner"],["Sorg","Idrett","Ledelse"]].flat().slice(0,3).map((item) => (
+                <div key={item} className="bg-[#EDF7FA] rounded-xl px-4 py-3 text-center">
+                  <p className="font-[family-name:var(--font-dm)] text-[#1B6B7A] text-xs font-semibold">{item}</p>
+                </div>
+              ))}
+            </div>
+
+            <Link
+              href="/om"
+              className="inline-flex items-center gap-2 text-[#0A1F27] font-[family-name:var(--font-dm)] font-semibold text-sm hover:text-[#1B6B7A] transition-colors cursor-pointer group"
+            >
+              Les mer om meg
+              <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* ─────────────────────────────────────────────
-          TESTIMONIALS — card style
-      ───────────────────────────────────────────── */}
-      <section className="py-24 px-6 bg-[#1A1A12]">
-        <div className="max-w-6xl mx-auto">
-          <div className="mb-12 text-center">
-            <p className="font-[family-name:var(--font-quicksand)] text-[#9EAB5C] text-sm font-bold tracking-widest uppercase mb-2">
-              Referanser
-            </p>
-            <h2 className="font-[family-name:var(--font-caveat)] text-[clamp(2.5rem,5vw,4rem)] font-bold text-[#FAF8F2]">
-              Hva folk sier
-            </h2>
+      {/* ════════════════════════════════════════════
+          4. TESTIMONIALS — "HVA SIER DE JEG HAR HJULPET?"
+      ════════════════════════════════════════════ */}
+      <section className="py-24 px-6 bg-[#0B3D4A]">
+        <div className="max-w-7xl mx-auto">
+
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-14">
+            <div>
+              <div className="flex items-center gap-3 mb-3">
+                <div className="h-px w-8 bg-[#C8963A]" />
+                <span className="font-[family-name:var(--font-dm)] text-[#3AA0B2] text-xs font-semibold tracking-[0.15em] uppercase">Referanser</span>
+              </div>
+              <h2 className="font-[family-name:var(--font-outfit)] text-4xl md:text-5xl font-bold text-white leading-tight">
+                Hva sier de jeg<br />
+                <span className="text-[#C8963A]">har hjulpet?</span>
+              </h2>
+            </div>
+            <Link href="/referanser" className="text-[#3AA0B2] hover:text-white font-[family-name:var(--font-dm)] text-sm font-semibold transition-colors cursor-pointer self-start">
+              Se alle →
+            </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+          {/* Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {testimonials.map((t, i) => (
               <div
                 key={i}
-                className="bg-[#2D2C1F] rounded-[1.5rem] p-7 border border-[#3D3C2C] flex flex-col gap-5"
+                className={`rounded-2xl p-8 border border-white/8 ${
+                  i === 0 ? "bg-white/8" : "bg-white/4"
+                }`}
               >
-                <div className="flex gap-1">
+                <Quote size={20} className="text-[#C8963A] mb-5" />
+                <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, j) => (
-                    <Star key={j} size={14} className="fill-[#C8963A] text-[#C8963A]" />
+                    <Star key={j} size={12} className="fill-[#C8963A] text-[#C8963A]" />
                   ))}
                 </div>
-                <p className="font-[family-name:var(--font-caveat)] text-xl font-semibold text-[#DDD5C0] leading-relaxed flex-1">
+                <p className="font-[family-name:var(--font-outfit)] text-lg font-light text-white/80 leading-relaxed mb-6 italic">
                   &ldquo;{t.quote}&rdquo;
                 </p>
-                <div className="border-t border-[#3D3C2C] pt-4">
-                  <p className="font-[family-name:var(--font-quicksand)] font-bold text-[#FAF8F2] text-sm">{t.name}</p>
-                  <p className="font-[family-name:var(--font-quicksand)] text-[#6B6852] text-xs mt-0.5">{t.role}</p>
+                <div className="flex items-center gap-3 pt-4 border-t border-white/10">
+                  <div className="w-8 h-8 rounded-full bg-[#1B6B7A] flex items-center justify-center">
+                    <span className="font-[family-name:var(--font-outfit)] text-white text-xs font-bold">
+                      {t.name[0]}
+                    </span>
+                  </div>
+                  <div>
+                    <p className="font-[family-name:var(--font-dm)] text-white font-semibold text-sm">{t.name}</p>
+                    <p className="font-[family-name:var(--font-dm)] text-white/40 text-xs">{t.role}</p>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
-          <div className="text-center mt-8">
-            <Link
-              href="/referanser"
-              className="inline-flex items-center gap-2 text-[#9EAB5C] font-[family-name:var(--font-quicksand)] font-semibold text-sm hover:text-[#E8B96A] transition-colors duration-200 cursor-pointer"
-            >
-              Se alle referanser <ArrowRight size={14} />
-            </Link>
-          </div>
         </div>
       </section>
 
-      {/* ─────────────────────────────────────────────
-          WHY COACHING — checklist
-      ───────────────────────────────────────────── */}
-      <section className="py-24 px-6 bg-[#F0EBE0]">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-          <div className="space-y-6">
-            <p className="font-[family-name:var(--font-quicksand)] text-[#7A8E3E] text-sm font-bold tracking-widest uppercase">
-              Hvorfor coaching?
+      {/* ════════════════════════════════════════════
+          5. FULL-WIDTH IMAGE BREAK
+      ════════════════════════════════════════════ */}
+      <section className="relative h-[340px] overflow-hidden">
+        <Image src="/images/img3.jpg" alt="" fill className="object-cover object-center" quality={80} />
+        <div className="absolute inset-0 bg-[#0B3D4A]/70" />
+        <div className="absolute inset-0 flex items-center justify-center px-6">
+          <blockquote className="text-center max-w-3xl">
+            <p className="font-[family-name:var(--font-bebas)] text-[clamp(2rem,6vw,5rem)] text-white tracking-wide leading-tight">
+              Du har allerede det du trenger —<br />
+              <span className="text-[#C8963A]">la oss finne det sammen</span>
             </p>
-            <h2 className="font-[family-name:var(--font-caveat)] text-[clamp(2.5rem,4.5vw,3.8rem)] font-bold text-[#1A1A12] leading-tight">
-              Kanskje du kjenner<br />deg igjen?
-            </h2>
-            <ul className="space-y-3">
-              {[
-                "Du ønsker et nytt perspektiv på livsstil eller karriere",
-                "Du har det vanskelig i relasjoner eller bærer på sorg",
-                "Du vil prestere bedre — i idrett eller som leder",
-                "Du vil hjelpe barnet ditt på en bedre måte",
-                "Du trenger noen som lytter uten å dømme",
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-[#9EAB5C] flex items-center justify-center shrink-0 mt-0.5">
-                    <Check size={13} className="text-white" strokeWidth={3} />
-                  </div>
-                  <span className="font-[family-name:var(--font-quicksand)] text-[#2D2C1F] text-base leading-snug">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="relative h-80 lg:h-[460px]">
-            <div className="absolute inset-0 rounded-[2rem] overflow-hidden">
-              <Image src="/images/img1.jpg" alt="Refleksjon" fill className="object-cover" quality={85} />
-            </div>
-            {/* Floating card */}
-            <div className="absolute -bottom-4 -left-4 bg-[#FAF8F2] rounded-2xl p-5 shadow-xl border border-[#DDD5C0] max-w-[220px]">
-              <p className="font-[family-name:var(--font-caveat)] text-[#C8963A] text-4xl font-bold">Gratis</p>
-              <p className="font-[family-name:var(--font-quicksand)] text-[#4A4837] text-xs mt-1 leading-snug">
-                Start med en gratis intro-samtale. Ingen forpliktelse.
-              </p>
-            </div>
-          </div>
+          </blockquote>
         </div>
       </section>
 
-      {/* ─────────────────────────────────────────────
-          BOTTOM CTA
-      ───────────────────────────────────────────── */}
-      <section className="py-24 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="relative bg-[#7A8E3E] rounded-[2rem] overflow-hidden px-8 py-16 text-center">
-            {/* Decorative blob */}
-            <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-[#9EAB5C]/50 blur-3xl" />
-            <div className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full bg-[#C8963A]/30 blur-3xl" />
+      {/* ════════════════════════════════════════════
+          6. CONTACT TEASER — KONTAKT MEG
+      ════════════════════════════════════════════ */}
+      <section className="py-24 px-6 bg-white">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-            <div className="relative z-10">
-              <p className="font-[family-name:var(--font-quicksand)] text-[#E8F0D0] text-sm font-bold tracking-widest uppercase mb-3">
-                Ta det første steget
-              </p>
-              <h2 className="font-[family-name:var(--font-caveat)] text-[clamp(2.8rem,6vw,5.5rem)] font-bold text-[#FAF8F2] leading-tight mb-5">
-                Klar for å starte<br />reisen?
-              </h2>
-              <p className="font-[family-name:var(--font-quicksand)] text-[#E8F0D0] text-base max-w-sm mx-auto mb-8 leading-relaxed">
-                Book en gratis 20-minutters intro og finn ut om coaching er noe for deg.
-              </p>
-              <div className="flex flex-wrap gap-4 justify-center">
-                <Link
-                  href="/timeplan"
-                  className="inline-flex items-center gap-2 bg-[#FAF8F2] text-[#1A1A12] font-[family-name:var(--font-quicksand)] font-bold px-8 py-4 rounded-2xl hover:bg-[#C8963A] hover:text-[#FAF8F2] transition-colors duration-300 cursor-pointer"
+          <div className="space-y-6">
+            <div className="flex items-center gap-3">
+              <div className="h-px w-8 bg-[#C8963A]" />
+              <span className="font-[family-name:var(--font-dm)] text-[#1B6B7A] text-xs font-semibold tracking-[0.15em] uppercase">Ta kontakt</span>
+            </div>
+            <h2 className="font-[family-name:var(--font-outfit)] text-4xl md:text-5xl font-bold text-[#0A1F27] leading-tight">
+              Klar for å starte<br />
+              <span className="text-[#1B6B7A]">din reise?</span>
+            </h2>
+            <p className="font-[family-name:var(--font-dm)] text-[#2C4A55] text-base leading-[1.8]">
+              Start med en gratis 20-minutters intro-samtale. Ingen forpliktelser — bare en åpen prat om hva du ønsker å jobbe med.
+            </p>
+
+            <div className="space-y-3">
+              {[
+                { icon: Phone, label: "+47 41 12 21 29", href: "tel:+4741122129" },
+                { icon: Mail, label: "post@fas-coaching.no", href: "mailto:post@fas-coaching.no" },
+                { icon: MapPin, label: "Skårerveien 12, Lørenskog", href: "#" },
+              ].map(({ icon: Icon, label, href }) => (
+                <a
+                  key={label}
+                  href={href}
+                  className="flex items-center gap-3 group cursor-pointer"
                 >
-                  Book gratis intro
-                  <ArrowRight size={16} />
-                </Link>
-                <Link
-                  href="/kontakt"
-                  className="inline-flex items-center gap-2 text-[#FAF8F2] border-2 border-[#FAF8F2]/40 font-[family-name:var(--font-quicksand)] font-bold px-8 py-4 rounded-2xl hover:border-[#FAF8F2] transition-colors duration-300 cursor-pointer"
-                >
-                  Send melding
-                </Link>
+                  <div className="w-9 h-9 rounded-lg bg-[#EDF7FA] flex items-center justify-center shrink-0 group-hover:bg-[#1B6B7A] transition-colors duration-200">
+                    <Icon size={15} className="text-[#1B6B7A] group-hover:text-white transition-colors duration-200" />
+                  </div>
+                  <span className="font-[family-name:var(--font-dm)] text-[#2C4A55] text-sm group-hover:text-[#1B6B7A] transition-colors duration-200">
+                    {label}
+                  </span>
+                </a>
+              ))}
+            </div>
+
+            <div className="flex flex-wrap gap-3 pt-2">
+              <Link
+                href="/timeplan"
+                className="inline-flex items-center gap-2 bg-[#0B3D4A] text-white font-[family-name:var(--font-dm)] font-semibold px-7 py-3.5 rounded-xl hover:bg-[#1B6B7A] transition-colors duration-200 cursor-pointer text-sm"
+              >
+                Book gratis intro <ArrowRight size={14} />
+              </Link>
+              <Link
+                href="/kontakt"
+                className="inline-flex items-center gap-2 text-[#0A1F27] border border-[#D0E5EA] font-[family-name:var(--font-dm)] font-medium px-6 py-3.5 rounded-xl hover:border-[#1B6B7A] hover:text-[#1B6B7A] transition-all duration-200 cursor-pointer text-sm"
+              >
+                Send melding
+              </Link>
+            </div>
+          </div>
+
+          {/* Right: Image */}
+          <div className="relative h-[420px] rounded-2xl overflow-hidden">
+            <Image src="/images/img6.jpg" alt="Kontakt FAS Coaching" fill className="object-cover" quality={85} />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0B3D4A]/60 to-transparent" />
+            <div className="absolute bottom-6 left-6 right-6">
+              <div className="bg-white/95 backdrop-blur-sm rounded-xl px-5 py-4 border border-white/80 shadow-xl">
+                <p className="font-[family-name:var(--font-outfit)] font-semibold text-[#0A1F27] text-sm">Gratis intro-samtale</p>
+                <p className="font-[family-name:var(--font-dm)] text-[#5C7A84] text-xs mt-0.5">20 minutter · Ingen forpliktelse</p>
               </div>
             </div>
           </div>
