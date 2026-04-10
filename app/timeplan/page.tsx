@@ -37,7 +37,7 @@ export default function TimeplanPage() {
             Start din<br />
             <span className="text-[#002850]">reise</span>
           </h1>
-          <p className="font-[family-name:var(--font-dm)] text-[#111110] text-base mt-6 max-w-lg leading-relaxed">
+          <p className="font-[family-name:var(--font-dm)] text-[#111110] text-[1rem] mt-6 max-w-lg leading-relaxed">
             Velg det coachingområdet som passer deg — og start gjerne med en gratis intro-samtale.
           </p>
         </div>

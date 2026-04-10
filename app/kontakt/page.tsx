@@ -21,7 +21,7 @@ export default function KontaktPage() {
             La oss ta en<br />
             <span className="text-[#002850]">prat</span>
           </h1>
-          <p className="font-[family-name:var(--font-dm)] text-[#111110] text-base mt-6 max-w-lg leading-relaxed">
+          <p className="font-[family-name:var(--font-dm)] text-[#111110] text-[1rem] mt-6 max-w-lg leading-relaxed">
             Send en melding og jeg svarer innen én arbeidsdag. Eller ring direkte.
           </p>
         </div>

@@ -252,15 +252,15 @@ export default function HomePage() {
               Profesjonell coach<br />
               <span className="text-[#002850]">for hele livet</span>
             </h2>
-            <p className="font-[family-name:var(--font-dm)] text-[#111110] text-base leading-[1.8]">
+            <p className="font-[family-name:var(--font-dm)] text-[#111110] text-[1rem] leading-[1.8]">
               Jeg er en profesjonell business- og livsstilscoach som hjelper både voksne og barn til å forme et eget perspektiv på livet. Ditt liv kan bli mye bedre med positiv tenking, livsglede, bedre helse og en mer effektiv og morsommere hverdag.
             </p>
-            <p className="font-[family-name:var(--font-dm)] text-[#111110] text-base leading-[1.8]">
+            <p className="font-[family-name:var(--font-dm)] text-[#111110] text-[1rem] leading-[1.8]">
               Jeg kan hjelpe deg med verktøy og teknikker, og utvikle vaner og ferdigheter som gjør at du effektivt, og med et helt nytt perspektiv, kan håndtere de utfordringene du møter i livet. Samtaler kan gjøres via telefon, video eller personlig møte.
             </p>
 
             <blockquote className="border-l-2 border-[#002850] pl-5 py-1">
-              <p className="font-[family-name:var(--font-dm)] text-base text-[#111110] leading-snug font-medium">
+              <p className="font-[family-name:var(--font-dm)] text-[1rem] text-[#111110] leading-snug font-medium">
                 &ldquo;Hvis du gjør det du alltid har gjort, får du det du alltid har fått.&rdquo;
               </p>
             </blockquote>
@@ -330,7 +330,7 @@ export default function HomePage() {
               Klar for å starte<br />
               <span className="text-[#002850]">din reise?</span>
             </h2>
-            <p className="font-[family-name:var(--font-dm)] text-[#111110] text-base leading-[1.8]">
+            <p className="font-[family-name:var(--font-dm)] text-[#111110] text-[1rem] leading-[1.8]">
               Start med en gratis 20-minutters intro-samtale. Ingen forpliktelser — bare en åpen prat om hva du ønsker å jobbe med.
             </p>
 

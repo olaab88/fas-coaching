@@ -114,7 +114,7 @@ export default function ReferanserPage() {
           <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-[#111110]">
             Skriv din egen <span className="text-[#002850]">historie</span>
           </h2>
-          <p className="font-[family-name:var(--font-dm)] text-[#111110] text-base leading-relaxed">
+          <p className="font-[family-name:var(--font-dm)] text-[#111110] text-[1rem] leading-relaxed">
             Start med en gratis intro-samtale og se hva coaching kan gjøre for deg.
           </p>
           <Link

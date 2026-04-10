@@ -79,16 +79,16 @@ export default function OmPage() {
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-[#111110] leading-tight">
               Min reise inn i coaching
             </h2>
-            <p className="font-[family-name:var(--font-dm)] text-[#111110] text-base leading-[1.8]">
+            <p className="font-[family-name:var(--font-dm)] text-[#111110] text-[1rem] leading-[1.8]">
               Jeg er en en profesjonell business-og livsstilscoach som hjelper både voksne og barn til å forme et eget perspektiv på livet.
             </p>
-            <p className="font-[family-name:var(--font-dm)] text-[#111110] text-base leading-[1.8]">
+            <p className="font-[family-name:var(--font-dm)] text-[#111110] text-[1rem] leading-[1.8]">
               Ditt liv kan bli mye bedre med positiv tenking, livsglede, bedre helse og en mer effektiv og morsommere hverdag, enten det gjelder din karrière, dine relasjoner eller andre ting som er viktige for deg.
             </p>
-            <p className="font-[family-name:var(--font-dm)] text-[#111110] text-base leading-[1.8]">
+            <p className="font-[family-name:var(--font-dm)] text-[#111110] text-[1rem] leading-[1.8]">
               Jeg kan hjelpe deg med verktøy og teknikker, og utvikle vaner og ferdigheter som gjør at du effektivt, og med et helt nytt perspektiv, kan håndtere de utfordringene du møter i livet.
             </p>
-            <p className="font-[family-name:var(--font-dm)] text-[#111110] text-base leading-[1.8]">
+            <p className="font-[family-name:var(--font-dm)] text-[#111110] text-[1rem] leading-[1.8]">
               Samtaler kan gjøres via telefon, video eller personlig møte.
             </p>
             <div className="pt-2 flex flex-wrap items-end justify-between gap-4">
@@ -105,7 +105,7 @@ export default function OmPage() {
             </div>
 
             <blockquote className="border-l-2 border-[#002850] pl-5 py-1">
-              <p className="font-[family-name:var(--font-dm)] text-base font-medium text-[#111110] leading-snug">
+              <p className="font-[family-name:var(--font-dm)] text-[1rem] font-medium text-[#111110] leading-snug">
                 &ldquo;Hvis du gjør det du alltid har gjort, får du det du alltid har fått.&rdquo;
               </p>
             </blockquote>
