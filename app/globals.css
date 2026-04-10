@@ -26,11 +26,11 @@ body {
   }
 }
 
-::selection { background: #C8963A; color: #fff; }
+::selection { background: #002850; color: #fff; }
 
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: #EFECEA; }
-::-webkit-scrollbar-thumb { background: #C8963A; border-radius: 2px; }
+::-webkit-scrollbar-thumb { background: #002850; border-radius: 2px; }
 
 @keyframes marquee {
   from { transform: translateX(0); }
