@@ -1,12 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-base:      #F8F7F4;
-  --color-surface:   #EFECEA;
+  --color-page:      #F8F7F4;
   --color-ink:       #111110;
-  --color-muted:     #6B6860;
-  --color-gold:      #C8963A;
-  --color-gold-soft: #F5E4C3;
   --color-border:    #E2DDD7;
   --color-dark:      #141210;
   --font-display: var(--font-playfair), Georgia, serif;
