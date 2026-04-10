@@ -13,25 +13,25 @@ const testimonials = [
     name: "Jon Henning",
     role: "42 år",
     sessions: "4 måneder",
-    quote: "Finn Arne er en mann som virkelig får deg til å finne ut av hvem som er viktigst i livet og hva som er viktigst ved å lytte hjerte og følelser, ikke via hjerne og mekanismer som er satt i et system. Han finner dine behov og avdekker hva du trenger. Jeg hadde ikke kommet dit jeg er i dag på 4 mnd uten Finn Arnes hjelp og opplever nå min beste tid i livet i en alder av 42 år.",
-  },
-  {
-    name: "Tore",
-    role: "38 år",
-    sessions: "3 timer",
-    quote: "Når jeg kom til deg hadde jeg få eller ingen positive tanker. Var sint og skylte på omgivelser og andre rundt meg. Lei av livet og meg selv, lite sosial og murte meg inne. Du fikk meg til å gå i meg selv og vi fant raskt noen av årsakene til mine problemer. Nå smiler livet igjen og er sosial, positiv og har fått meg kjæreste. Dette kan varmt anbefales. Tusen takk.",
+    quote: "Desember 2018 var et vendepunkt i livet mitt, hvor jeg måtte innse at jeg over en lengre periode hadde jobbet for mye og sovet for lite. Det var bare å innse at man kan bli syk av det, og at man må finne tilbake til seg selv og livet igjen. Min kone hadde forstått og fortalt dette over en lengre periode, og endelig fikk hun meg til å forstå alvoret.\n\nVia bekjente kom jeg i kontakt med Finn Arne, som satte av tid allerede dagen etter. Det som slo meg aller mest da jeg kom inn i rommet, var at han møtte meg med åpne armer og ga meg en klem.\n\nFinn Arne er en mann som virkelig får deg til å finne ut av hvem og hva som er viktigst i livet, ved å lytte til hjerte og følelser — ikke via hjerne og mekanismer som er satt i et system. Han finner dine behov og avdekker hva du trenger. Ved hjelp av dette kom vi frem til mange gode ting man skal minne seg selv på daglig, for å huske hva som er viktigst. Nemlig deg selv.\n\nHistorien kunne vært en lang roman, men fortalt i korte trekk: Jeg hadde ikke kommet dit jeg er i dag uten Finn Arnes hjelp på 4 måneder, og opplever nå min beste tid i livet i en alder av 42 år.",
   },
   {
     name: "Per",
     role: "40 år",
     sessions: "Flere samtaler",
-    quote: "Han er ikke belærende, ikke instruerende, har ikke alltid svaret, men er meget god til å stille spørsmål. Gjennom gode samtaler og dialog leder han meg gjennom nye måter å se ting på, og via gode spørsmål ender jeg oftest opp med svaret selv. Finn Arne oppklarte raskt at det er en lettere og mer realistisk oppgave å endre på seg selv fremfor å tro en skal lykkes med å endre verden. Stor takk for kunnskap og profesjonell hjelp.",
+    quote: "I flere år med et stadig sterkere fokus på hvordan virksomheten burde forholde seg til meg og mitt, måtte jeg innse at jeg ikke hjalp meg selv særlig bra. Jeg har over tid erfart en økt grad av irritasjon og forundring over hvordan «verden» kunne velge å misforstå meg i det som for meg var opplagt.\n\nEtter noen samtaler med Finn Arne ble jeg raskt klar over at her var det en som var oppriktig engasjert og opptatt av å hjelpe meg. Han er ikke belærende, ikke instruerende, og har ikke alltid svaret — men han er meget god til å stille de rette spørsmålene.\n\nGjennom gode samtaler og dialog leder han meg gjennom nye måter å se ting på, og via gode spørsmål ender jeg oftest opp med svaret selv. Finn Arne oppklarte raskt at det er en lettere og mer realistisk oppgave å endre på seg selv fremfor å tro at en skal lykkes med å endre verden. Bonusen er at når jeg endret meg, endret det også omgivelsene mine positivt. Noen ganger trenger vi noen for å se det åpenbare. Stor takk for kunnskap og profesjonell hjelp — du har min beste anbefaling.",
+  },
+  {
+    name: "Tore",
+    role: "38 år",
+    sessions: "Flere samtaler",
+    quote: "Når jeg kom til deg hadde jeg få eller ingen positive tanker. Var sint og skylte på omgivelser og andre rundt meg. Lei av livet og meg selv, lite sosial og murte meg inne. Du fikk meg til å gå i meg selv, og vi fant raskt noen av årsakene til mine problemer.\n\nNå smiler livet igjen. Jeg er sosial, positiv og har fått meg kjæreste. Dette kan varmt anbefales. Tusen takk.",
   },
   {
     name: "Frode",
     role: "49 år — bedriftsleder",
     sessions: "Krisetid",
-    quote: "På få dagers varsel hadde vi igjen gode samtaler og begynte å nøste sammen. På rekord tid klarte han å få meg til å innse at det faktisk ikke var noen som hadde alle svarene. Han får meg til å tenke selv og støtter, dytter meg i front og er selv usynlig støtte og sørger for at vi har fremdrift og følger planen. Takk for det jeg klart ser som 'avgjørende bidrag' for meg i noen uker preget av rådløshet.",
+    quote: "Jeg eier og leder ett solid firma med 35 ansatte, som jeg overtok av familien for 11 år siden. Jeg har alltid jobbet hardt og hatt full kontroll og god drift. Så smalt det — 12. mars og full nedstengning av landet. Jeg var plutselig i en helt ny situasjon hvor jeg i løpet av én dag ble bombardert av hendelser jeg ikke klarte å håndtere slik jeg ønsket.\n\nJeg druknet i forventninger og krav fra alle rundt meg, uten å se noen løsning. Jeg måtte ha hjelp til å sortere. Jeg tok kontakt med Finn Arne, som vi hadde fått anbefalt av en bekjent. Han imponerte meg da, og han imponerte meg igjen. På få dagers varsel hadde vi igjen gode samtaler og begynte å nøste det sammen. På rekord tid klarte han å få meg til å innse at det faktisk ikke var noen som hadde alle svarene. Alle er ulike, og ingen besitter alle de absolutte sannheter.\n\nAlle ansatte, leverandører og kunder ble informert, og vi ga god informasjon med de riktige formuleringene til de rette tidspunktene. Kommunikasjonen fungerte, og det var ingen panikk. Han får meg til å tenke selv og støtter, dytter meg i front og er selv usynlig støtte — og sørger for at vi har fremdrift og følger planen.\n\nTakk for det jeg klart ser som «avgjørende bidrag» for meg i noen uker preget av rådløshet og handlekraft.",
   },
 ];
 
@@ -79,9 +79,13 @@ export default function ReferanserPage() {
               <div className="flex gap-1">
                 {[...Array(5)].map((_, j) => <Star key={j} size={12} className="fill-[#64C8C8] text-[#64C8C8]" />)}
               </div>
-              <p className="font-[family-name:var(--font-dm)] text-sm text-[#2C2C2C] leading-relaxed flex-1">
-                &ldquo;{t.quote}&rdquo;
-              </p>
+              <div className="flex-1 space-y-3">
+                {t.quote.split("\n\n").map((para, j) => (
+                  <p key={j} className="font-[family-name:var(--font-dm)] text-sm text-[#111110] leading-relaxed">
+                    {j === 0 && <>&ldquo;</>}{para}{j === t.quote.split("\n\n").length - 1 && <>&rdquo;</>}
+                  </p>
+                ))}
+              </div>
               <div className="flex items-center justify-between pt-4 border-t border-[#F8F7F4]">
                 <div>
                   <p className="font-[family-name:var(--font-dm)] font-semibold text-[#111110] text-sm">{t.name}</p>

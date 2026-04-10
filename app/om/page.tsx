@@ -62,7 +62,7 @@ export default function OmPage() {
                 <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-xs mt-1.5">år som coach</p>
               </div>
             </div>
-            <div className="rounded-2xl overflow-hidden aspect-[4/3] relative mt-8 bg-[#F0EEEB]">
+            <div className="rounded-2xl overflow-hidden aspect-[2/3] relative mt-8 bg-[#F0EEEB]">
               <Image
                 src="/images/site_img_d.jpg"
                 alt="Finn Arne Sivertsen — aktivitet"
