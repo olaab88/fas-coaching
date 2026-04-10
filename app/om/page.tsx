@@ -80,14 +80,21 @@ export default function OmPage() {
               Min reise inn i coaching
             </h2>
             <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-base leading-[1.8]">
-              Jeg er en profesjonell business- og livsstilscoach som hjelper både voksne og barn til å forme et eget perspektiv på livet. Ditt liv kan bli mye bedre med positiv tenking, livsglede, bedre helse og en mer effektiv og morsommere hverdag, enten det gjelder din karrière, dine relasjoner eller andre ting som er viktige for deg.
+              Jeg er en profesjonell business- og livsstilscoach som hjelper både voksne og barn til å forme et eget perspektiv på livet.
+            </p>
+            <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-base leading-[1.8]">
+              Ditt liv kan bli mye bedre med positiv tenking, livsglede, bedre helse og en mer effektiv og morsommere hverdag, enten det gjelder din karrière, dine relasjoner eller andre ting som er viktige for deg.
             </p>
             <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-base leading-[1.8]">
               Jeg kan hjelpe deg med verktøy og teknikker, og utvikle vaner og ferdigheter som gjør at du effektivt, og med et helt nytt perspektiv, kan håndtere de utfordringene du møter i livet.
             </p>
             <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-base leading-[1.8]">
-              Jeg er basert i Lørenskog og tilbyr samtaler via telefon, video eller personlig møte. Vi starter alltid med en gratis og uforpliktende intro-samtale.
+              Samtaler kan gjøres via telefon, video eller personlig møte.
             </p>
+            <div className="pt-2">
+              <p className="font-[family-name:var(--font-playfair)] font-bold text-[#111110] text-base">Finn Arne Sivertsen</p>
+              <p className="font-[family-name:var(--font-dm)] text-[#64C8C8] text-sm font-semibold tracking-wide">FAS Coaching</p>
+            </div>
 
             <blockquote className="border-l-2 border-[#C8963A] pl-5 py-1">
               <p className="font-[family-name:var(--font-playfair)] text-xl italic text-[#111110] leading-snug">
