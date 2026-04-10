@@ -126,14 +126,14 @@ export default function HomePage() {
           {/* Right: Full-height photo */}
           <div className="relative lg:w-[48%] h-72 lg:h-auto">
             {/* On mobile: normal flow with aspect ratio; on lg: absolute fill right side */}
-            <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:left-0 rounded-3xl lg:rounded-none lg:rounded-l-3xl overflow-hidden h-full min-h-72">
+            <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:left-0 rounded-3xl lg:rounded-none lg:rounded-l-3xl overflow-hidden h-full min-h-72 bg-[#F0EEEB]">
               <Image
                 src="/images/finn_arne_outdoor.png"
                 alt="Finn Arne Sivertsen — FAS Coaching"
                 fill
                 priority
                 sizes="(max-width:1024px)100vw,48vw"
-                className="object-cover object-top"
+                className="object-contain object-top"
                 quality={90}
               />
               <div className="absolute inset-0 bg-gradient-to-r from-[#F8F7F4]/20 to-transparent lg:block hidden" />
@@ -227,13 +227,13 @@ export default function HomePage() {
 
           {/* Photo */}
           <div className="relative">
-            <div className="rounded-3xl overflow-hidden aspect-[3/4] relative">
+            <div className="rounded-3xl overflow-hidden aspect-[4/5] relative bg-[#F0EEEB]">
               <Image
                 src="/images/finn_arne.png"
                 alt="Finn Arne Sivertsen — FAS Coaching"
                 fill
                 sizes="(max-width:1024px)100vw,50vw"
-                className="object-cover object-top"
+                className="object-contain object-top"
                 quality={90}
               />
             </div>

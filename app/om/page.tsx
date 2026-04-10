@@ -47,13 +47,13 @@ export default function OmPage() {
           {/* Photos */}
           <div className="lg:col-span-5 space-y-4">
             <div className="relative">
-              <div className="rounded-3xl overflow-hidden aspect-[3/4] relative">
+              <div className="rounded-3xl overflow-hidden aspect-[4/5] relative bg-[#F0EEEB]">
                 <Image
                   src="/images/finn_arne.png"
                   alt="Finn Arne Sivertsen — FAS Coaching"
                   fill
                   sizes="(max-width:1024px)100vw,42vw"
-                  className="object-cover object-top"
+                  className="object-contain object-top"
                   priority
                 />
               </div>
@@ -62,13 +62,13 @@ export default function OmPage() {
                 <p className="font-[family-name:var(--font-dm)] text-white text-xs mt-0.5">år som coach</p>
               </div>
             </div>
-            <div className="rounded-2xl overflow-hidden aspect-video relative mt-8">
+            <div className="rounded-2xl overflow-hidden aspect-[4/3] relative mt-8 bg-[#F0EEEB]">
               <Image
                 src="/images/site_img_d.jpg"
                 alt="Finn Arne Sivertsen — aktivitet"
                 fill
                 sizes="(max-width:1024px)100vw,42vw"
-                className="object-cover"
+                className="object-contain object-center"
                 quality={85}
               />
             </div>
