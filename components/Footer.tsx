@@ -19,8 +19,8 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2 space-y-5">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg overflow-hidden bg-white/5 flex items-center justify-center border border-white/10">
-                <Image src="/images/logo6.png" alt="FAS Coaching" width={32} height={32} className="object-contain scale-90" />
+              <div className="w-8 h-8 flex items-center justify-center shrink-0">
+                <Image src="/images/logo_real.png" alt="FAS Coaching" width={32} height={32} className="object-contain" />
               </div>
               <span className="font-[family-name:var(--font-dm)] text-white font-semibold text-sm">FAS Coaching</span>
             </div>

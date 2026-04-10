@@ -39,8 +39,8 @@ export default function Navbar() {
 
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group shrink-0">
-            <div className="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center bg-[#F8F7F4] border border-[#E2DDD7]">
-              <Image src="/images/logo6.png" alt="FAS Coaching" width={32} height={32} className="object-contain scale-90" />
+            <div className="w-8 h-8 flex items-center justify-center shrink-0">
+              <Image src="/images/logo_real.png" alt="FAS Coaching" width={32} height={32} className="object-contain" />
             </div>
             <span className="font-[family-name:var(--font-dm)] text-[#111110] font-semibold text-sm tracking-tight">
               FAS Coaching
