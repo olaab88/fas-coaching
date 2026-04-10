@@ -1,42 +1,46 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Clock, MapPin, Video, Phone } from "lucide-react";
+import { ArrowRight, MapPin, Video, Phone } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Timeplan & Booking — FAS Coaching",
   description:
-    "Book din coaching-time hos FAS Coaching. Tilbyr både fysiske møter i Lørenskog og digitale samtaler. Start med en gratis 20-minutters intro.",
+    "Book din coaching-time hos FAS Coaching. Tilbyr fysiske møter i Lørenskog og digitale samtaler. Start med en gratis intro-samtale.",
 };
 
-const packages = [
+const sessionTypes = [
   {
-    name: "Intro-samtale",
+    title: "Intro-samtale",
     duration: "20 min",
-    price: "Gratis",
-    desc: "Et uforpliktende møte der vi bli kjent og ser om coaching er riktig for deg.",
-    highlight: false,
+    desc: "Et uforpliktende møte der vi blir kjent og ser om coaching er riktig for deg. Gratis og uten forpliktelser.",
+    tag: "Gratis",
+    color: "bg-[#7A8E3E]",
+    textColor: "text-[#FAF8F2]",
   },
   {
-    name: "Enkelttime",
+    title: "Individuell coaching",
     duration: "60 min",
-    price: "900 kr",
-    desc: "Én coaching-økt med fokus på det du trenger akkurat nå — mål, utfordringer eller refleksjon.",
-    highlight: false,
+    desc: "En-til-en økt med fokus på det du trenger — mål, utfordringer, refleksjon og konkrete verktøy.",
+    tag: "Voksne",
+    color: "bg-[#F0EBE0]",
+    textColor: "text-[#1A1A12]",
   },
   {
-    name: "Pakke — 5 timer",
-    duration: "5 x 60 min",
-    price: "3 900 kr",
-    desc: "Vår mest populære pakke. Gir rom for dypere prosess og varig endring over tid.",
-    highlight: true,
+    title: "Coaching barn & unge",
+    duration: "45–60 min",
+    desc: "Tilpassede samtaler for barn og tenåringer i trygge omgivelser. Foresatte involveres ved behov.",
+    tag: "6–18 år",
+    color: "bg-[#C8963A]",
+    textColor: "text-[#FAF8F2]",
   },
   {
-    name: "Pakke — 10 timer",
-    duration: "10 x 60 min",
-    price: "7 200 kr",
-    desc: "For deg som ønsker et grundig og langsiktig forløp med full personlig oppfølging.",
-    highlight: false,
+    title: "Gruppecoaching",
+    duration: "90 min",
+    desc: "Coaching i fellesskap. Møt andre på lignende reiser og veks sammen i et trygt og støttende miljø.",
+    tag: "Gruppe",
+    color: "bg-[#1A1A12]",
+    textColor: "text-[#FAF8F2]",
   },
 ];
 
@@ -49,7 +53,7 @@ const formats = [
   {
     icon: Video,
     title: "Digitalt / video",
-    desc: "Teams eller Zoom. Akkurat like effektivt som fysisk møte.",
+    desc: "Teams eller Zoom — like effektivt som fysisk møte.",
   },
   {
     icon: Phone,
@@ -60,42 +64,36 @@ const formats = [
 
 export default function TimeplanPage() {
   return (
-    <div className="bg-[#FAFAF9]">
+    <div className="bg-[#FAF8F2]">
 
-      {/* ── HERO ─────────────────────────────────── */}
-      <section className="pt-36 pb-20 px-6 bg-[#F5F0EB]">
+      {/* HERO */}
+      <section className="pt-36 pb-20 px-6 bg-[#F0EBE0]">
         <div className="max-w-6xl mx-auto">
-          <div className="max-w-2xl">
-            <span className="font-[family-name:var(--font-quicksand)] text-[#CA8A04] text-sm font-medium tracking-widest uppercase">
-              Timeplan
-            </span>
-            <h1 className="font-[family-name:var(--font-cormorant)] text-6xl md:text-7xl font-light text-[#1C1917] leading-tight mt-3">
-              Start din<br />
-              <em className="italic">coaching-reise</em>
-            </h1>
-            <p className="font-[family-name:var(--font-quicksand)] text-[#44403C] text-base leading-relaxed mt-5 max-w-lg">
-              Velg pakken som passer deg, eller start med en gratis intro-samtale. Alle formater er tilgjengelige — fysisk eller digitalt.
-            </p>
-          </div>
+          <p className="font-[family-name:var(--font-quicksand)] text-[#7A8E3E] text-sm font-bold tracking-widest uppercase mb-4">
+            Timeplan
+          </p>
+          <h1 className="font-[family-name:var(--font-caveat)] text-[clamp(3rem,7vw,6rem)] font-bold text-[#1A1A12] leading-[0.95] max-w-xl">
+            Start din<br />
+            <span className="text-[#C8963A]">coaching-reise</span>
+          </h1>
+          <p className="font-[family-name:var(--font-quicksand)] text-[#4A4837] text-base leading-relaxed mt-5 max-w-lg">
+            Velg den typen samtale som passer deg — eller start med en gratis intro der vi finner ut om coaching er riktig for deg.
+          </p>
         </div>
       </section>
 
-      {/* ── FORMATS ──────────────────────────────── */}
-      <section className="py-16 px-6">
+      {/* FORMAT PILLS */}
+      <section className="py-14 px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {formats.map((f, i) => (
-              <div key={i} className="flex items-start gap-4 p-6 bg-[#FAFAF9] rounded-2xl border border-[#E8DDD0]">
-                <div className="p-3 bg-[#CA8A04]/10 rounded-xl shrink-0">
-                  <f.icon size={20} className="text-[#CA8A04]" />
+              <div key={i} className="flex items-start gap-4 p-6 bg-[#F0EBE0] rounded-2xl">
+                <div className="p-3 bg-[#9EAB5C]/20 rounded-xl shrink-0">
+                  <f.icon size={20} className="text-[#7A8E3E]" />
                 </div>
                 <div>
-                  <h3 className="font-[family-name:var(--font-quicksand)] font-semibold text-[#1C1917] text-sm">
-                    {f.title}
-                  </h3>
-                  <p className="font-[family-name:var(--font-quicksand)] text-[#78716C] text-xs mt-1 leading-relaxed">
-                    {f.desc}
-                  </p>
+                  <h3 className="font-[family-name:var(--font-quicksand)] font-bold text-[#1A1A12] text-sm">{f.title}</h3>
+                  <p className="font-[family-name:var(--font-quicksand)] text-[#6B6852] text-xs mt-1 leading-relaxed">{f.desc}</p>
                 </div>
               </div>
             ))}
@@ -103,105 +101,79 @@ export default function TimeplanPage() {
         </div>
       </section>
 
-      {/* ── PACKAGES ─────────────────────────────── */}
-      <section className="py-16 px-6">
+      {/* SESSION TYPES */}
+      <section className="py-10 px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="mb-12">
-            <span className="font-[family-name:var(--font-quicksand)] text-[#CA8A04] text-sm font-medium tracking-widest uppercase">
-              Priser
-            </span>
-            <h2 className="font-[family-name:var(--font-cormorant)] text-4xl md:text-5xl font-light text-[#1C1917] leading-tight mt-2">
-              Velg pakke
+          <div className="mb-10">
+            <p className="font-[family-name:var(--font-quicksand)] text-[#7A8E3E] text-sm font-bold tracking-widest uppercase mb-2">
+              Typer samtaler
+            </p>
+            <h2 className="font-[family-name:var(--font-caveat)] text-[clamp(2.5rem,5vw,4rem)] font-bold text-[#1A1A12]">
+              Hva tilbyr jeg?
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {packages.map((p, i) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {sessionTypes.map((s, i) => (
               <div
                 key={i}
-                className={`rounded-2xl p-8 border transition-all duration-300 ${
-                  p.highlight
-                    ? "bg-[#1C1917] border-[#1C1917]"
-                    : "bg-[#FAFAF9] border-[#E8DDD0] hover:border-[#CA8A04]"
-                }`}
+                className={`${s.color} rounded-[1.75rem] p-8 flex flex-col gap-4`}
               >
-                {p.highlight && (
-                  <span className="inline-block font-[family-name:var(--font-quicksand)] text-xs font-semibold text-[#1C1917] bg-[#CA8A04] px-3 py-1 rounded-full mb-4">
-                    Mest populær
+                <div className="flex items-center justify-between">
+                  <span className={`font-[family-name:var(--font-quicksand)] text-xs font-bold tracking-widest uppercase px-3 py-1.5 rounded-full ${
+                    s.color === "bg-[#F0EBE0]" ? "bg-[#DDD5C0] text-[#1A1A12]" : "bg-black/15 text-white"
+                  }`}>
+                    {s.tag}
                   </span>
-                )}
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <h3
-                      className={`font-[family-name:var(--font-cormorant)] text-2xl font-semibold ${
-                        p.highlight ? "text-[#FAFAF9]" : "text-[#1C1917]"
-                      }`}
-                    >
-                      {p.name}
-                    </h3>
-                    <div className={`flex items-center gap-1.5 mt-1 ${p.highlight ? "text-[#A8A29E]" : "text-[#78716C]"}`}>
-                      <Clock size={12} />
-                      <span className="font-[family-name:var(--font-quicksand)] text-xs">{p.duration}</span>
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <p
-                      className={`font-[family-name:var(--font-cormorant)] text-3xl font-semibold ${
-                        p.highlight ? "text-[#CA8A04]" : "text-[#CA8A04]"
-                      }`}
-                    >
-                      {p.price}
-                    </p>
-                  </div>
+                  <span className={`font-[family-name:var(--font-quicksand)] text-xs opacity-70 ${s.textColor}`}>
+                    {s.duration}
+                  </span>
                 </div>
-                <p
-                  className={`font-[family-name:var(--font-quicksand)] text-sm leading-relaxed mb-6 ${
-                    p.highlight ? "text-[#A8A29E]" : "text-[#44403C]"
-                  }`}
-                >
-                  {p.desc}
+                <h3 className={`font-[family-name:var(--font-caveat)] text-2xl font-bold ${s.textColor}`}>
+                  {s.title}
+                </h3>
+                <p className={`font-[family-name:var(--font-quicksand)] text-sm leading-relaxed ${
+                  s.textColor === "text-[#FAF8F2]" ? "text-white/75" : "text-[#4A4837]"
+                }`}>
+                  {s.desc}
                 </p>
-                <Link
-                  href="/kontakt"
-                  className={`inline-flex items-center gap-2 font-[family-name:var(--font-quicksand)] font-semibold text-sm px-6 py-3 rounded-xl transition-colors duration-300 cursor-pointer ${
-                    p.highlight
-                      ? "bg-[#CA8A04] text-[#FAFAF9] hover:bg-[#D97706]"
-                      : "bg-[#1C1917] text-[#FAFAF9] hover:bg-[#CA8A04]"
-                  }`}
-                >
-                  Book nå
-                  <ArrowRight size={14} />
-                </Link>
               </div>
             ))}
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link
+              href="/kontakt"
+              className="inline-flex items-center gap-2 bg-[#7A8E3E] text-[#FAF8F2] font-[family-name:var(--font-quicksand)] font-bold px-8 py-4 rounded-2xl hover:bg-[#C8963A] transition-colors duration-300 cursor-pointer"
+            >
+              Ta kontakt for å booke
+              <ArrowRight size={16} />
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* ── IMAGE + INFO ─────────────────────────── */}
-      <section className="py-20 px-6 bg-[#F5F0EB]">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative h-72 lg:h-96 rounded-2xl overflow-hidden">
-              <Image src="/images/img6.jpg" alt="Coaching omgivelser" fill className="object-cover" />
-            </div>
-            <div className="space-y-5">
-              <h2 className="font-[family-name:var(--font-cormorant)] text-4xl font-light text-[#1C1917] leading-tight">
-                Usikker på om coaching er noe for deg?
-              </h2>
-              <p className="font-[family-name:var(--font-quicksand)] text-[#44403C] text-sm leading-relaxed">
-                Start med en gratis 20-minutters intro-samtale. Ingen forpliktelser, ingen forventninger — bare en åpen prat om hva du ønsker å jobbe med.
-              </p>
-              <p className="font-[family-name:var(--font-quicksand)] text-[#44403C] text-sm leading-relaxed">
-                Etter samtalen avgjør du selv om du ønsker å gå videre. Jeg vil alltid være ærlig om coaching passer for deg og din situasjon.
-              </p>
-              <Link
-                href="/kontakt"
-                className="inline-flex items-center gap-2 bg-[#1C1917] text-[#FAFAF9] font-[family-name:var(--font-quicksand)] font-semibold px-7 py-3.5 rounded-xl hover:bg-[#CA8A04] transition-colors duration-300 cursor-pointer"
-              >
-                Ta kontakt
-                <ArrowRight size={14} />
-              </Link>
-            </div>
+      {/* IMAGE + INFO */}
+      <section className="py-20 px-6 bg-[#F0EBE0]">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="h-72 lg:h-80 rounded-[2rem] overflow-hidden relative">
+            <Image src="/images/img6.jpg" alt="Coaching omgivelser" fill className="object-cover" quality={85} />
+          </div>
+          <div className="space-y-5">
+            <h2 className="font-[family-name:var(--font-caveat)] text-[clamp(2rem,4vw,3.2rem)] font-bold text-[#1A1A12] leading-tight">
+              Usikker på om coaching er noe for deg?
+            </h2>
+            <p className="font-[family-name:var(--font-quicksand)] text-[#4A4837] text-sm leading-relaxed">
+              Start med en gratis intro-samtale. Ingen forpliktelser, ingen forventninger — bare en åpen prat om hva du ønsker å jobbe med.
+            </p>
+            <p className="font-[family-name:var(--font-quicksand)] text-[#4A4837] text-sm leading-relaxed">
+              Etter samtalen avgjør du selv om du ønsker å gå videre. Jeg vil alltid være ærlig om coaching passer for din situasjon.
+            </p>
+            <Link
+              href="/kontakt"
+              className="inline-flex items-center gap-2 bg-[#1A1A12] text-[#FAF8F2] font-[family-name:var(--font-quicksand)] font-bold px-7 py-3.5 rounded-2xl hover:bg-[#7A8E3E] transition-colors duration-300 cursor-pointer"
+            >
+              Ta kontakt <ArrowRight size={14} />
+            </Link>
           </div>
         </div>
       </section>
