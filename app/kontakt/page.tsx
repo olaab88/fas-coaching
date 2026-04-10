@@ -3,8 +3,9 @@ import { MapPin, Mail, Clock, Phone, ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Kontakt — FAS Coaching",
-  description: "Ta kontakt med FAS Coaching. Basert i Lørenskog — tilbyr også digitale samtaler.",
+  title: "Kontakt FAS Coaching — Coach i Lørenskog | Book gratis intro",
+  description: "Ta kontakt med Finn Arne Sivertsen for coaching i Lørenskog eller digitalt. Ring +47 906 90 635 eller send melding. Gratis 20 min intro-samtale.",
+  alternates: { canonical: "https://www.fas-coaching.no/kontakt" },
 };
 
 export default function KontaktPage() {

@@ -4,8 +4,9 @@ import { ArrowRight, MapPin, Video, Phone } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Timeplan — FAS Coaching",
-  description: "Book din coaching-time hos FAS Coaching. Fysisk i Lørenskog eller digitalt.",
+  title: "Book Coaching i Lørenskog — Livsstil, Karriere og mer | FAS Coaching",
+  description: "Book coaching med Finn Arne Sivertsen. Velg mellom livsstil, karriere, relasjoner, sorg, idrett og ledelse. Fysisk i Lørenskog eller digitalt. Gratis intro.",
+  alternates: { canonical: "https://www.fas-coaching.no/timeplan" },
 };
 
 const sessions = [

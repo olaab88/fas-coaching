@@ -4,8 +4,9 @@ import { ArrowRight, Star } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Referanser — FAS Coaching",
-  description: "Les hva klienter sier om coaching med Finn Arne Sivertsen. Ekte erfaringer fra folk i alle livssituasjoner.",
+  title: "Klientanmeldelser og erfaringer — FAS Coaching Lørenskog",
+  description: "Les ekte erfaringer fra klienter som har jobbet med Finn Arne Sivertsen. Over 100 klienter, 5.0 i snittrating og 98% som anbefaler.",
+  alternates: { canonical: "https://www.fas-coaching.no/referanser" },
 };
 
 const testimonials = [

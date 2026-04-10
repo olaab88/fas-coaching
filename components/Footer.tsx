@@ -76,9 +76,14 @@ export default function Footer() {
         </div>
 
         <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
-          <p className="font-[family-name:var(--font-dm)] text-white/80 text-xs">
-            © {new Date().getFullYear()} FAS Coaching · Finn Arne Sivertsen · Orgnr. 812977652
-          </p>
+          <div className="flex flex-col md:flex-row items-center gap-3">
+            <p className="font-[family-name:var(--font-dm)] text-white/80 text-xs">
+              © {new Date().getFullYear()} FAS Coaching · Finn Arne Sivertsen · Orgnr. 812977652
+            </p>
+            <Link href="/personvern" className="font-[family-name:var(--font-dm)] text-white/50 hover:text-white/80 text-xs transition-colors duration-150">
+              Personvern
+            </Link>
+          </div>
           <Link
             href="/kontakt"
             className="font-[family-name:var(--font-dm)] text-xs bg-[#002850] text-white px-5 py-2 rounded-full hover:bg-[#143C64] transition-colors cursor-pointer font-medium"

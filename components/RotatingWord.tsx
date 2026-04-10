@@ -25,6 +25,7 @@ export default function RotatingWord() {
       style={{
         opacity: visible ? 1 : 0,
         transform: visible ? "translateY(0)" : "translateY(8px)",
+        minWidth: "5ch",
       }}
     >
       {words[index]}
