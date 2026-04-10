@@ -72,21 +72,26 @@ export default function HomePage() {
     <div className="bg-[#F8F7F4]">
 
       {/* ── HERO ─────────────────────────────────────── */}
-      <section className="min-h-screen pt-16 flex items-center">
-        <div className="max-w-7xl mx-auto px-6 w-full py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section className="min-h-screen pt-16 bg-[#F8F7F4] overflow-hidden relative">
+        <div className="max-w-7xl mx-auto px-6 w-full min-h-[calc(100vh-4rem)] flex flex-col lg:flex-row">
 
           {/* Left: Text */}
-          <div className="space-y-8">
-            <div className="inline-flex items-center gap-2 bg-[#E8F7F7] text-[#00617A] rounded-full px-4 py-1.5 text-xs font-[family-name:var(--font-dm)] font-semibold tracking-wide">
+          <div className="flex flex-col justify-center py-20 lg:py-24 lg:w-[52%] lg:pr-16 space-y-8 z-10">
+            <div className="inline-flex items-center gap-2 bg-[#E8F7F7] text-[#00617A] rounded-full px-4 py-1.5 text-xs font-[family-name:var(--font-dm)] font-semibold tracking-wide w-fit">
               <span className="w-1.5 h-1.5 rounded-full bg-[#64C8C8]" />
-              Coaching · Lørenskog & digitalt
+              Coaching · Lørenskog &amp; digitalt
             </div>
 
-            <h1 className="font-[family-name:var(--font-playfair)] text-[clamp(2.8rem,5.5vw,5rem)] text-[#111110] leading-[1.05] font-bold">
-              Coaching som<br />
-              gir deg<br />
-              <RotatingWord />
-            </h1>
+            <div>
+              <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-sm font-semibold tracking-[0.2em] uppercase mb-3">
+                FAS Coaching
+              </p>
+              <h1 className="font-[family-name:var(--font-playfair)] text-[clamp(3rem,6vw,5.5rem)] text-[#111110] leading-[1.0] font-bold">
+                Coaching som<br />
+                gir deg<br />
+                <RotatingWord />
+              </h1>
+            </div>
 
             <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-lg leading-relaxed max-w-md">
               Jeg er Finn Arne Sivertsen — profesjonell business- og livsstilscoach som hjelper både voksne og barn til å forme et eget perspektiv på livet.
@@ -118,23 +123,25 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right: Finn Arne photo */}
-          <div className="relative order-first lg:order-last">
-            <div className="relative rounded-3xl overflow-hidden aspect-[4/5] lg:aspect-[3/4]">
+          {/* Right: Full-height photo */}
+          <div className="relative lg:w-[48%] h-72 lg:h-auto">
+            {/* On mobile: normal flow with aspect ratio; on lg: absolute fill right side */}
+            <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:left-0 rounded-3xl lg:rounded-none lg:rounded-l-3xl overflow-hidden h-full min-h-72">
               <Image
-                src="/images/site_img_d.jpg"
+                src="/images/finn_arne_outdoor.png"
                 alt="Finn Arne Sivertsen — FAS Coaching"
                 fill
                 priority
-                sizes="(max-width:1024px)100vw,50vw"
-                className="object-cover object-center"
+                sizes="(max-width:1024px)100vw,48vw"
+                className="object-cover object-top"
                 quality={90}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#111110]/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#F8F7F4]/20 to-transparent lg:block hidden" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#111110]/20 to-transparent" />
             </div>
 
             {/* Floating rating card */}
-            <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl px-6 py-4 shadow-xl border border-[#E2DDD7]">
+            <div className="absolute bottom-6 left-4 lg:-left-6 bg-white rounded-2xl px-5 py-4 shadow-xl border border-[#E2DDD7] z-10">
               <div className="flex gap-1 mb-1.5">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} size={11} className="fill-[#64C8C8] text-[#64C8C8]" />
@@ -145,7 +152,7 @@ export default function HomePage() {
             </div>
 
             {/* Top badge */}
-            <div className="absolute -top-3 -right-3 bg-[#002850] text-white rounded-2xl px-4 py-3 shadow-lg">
+            <div className="absolute top-6 right-4 lg:-right-3 bg-[#002850] text-white rounded-2xl px-4 py-3 shadow-lg z-10">
               <p className="font-[family-name:var(--font-playfair)] font-bold text-2xl leading-none">5+</p>
               <p className="font-[family-name:var(--font-dm)] text-white/80 text-[10px] mt-0.5">år erfaring</p>
             </div>
@@ -164,7 +171,7 @@ export default function HomePage() {
               </p>
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl font-bold text-[#111110] leading-tight">
                 Seks veier til<br />
-                <em className="text-[#002850]">bedre livskvalitet</em>
+                <span className="text-[#002850]">bedre livskvalitet</span>
               </h2>
             </div>
             <Link
@@ -231,7 +238,7 @@ export default function HomePage() {
               />
             </div>
             <div className="absolute -bottom-5 -right-4 bg-[#141210] text-white rounded-2xl px-6 py-5 shadow-xl">
-              <p className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-[#C8963A]">5+</p>
+              <p className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-[#64C8C8]">5+</p>
               <p className="font-[family-name:var(--font-dm)] text-white/60 text-xs mt-0.5">år som coach</p>
             </div>
           </div>
@@ -243,7 +250,7 @@ export default function HomePage() {
             </p>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl font-bold text-[#111110] leading-tight">
               Profesjonell coach<br />
-              <em className="text-[#002850]">for hele livet</em>
+              <span className="text-[#002850]">for hele livet</span>
             </h2>
             <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-base leading-[1.8]">
               Jeg er en profesjonell business- og livsstilscoach som hjelper både voksne og barn til å forme et eget perspektiv på livet. Ditt liv kan bli mye bedre med positiv tenking, livsglede, bedre helse og en mer effektiv og morsommere hverdag.
@@ -253,7 +260,7 @@ export default function HomePage() {
             </p>
 
             <blockquote className="border-l-2 border-[#002850] pl-5 py-1">
-              <p className="font-[family-name:var(--font-playfair)] text-xl italic text-[#111110] leading-snug">
+              <p className="font-[family-name:var(--font-dm)] text-base text-[#111110] leading-snug font-medium">
                 &ldquo;Hvis du gjør det du alltid har gjort, får du det du alltid har fått.&rdquo;
               </p>
             </blockquote>
@@ -279,7 +286,7 @@ export default function HomePage() {
               </p>
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl font-bold text-white leading-tight">
                 Hva sier<br />
-                <em className="text-[#64C8C8]">klientene?</em>
+                <span className="text-[#64C8C8]">klientene?</span>
               </h2>
             </div>
             <Link
@@ -321,7 +328,7 @@ export default function HomePage() {
             </p>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl font-bold text-[#111110] leading-tight">
               Klar for å starte<br />
-              <em className="text-[#002850]">din reise?</em>
+              <span className="text-[#002850]">din reise?</span>
             </h2>
             <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-base leading-[1.8]">
               Start med en gratis 20-minutters intro-samtale. Ingen forpliktelser — bare en åpen prat om hva du ønsker å jobbe med.

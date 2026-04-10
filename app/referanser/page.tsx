@@ -54,7 +54,7 @@ export default function ReferanserPage() {
           </p>
           <h1 className="font-[family-name:var(--font-playfair)] text-[clamp(3rem,8vw,7rem)] text-[#111110] font-bold leading-[1.0]">
             Ekte<br />
-            <em className="text-[#002850]">endring</em>
+            <span className="text-[#002850]">endring</span>
           </h1>
         </div>
       </section>
@@ -101,9 +101,9 @@ export default function ReferanserPage() {
         <Image src="/images/site_img_a.jpg" alt="" fill className="object-cover" quality={75} />
         <div className="absolute inset-0 bg-[#141210]/60" />
         <div className="absolute inset-0 flex items-center justify-center px-6">
-          <p className="font-[family-name:var(--font-playfair)] text-[clamp(1.8rem,4vw,3.5rem)] font-bold italic text-white text-center max-w-3xl leading-tight">
+          <p className="font-[family-name:var(--font-playfair)] text-[clamp(1.8rem,4vw,3.5rem)] font-bold text-white text-center max-w-3xl leading-tight">
             Den beste investeringen du kan gjøre,{" "}
-            <em className="text-[#64C8C8] not-italic font-bold">er i deg selv.</em>
+            <span className="text-[#64C8C8]">er i deg selv.</span>
           </p>
         </div>
       </section>
@@ -112,7 +112,7 @@ export default function ReferanserPage() {
       <section className="py-20 px-6 bg-white">
         <div className="max-w-2xl mx-auto text-center space-y-6">
           <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-[#111110]">
-            Skriv din egen <em>historie</em>
+            Skriv din egen <span className="text-[#002850]">historie</span>
           </h2>
           <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-base leading-relaxed">
             Start med en gratis intro-samtale og se hva coaching kan gjøre for deg.

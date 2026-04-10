@@ -20,14 +20,14 @@ export default function RotatingWord() {
   }, []);
 
   return (
-    <em
-      className="text-[#002850] inline-block transition-all duration-300"
+    <span
+      className="text-[#002850] font-bold inline-block transition-all duration-300"
       style={{
         opacity: visible ? 1 : 0,
         transform: visible ? "translateY(0)" : "translateY(8px)",
       }}
     >
       {words[index]}
-    </em>
+    </span>
   );
 }

@@ -19,7 +19,7 @@ export default function KontaktPage() {
           </p>
           <h1 className="font-[family-name:var(--font-playfair)] text-[clamp(3rem,8vw,7rem)] text-[#111110] font-bold leading-[1.0]">
             La oss ta en<br />
-            <em className="text-[#002850]">prat</em>
+            <span className="text-[#002850]">prat</span>
           </h1>
           <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-base mt-6 max-w-lg leading-relaxed">
             Send en melding og jeg svarer innen én arbeidsdag. Eller ring direkte.

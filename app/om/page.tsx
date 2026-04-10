@@ -35,7 +35,7 @@ export default function OmPage() {
           </p>
           <h1 className="font-[family-name:var(--font-playfair)] text-[clamp(3rem,8vw,7rem)] text-[#111110] font-bold leading-[1.0]">
             Finn Arne<br />
-            <em className="text-[#002850]">Sivertsen</em>
+            <span className="text-[#002850]">Sivertsen</span>
           </h1>
         </div>
       </section>
@@ -97,7 +97,7 @@ export default function OmPage() {
             </div>
 
             <blockquote className="border-l-2 border-[#002850] pl-5 py-1">
-              <p className="font-[family-name:var(--font-playfair)] text-xl italic text-[#111110] leading-snug">
+              <p className="font-[family-name:var(--font-dm)] text-base font-medium text-[#111110] leading-snug">
                 &ldquo;Hvis du gjør det du alltid har gjort, får du det du alltid har fått.&rdquo;
               </p>
             </blockquote>
@@ -128,7 +128,7 @@ export default function OmPage() {
             </p>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-bold text-white leading-tight">
               Sertifiseringer<br />
-              <em className="text-[#64C8C8]">& utdanning</em>
+              <span className="text-[#64C8C8]">& utdanning</span>
             </h2>
             <p className="font-[family-name:var(--font-dm)] text-white/40 text-sm leading-relaxed mt-4 max-w-xs">
               Solid faglig fundament kombinert med mange år i praksis.
@@ -154,9 +154,9 @@ export default function OmPage() {
           </div>
           <div className="space-y-6">
             <blockquote>
-              <p className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-[#111110] leading-snug italic">
+              <p className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-[#111110] leading-snug">
                 &ldquo;Coaching handler ikke om å gi svar — det handler om å hjelpe deg{" "}
-                <span className="text-[#002850] not-italic font-semibold">finne dine egne.&rdquo;</span>
+                <span className="text-[#002850]">finne dine egne.&rdquo;</span>
               </p>
             </blockquote>
             <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-sm leading-relaxed">

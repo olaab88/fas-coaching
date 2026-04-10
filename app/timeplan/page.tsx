@@ -35,7 +35,7 @@ export default function TimeplanPage() {
           </p>
           <h1 className="font-[family-name:var(--font-playfair)] text-[clamp(3rem,8vw,7rem)] text-[#111110] font-bold leading-[1.0]">
             Start din<br />
-            <em className="text-[#002850]">reise</em>
+            <span className="text-[#002850]">reise</span>
           </h1>
           <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-base mt-6 max-w-lg leading-relaxed">
             Velg det coachingområdet som passer deg — og start gjerne med en gratis intro-samtale.
@@ -114,7 +114,7 @@ export default function TimeplanPage() {
           <div className="space-y-5">
             <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-bold text-[#111110]">
               Usikker på om coaching er{" "}
-              <em className="text-[#002850]">noe for deg?</em>
+              <span className="text-[#002850]">noe for deg?</span>
             </h2>
             <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-sm leading-[1.8]">
               Start med en gratis 20-minutters intro-samtale. Ingen forpliktelser — bare en åpen prat om hva du ønsker å jobbe med. Etter samtalen avgjør du selv om du ønsker å gå videre.
