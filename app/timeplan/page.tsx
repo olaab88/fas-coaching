@@ -37,7 +37,7 @@ export default function TimeplanPage() {
             Start din<br />
             <span className="text-[#002850]">reise</span>
           </h1>
-          <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-base mt-6 max-w-lg leading-relaxed">
+          <p className="font-[family-name:var(--font-dm)] text-[#1A1A1A] text-base mt-6 max-w-lg leading-relaxed">
             Velg det coachingområdet som passer deg — og start gjerne med en gratis intro-samtale.
           </p>
         </div>
@@ -53,7 +53,7 @@ export default function TimeplanPage() {
               </div>
               <div>
                 <p className="font-[family-name:var(--font-dm)] font-semibold text-[#111110] text-sm">{f.title}</p>
-                <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-xs mt-0.5 leading-relaxed">{f.desc}</p>
+                <p className="font-[family-name:var(--font-dm)] text-[#1A1A1A] text-xs mt-0.5 leading-relaxed">{f.desc}</p>
               </div>
             </div>
           ))}
@@ -88,7 +88,7 @@ export default function TimeplanPage() {
                     {s.tag}
                   </span>
                   <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-[#111110] mt-1 mb-2">{s.title}</h3>
-                  <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-sm leading-relaxed">{s.desc}</p>
+                  <p className="font-[family-name:var(--font-dm)] text-[#1A1A1A] text-sm leading-relaxed">{s.desc}</p>
                 </div>
               </div>
             ))}
@@ -116,7 +116,7 @@ export default function TimeplanPage() {
               Usikker på om coaching er{" "}
               <span className="text-[#002850]">noe for deg?</span>
             </h2>
-            <p className="font-[family-name:var(--font-dm)] text-[#6B6860] text-sm leading-[1.8]">
+            <p className="font-[family-name:var(--font-dm)] text-[#1A1A1A] text-sm leading-[1.8]">
               Start med en gratis 20-minutters intro-samtale. Ingen forpliktelser — bare en åpen prat om hva du ønsker å jobbe med. Etter samtalen avgjør du selv om du ønsker å gå videre.
             </p>
             <Link

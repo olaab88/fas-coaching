@@ -56,7 +56,7 @@ export default function Navbar() {
                   className={`px-4 py-2 rounded-lg font-[family-name:var(--font-dm)] text-sm transition-colors duration-150 ${
                     pathname === l.href
                       ? "text-[#111110] font-medium"
-                      : "text-[#6B6860] hover:text-[#111110]"
+                      : "text-[#1A1A1A] hover:text-[#111110]"
                   }`}
                 >
                   {l.label}
@@ -76,7 +76,7 @@ export default function Navbar() {
           {/* Hamburger */}
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden p-2 rounded-lg text-[#6B6860] hover:text-[#111110] hover:bg-[#EFECEA] transition-colors cursor-pointer"
+            className="md:hidden p-2 rounded-lg text-[#1A1A1A] hover:text-[#111110] hover:bg-[#EFECEA] transition-colors cursor-pointer"
             aria-label="Meny"
           >
             {open ? <X size={18} /> : <Menu size={18} />}
@@ -96,7 +96,7 @@ export default function Navbar() {
                 className={`px-4 py-3 rounded-lg font-[family-name:var(--font-dm)] text-sm transition-colors ${
                   pathname === l.href
                     ? "text-[#111110] font-medium bg-[#EFECEA]"
-                    : "text-[#6B6860] hover:text-[#111110] hover:bg-[#F8F7F4]"
+                    : "text-[#1A1A1A] hover:text-[#111110] hover:bg-[#F8F7F4]"
                 }`}
               >
                 {l.label}
