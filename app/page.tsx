@@ -222,7 +222,7 @@ export default function HomePage() {
           <div className="relative">
             <div className="rounded-3xl overflow-hidden aspect-[3/4] relative">
               <Image
-                src="/images/site_img_b.jpg"
+                src="/images/finn_arne.png"
                 alt="Finn Arne Sivertsen — FAS Coaching"
                 fill
                 sizes="(max-width:1024px)100vw,50vw"
