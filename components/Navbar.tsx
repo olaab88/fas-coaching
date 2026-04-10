@@ -53,10 +53,10 @@ export default function Navbar() {
               <li key={l.href}>
                 <Link
                   href={l.href}
-                  className={`px-4 py-2 rounded-lg font-[family-name:var(--font-dm)] text-sm transition-colors duration-150 ${
+                  className={`px-4 py-2 rounded-lg font-[family-name:var(--font-dm)] text-sm transition-all duration-150 ${
                     pathname === l.href
-                      ? "text-[#111110] font-medium"
-                      : "text-[#111110] hover:text-[#111110]"
+                      ? "text-[#002850] font-semibold bg-[#EBF2FA] border border-[#C5D9EE]"
+                      : "text-[#6B6860] hover:text-[#111110] hover:bg-[#F0EEEB]"
                   }`}
                 >
                   {l.label}
