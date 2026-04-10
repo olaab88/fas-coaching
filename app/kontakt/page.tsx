@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { MapPin, Mail, Clock } from "lucide-react";
+import { MapPin, Mail, Clock, Phone } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -136,6 +136,20 @@ export default function KontaktPage() {
                     <p className="font-[family-name:var(--font-quicksand)] text-[#4A4837] text-sm mt-0.5">
                       Skårerveien 12<br />Lørenskog, Norge
                     </p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="p-2.5 bg-[#9EAB5C]/20 rounded-lg shrink-0">
+                    <Phone size={16} className="text-[#7A8E3E]" />
+                  </div>
+                  <div>
+                    <p className="font-[family-name:var(--font-quicksand)] font-bold text-[#1A1A12] text-sm">Telefon</p>
+                    <a
+                      href="tel:+4741122129"
+                      className="font-[family-name:var(--font-quicksand)] text-[#4A4837] hover:text-[#7A8E3E] text-sm mt-0.5 transition-colors"
+                    >
+                      +47 41 12 21 29
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">

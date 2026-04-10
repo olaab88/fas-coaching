@@ -4,30 +4,30 @@ import { ArrowRight, ArrowUpRight, Star, Check } from "lucide-react";
 
 const services = [
   {
-    title: "Individuell coaching",
-    desc: "En-til-en samtaler tilpasset deg. Vi kartlegger, reflekterer og lager en plan som faktisk passer livet ditt.",
-    tag: "Voksne",
+    title: "Livsstil & karriere",
+    desc: "Veiledning for deg som vil finne balansen mellom hvem du er og hva du gjør — i jobb, hverdag og fremtid.",
+    tag: "Livsstil",
     color: "bg-[#7A8E3E]",
     textColor: "text-[#FAF8F2]",
   },
   {
-    title: "Barn & unge",
-    desc: "Trygge, lekne rammer der barn og tenåringer kan snakke fritt og bygge indre styrke.",
-    tag: "6–18 år",
+    title: "Relasjoner & sorg",
+    desc: "Et trygt rom for å bearbeide vanskelige følelser, tap og relasjonelle utfordringer — i ditt eget tempo.",
+    tag: "Støtte",
     color: "bg-[#F0EBE0]",
     textColor: "text-[#1A1A12]",
   },
   {
-    title: "Livsstilveiledning",
-    desc: "Helhetlig blikk på hverdagen — vaner, relasjoner, identitet. Finn din unike balanse.",
-    tag: "Livsstil",
+    title: "Idrett & ledelse",
+    desc: "Mentalt påfyll for utøvere og ledere som vil prestere bedre — med ro, fokus og indre styrke.",
+    tag: "Prestasjon",
     color: "bg-[#C8963A]",
     textColor: "text-[#FAF8F2]",
   },
   {
-    title: "Gruppecoaching",
-    desc: "Vekst i fellesskap. Møt andre som er på lignende reiser og lær av hverandre.",
-    tag: "Gruppe",
+    title: "Unge & barn",
+    desc: "Trygge og lekne samtaler for barn og tenåringer som trenger et eget rom å vokse i.",
+    tag: "6–18 år",
     color: "bg-[#1A1A12]",
     textColor: "text-[#FAF8F2]",
   },
@@ -93,7 +93,7 @@ export default function HomePage() {
             på livet
           </h1>
           <p className="font-[family-name:var(--font-quicksand)] text-[#D6D3C8] text-lg leading-relaxed max-w-lg mb-10">
-            Profesjonell coaching for voksne og barn — med varme, nærvær og verktøy som virker i hverdagen.
+            Jeg veileder unge og voksne innen livsstil, karriere, relasjoner, sorg, idrett og ledelse — for en bedre livskvalitet.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
@@ -166,10 +166,10 @@ export default function HomePage() {
               noe
             </h2>
             <p className="font-[family-name:var(--font-quicksand)] text-[#4A4837] text-base leading-[1.75]">
-              Hos FAS Coaching møter du en coach som lytter uten å dømme, stiller de rette spørsmålene og hjelper deg å se egne ressurser. Jeg jobber med voksne som ønsker mer retning — og med barn og unge som trenger et trygt rom.
+              FAS Coaching jobber innen mange områder. Jeg veileder unge og voksne i å få et nytt perspektiv på livsstil, karriere, relasjoner, sorg, idrett og ledelse — der man støter på problemer. Hensikten er å oppnå en bedre livskvalitet.
             </p>
             <p className="font-[family-name:var(--font-quicksand)] text-[#4A4837] text-base leading-[1.75]">
-              Coachingen er alltid tilpasset deg. Ingen fasit. Bare de riktige verktøyene — i ditt tempo.
+              Coachingen er alltid tilpasset deg og din situasjon. Ingen fasitsvar — bare de riktige verktøyene i ditt tempo.
             </p>
 
             {/* Mini stat row */}
@@ -343,11 +343,11 @@ export default function HomePage() {
             </h2>
             <ul className="space-y-3">
               {[
-                "Du vet ikke helt hva du vil med livet",
-                "Du føler deg fast i gamle mønstre",
+                "Du ønsker et nytt perspektiv på livsstil eller karriere",
+                "Du har det vanskelig i relasjoner eller bærer på sorg",
+                "Du vil prestere bedre — i idrett eller som leder",
                 "Du vil hjelpe barnet ditt på en bedre måte",
                 "Du trenger noen som lytter uten å dømme",
-                "Du ønsker mer balanse og ro i hverdagen",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-[#9EAB5C] flex items-center justify-center shrink-0 mt-0.5">

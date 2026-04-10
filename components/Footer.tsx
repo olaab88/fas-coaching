@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, Mail, Clock } from "lucide-react";
+import { MapPin, Mail, Clock, Phone } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -24,15 +24,7 @@ export default function Footer() {
             {/* Social pills */}
             <div className="flex gap-2">
               <a
-                href="https://www.instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 rounded-xl bg-[#2D2C1F] hover:bg-[#7A8E3E] text-[#6B6852] hover:text-[#FAF8F2] transition-colors duration-300 cursor-pointer font-[family-name:var(--font-quicksand)] text-xs font-semibold"
-              >
-                Instagram
-              </a>
-              <a
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/Fascoaching.no/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-2 rounded-xl bg-[#2D2C1F] hover:bg-[#7A8E3E] text-[#6B6852] hover:text-[#FAF8F2] transition-colors duration-300 cursor-pointer font-[family-name:var(--font-quicksand)] text-xs font-semibold"
@@ -78,6 +70,15 @@ export default function Footer() {
                 <span className="font-[family-name:var(--font-quicksand)] text-[#6B6852] text-sm">
                   Skårerveien 12<br />Lørenskog, Norge
                 </span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone size={15} className="text-[#9EAB5C] shrink-0" />
+                <a
+                  href="tel:+4741122129"
+                  className="font-[family-name:var(--font-quicksand)] text-[#6B6852] hover:text-[#9EAB5C] text-sm transition-colors"
+                >
+                  +47 41 12 21 29
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={15} className="text-[#9EAB5C] shrink-0" />

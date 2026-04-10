@@ -61,10 +61,10 @@ export default function OmPage() {
               Min reise inn i coaching
             </h2>
             <p className="font-[family-name:var(--font-quicksand)] text-[#4A4837] text-base leading-[1.8]">
-              Jeg begynte å coache fordi jeg selv opplevde hva det vil si å stå fast — uten verktøy, uten retning og uten noen som virkelig lyttet. Den erfaringen ble drivkraften min.
+              FAS Coaching jobber innen mange områder. Jeg veileder unge og voksne i å få et nytt perspektiv på livsstil, karriere, relasjoner, sorg, idrett og ledelse — der man støter på problemer. Hensikten er å oppnå en bedre livskvalitet.
             </p>
             <p className="font-[family-name:var(--font-quicksand)] text-[#4A4837] text-base leading-[1.8]">
-              I dag hjelper jeg voksne og barn til å finne klarhet og ro — ikke etter andres oppskrift, men etter sine egne verdier og ønsker. Jeg er basert i Lørenskog og tilbyr også digitale samtaler.
+              Jeg er basert i Lørenskog og tilbyr samtaler både fysisk og digitalt. Du kan nå meg på telefon eller via kontaktskjemaet — og vi starter alltid med en gratis og uforpliktende intro.
             </p>
 
             {/* Values */}
